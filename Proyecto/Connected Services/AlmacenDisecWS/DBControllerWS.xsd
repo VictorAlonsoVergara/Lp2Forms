@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://web.almacendisec.pucp.edu.pe/" targetNamespace="http://web.almacendisec.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="deleteBrand" type="tns:deleteBrand" />
+  <xs:element name="deleteBrandResponse" type="tns:deleteBrandResponse" />
   <xs:element name="hello" type="tns:hello" />
   <xs:element name="helloResponse" type="tns:helloResponse" />
   <xs:element name="insertBrand" type="tns:insertBrand" />
@@ -24,6 +26,8 @@
   <xs:element name="queryAllTransferDoneResponse" type="tns:queryAllTransferDoneResponse" />
   <xs:element name="queryAllTransferPending" type="tns:queryAllTransferPending" />
   <xs:element name="queryAllTransferPendingResponse" type="tns:queryAllTransferPendingResponse" />
+  <xs:element name="queryBrandByName" type="tns:queryBrandByName" />
+  <xs:element name="queryBrandByNameResponse" type="tns:queryBrandByNameResponse" />
   <xs:complexType name="queryAllTransferPending">
     <xs:sequence />
   </xs:complexType>
@@ -197,20 +201,44 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllSupplier">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllSupplierResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:supplier" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="queryAllStorehouse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="queryAllStorehouseResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:storehouse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllMeasurement_Unit">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllMeasurement_UnitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:measureUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllTransferDone">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllTransferDoneResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:transfer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllEmployee">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllEmployeeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllSupplier">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllSupplierResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:supplier" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryAllFamily">
@@ -233,12 +261,14 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllMeasurement_Unit">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllMeasurement_UnitResponse">
+  <xs:complexType name="deleteBrand">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:measureUnit" />
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteBrandResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryAllCustomer">
@@ -256,20 +286,14 @@
       <xs:element minOccurs="0" name="customer_ruc" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllTransferDone">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllTransferDoneResponse">
+  <xs:complexType name="queryBrandByName">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:transfer" />
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllCategory">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllCategoryResponse">
+  <xs:complexType name="queryBrandByNameResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:category" />
+      <xs:element minOccurs="0" name="return" type="tns:brand" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryAllBrand">
@@ -280,12 +304,12 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:brand" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllEmployee">
+  <xs:complexType name="queryAllCategory">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="queryAllEmployeeResponse">
+  <xs:complexType name="queryAllCategoryResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:employee" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:category" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="privilege">

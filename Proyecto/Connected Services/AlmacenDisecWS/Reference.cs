@@ -29,13 +29,13 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllTransferPendingResponse> queryAllTransferPendingAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferPendingRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse queryAllTransferDone(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest request);
+        AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse queryAllStorehouse(AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneResponse")]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse> queryAllTransferDoneAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse> queryAllStorehouseAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllMeasurement_UnitReques" +
@@ -51,15 +51,6 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllMeasurement_UnitResponse> queryAllMeasurement_UnitAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllMeasurement_UnitRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse queryAllStorehouse(AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseResponse")]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse> queryAllStorehouseAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllFamilyResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -69,40 +60,13 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllFamilyResponse> queryAllFamilyAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllFamilyRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse insertBrand(AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest request);
+        AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse queryAllTransferDone(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse> insertBrandAsync(AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse queryAllSupplier(AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierResponse")]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse> queryAllSupplierAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse queryAllCategory(AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryResponse")]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse> queryAllCategoryAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse queryAllCustomer(AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerResponse")]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse> queryAllCustomerAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse> queryAllTransferDoneAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllBrandResponse")]
@@ -114,6 +78,24 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllBrandResponse> queryAllBrandAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllBrandRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryBrandByNameRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryBrandByNameResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse queryBrandByName(AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryBrandByNameRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryBrandByNameResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse> queryBrandByNameAsync(AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse queryAllCustomer(AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse> queryAllCustomerAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/helloRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/helloResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -123,6 +105,15 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.helloResponse> helloAsync(AlmacenDisecForms.AlmacenDisecWS.helloRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse queryAllSupplier(AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse> queryAllSupplierAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllEmployeeRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllEmployeeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -130,6 +121,33 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllEmployeeRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllEmployeeResponse")]
         System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeResponse> queryAllEmployeeAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse insertBrand(AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse> insertBrandAsync(AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse queryAllCategory(AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse> queryAllCategoryAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteBrandResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.deleteBrandResponse deleteBrand(AlmacenDisecForms.AlmacenDisecWS.deleteBrandRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteBrandResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.deleteBrandResponse> deleteBrandAsync(AlmacenDisecForms.AlmacenDisecWS.deleteBrandRequest request);
     }
     
     /// <remarks/>
@@ -1707,27 +1725,27 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllTransferDone", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllTransferDoneRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllStorehouse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllStorehouseRequest {
         
-        public queryAllTransferDoneRequest() {
+        public queryAllStorehouseRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllTransferDoneResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllTransferDoneResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllStorehouseResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllStorehouseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public AlmacenDisecForms.AlmacenDisecWS.transfer[] @return;
+        public AlmacenDisecForms.AlmacenDisecWS.storehouse[] @return;
         
-        public queryAllTransferDoneResponse() {
+        public queryAllStorehouseResponse() {
         }
         
-        public queryAllTransferDoneResponse(AlmacenDisecForms.AlmacenDisecWS.transfer[] @return) {
+        public queryAllStorehouseResponse(AlmacenDisecForms.AlmacenDisecWS.storehouse[] @return) {
             this.@return = @return;
         }
     }
@@ -1756,34 +1774,6 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         public queryAllMeasurement_UnitResponse(AlmacenDisecForms.AlmacenDisecWS.measureUnit[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllStorehouse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllStorehouseRequest {
-        
-        public queryAllStorehouseRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllStorehouseResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllStorehouseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public AlmacenDisecForms.AlmacenDisecWS.storehouse[] @return;
-        
-        public queryAllStorehouseResponse() {
-        }
-        
-        public queryAllStorehouseResponse(AlmacenDisecForms.AlmacenDisecWS.storehouse[] @return) {
             this.@return = @return;
         }
     }
@@ -1827,119 +1817,27 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrand", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertBrandRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllTransferDone", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllTransferDoneRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public AlmacenDisecForms.AlmacenDisecWS.brand brand;
-        
-        public insertBrandRequest() {
-        }
-        
-        public insertBrandRequest(AlmacenDisecForms.AlmacenDisecWS.brand brand) {
-            this.brand = brand;
+        public queryAllTransferDoneRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrandResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertBrandResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertBrandResponse() {
-        }
-        
-        public insertBrandResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplier", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllSupplierRequest {
-        
-        public queryAllSupplierRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplierResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllSupplierResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllTransferDoneResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllTransferDoneResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public AlmacenDisecForms.AlmacenDisecWS.supplier[] @return;
+        public AlmacenDisecForms.AlmacenDisecWS.transfer[] @return;
         
-        public queryAllSupplierResponse() {
+        public queryAllTransferDoneResponse() {
         }
         
-        public queryAllSupplierResponse(AlmacenDisecForms.AlmacenDisecWS.supplier[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCategory", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllCategoryRequest {
-        
-        public queryAllCategoryRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCategoryResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllCategoryResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public AlmacenDisecForms.AlmacenDisecWS.category[] @return;
-        
-        public queryAllCategoryResponse() {
-        }
-        
-        public queryAllCategoryResponse(AlmacenDisecForms.AlmacenDisecWS.category[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomer", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllCustomerRequest {
-        
-        public queryAllCustomerRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomerResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllCustomerResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public AlmacenDisecForms.AlmacenDisecWS.customer[] @return;
-        
-        public queryAllCustomerResponse() {
-        }
-        
-        public queryAllCustomerResponse(AlmacenDisecForms.AlmacenDisecWS.customer[] @return) {
+        public queryAllTransferDoneResponse(AlmacenDisecForms.AlmacenDisecWS.transfer[] @return) {
             this.@return = @return;
         }
     }
@@ -1968,6 +1866,70 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         public queryAllBrandResponse(AlmacenDisecForms.AlmacenDisecWS.brand[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryBrandByName", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryBrandByNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public queryBrandByNameRequest() {
+        }
+        
+        public queryBrandByNameRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryBrandByNameResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryBrandByNameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.brand @return;
+        
+        public queryBrandByNameResponse() {
+        }
+        
+        public queryBrandByNameResponse(AlmacenDisecForms.AlmacenDisecWS.brand @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomer", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllCustomerRequest {
+        
+        public queryAllCustomerRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomerResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllCustomerResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.customer[] @return;
+        
+        public queryAllCustomerResponse() {
+        }
+        
+        public queryAllCustomerResponse(AlmacenDisecForms.AlmacenDisecWS.customer[] @return) {
             this.@return = @return;
         }
     }
@@ -2011,6 +1973,34 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplier", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllSupplierRequest {
+        
+        public queryAllSupplierRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplierResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllSupplierResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.supplier[] @return;
+        
+        public queryAllSupplierResponse() {
+        }
+        
+        public queryAllSupplierResponse(AlmacenDisecForms.AlmacenDisecWS.supplier[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployee", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
     public partial class queryAllEmployeeRequest {
         
@@ -2032,6 +2022,106 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         public queryAllEmployeeResponse(AlmacenDisecForms.AlmacenDisecWS.employee[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrand", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertBrandRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.brand brand;
+        
+        public insertBrandRequest() {
+        }
+        
+        public insertBrandRequest(AlmacenDisecForms.AlmacenDisecWS.brand brand) {
+            this.brand = brand;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrandResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertBrandResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertBrandResponse() {
+        }
+        
+        public insertBrandResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCategory", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllCategoryRequest {
+        
+        public queryAllCategoryRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCategoryResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllCategoryResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.category[] @return;
+        
+        public queryAllCategoryResponse() {
+        }
+        
+        public queryAllCategoryResponse(AlmacenDisecForms.AlmacenDisecWS.category[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteBrand", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class deleteBrandRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public deleteBrandRequest() {
+        }
+        
+        public deleteBrandRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteBrandResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class deleteBrandResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public deleteBrandResponse() {
+        }
+        
+        public deleteBrandResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2085,24 +2175,24 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllTransferDone(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest request) {
-            return base.Channel.queryAllTransferDone(request);
+        AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllStorehouse(AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest request) {
+            return base.Channel.queryAllStorehouse(request);
         }
         
-        public AlmacenDisecForms.AlmacenDisecWS.transfer[] queryAllTransferDone() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest();
-            AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllTransferDone(inValue);
+        public AlmacenDisecForms.AlmacenDisecWS.storehouse[] queryAllStorehouse() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest();
+            AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllStorehouse(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllTransferDoneAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest request) {
-            return base.Channel.queryAllTransferDoneAsync(request);
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllStorehouseAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest request) {
+            return base.Channel.queryAllStorehouseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse> queryAllTransferDoneAsync() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest();
-            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllTransferDoneAsync(inValue);
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse> queryAllStorehouseAsync() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest();
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllStorehouseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2124,27 +2214,6 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllMeasurement_UnitResponse> queryAllMeasurement_UnitAsync() {
             AlmacenDisecForms.AlmacenDisecWS.queryAllMeasurement_UnitRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllMeasurement_UnitRequest();
             return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllMeasurement_UnitAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllStorehouse(AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest request) {
-            return base.Channel.queryAllStorehouse(request);
-        }
-        
-        public AlmacenDisecForms.AlmacenDisecWS.storehouse[] queryAllStorehouse() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest();
-            AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllStorehouse(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllStorehouseAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest request) {
-            return base.Channel.queryAllStorehouseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse> queryAllStorehouseAsync() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseRequest();
-            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllStorehouseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2171,89 +2240,24 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.insertBrand(AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest request) {
-            return base.Channel.insertBrand(request);
+        AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllTransferDone(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest request) {
+            return base.Channel.queryAllTransferDone(request);
         }
         
-        public int insertBrand(AlmacenDisecForms.AlmacenDisecWS.brand brand) {
-            AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest();
-            inValue.brand = brand;
-            AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).insertBrand(inValue);
+        public AlmacenDisecForms.AlmacenDisecWS.transfer[] queryAllTransferDone() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest();
+            AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllTransferDone(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.insertBrandAsync(AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest request) {
-            return base.Channel.insertBrandAsync(request);
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllTransferDoneAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest request) {
+            return base.Channel.queryAllTransferDoneAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse> insertBrandAsync(AlmacenDisecForms.AlmacenDisecWS.brand brand) {
-            AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest();
-            inValue.brand = brand;
-            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).insertBrandAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllSupplier(AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest request) {
-            return base.Channel.queryAllSupplier(request);
-        }
-        
-        public AlmacenDisecForms.AlmacenDisecWS.supplier[] queryAllSupplier() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest();
-            AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllSupplier(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllSupplierAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest request) {
-            return base.Channel.queryAllSupplierAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse> queryAllSupplierAsync() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest();
-            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllSupplierAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllCategory(AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest request) {
-            return base.Channel.queryAllCategory(request);
-        }
-        
-        public AlmacenDisecForms.AlmacenDisecWS.category[] queryAllCategory() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest();
-            AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllCategory(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllCategoryAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest request) {
-            return base.Channel.queryAllCategoryAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse> queryAllCategoryAsync() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest();
-            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllCategoryAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllCustomer(AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest request) {
-            return base.Channel.queryAllCustomer(request);
-        }
-        
-        public AlmacenDisecForms.AlmacenDisecWS.customer[] queryAllCustomer() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest();
-            AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllCustomer(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllCustomerAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest request) {
-            return base.Channel.queryAllCustomerAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse> queryAllCustomerAsync() {
-            AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest();
-            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllCustomerAsync(inValue);
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse> queryAllTransferDoneAsync() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneRequest();
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllTransferDoneAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2275,6 +2279,50 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllBrandResponse> queryAllBrandAsync() {
             AlmacenDisecForms.AlmacenDisecWS.queryAllBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllBrandRequest();
             return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllBrandAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryBrandByName(AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameRequest request) {
+            return base.Channel.queryBrandByName(request);
+        }
+        
+        public AlmacenDisecForms.AlmacenDisecWS.brand queryBrandByName(string arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameRequest();
+            inValue.arg0 = arg0;
+            AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryBrandByName(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryBrandByNameAsync(AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameRequest request) {
+            return base.Channel.queryBrandByNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse> queryBrandByNameAsync(string arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameRequest();
+            inValue.arg0 = arg0;
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryBrandByNameAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllCustomer(AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest request) {
+            return base.Channel.queryAllCustomer(request);
+        }
+        
+        public AlmacenDisecForms.AlmacenDisecWS.customer[] queryAllCustomer() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest();
+            AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllCustomer(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllCustomerAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest request) {
+            return base.Channel.queryAllCustomerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse> queryAllCustomerAsync() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerRequest();
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllCustomerAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2301,6 +2349,27 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllSupplier(AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest request) {
+            return base.Channel.queryAllSupplier(request);
+        }
+        
+        public AlmacenDisecForms.AlmacenDisecWS.supplier[] queryAllSupplier() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest();
+            AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllSupplier(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllSupplierAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest request) {
+            return base.Channel.queryAllSupplierAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse> queryAllSupplierAsync() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierRequest();
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllSupplierAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllEmployee(AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeRequest request) {
             return base.Channel.queryAllEmployee(request);
         }
@@ -2319,6 +2388,73 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeResponse> queryAllEmployeeAsync() {
             AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeRequest();
             return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.insertBrand(AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest request) {
+            return base.Channel.insertBrand(request);
+        }
+        
+        public int insertBrand(AlmacenDisecForms.AlmacenDisecWS.brand brand) {
+            AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest();
+            inValue.brand = brand;
+            AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).insertBrand(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.insertBrandAsync(AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest request) {
+            return base.Channel.insertBrandAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse> insertBrandAsync(AlmacenDisecForms.AlmacenDisecWS.brand brand) {
+            AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.insertBrandRequest();
+            inValue.brand = brand;
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).insertBrandAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllCategory(AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest request) {
+            return base.Channel.queryAllCategory(request);
+        }
+        
+        public AlmacenDisecForms.AlmacenDisecWS.category[] queryAllCategory() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest();
+            AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllCategory(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.queryAllCategoryAsync(AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest request) {
+            return base.Channel.queryAllCategoryAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse> queryAllCategoryAsync() {
+            AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryRequest();
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).queryAllCategoryAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.deleteBrandResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.deleteBrand(AlmacenDisecForms.AlmacenDisecWS.deleteBrandRequest request) {
+            return base.Channel.deleteBrand(request);
+        }
+        
+        public int deleteBrand(int arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.deleteBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.deleteBrandRequest();
+            inValue.arg0 = arg0;
+            AlmacenDisecForms.AlmacenDisecWS.deleteBrandResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).deleteBrand(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.deleteBrandResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.deleteBrandAsync(AlmacenDisecForms.AlmacenDisecWS.deleteBrandRequest request) {
+            return base.Channel.deleteBrandAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.deleteBrandResponse> deleteBrandAsync(int arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.deleteBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.deleteBrandRequest();
+            inValue.arg0 = arg0;
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).deleteBrandAsync(inValue);
         }
     }
 }

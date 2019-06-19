@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b645ea71-15c4-4422-ae67-46e7df1cedee" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4bd98c34-2992-463f-9e37-f4c6ab911f91" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.207.227:8080/AlmacenDisecWeb/DBControllerWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.207.226:8080/AlmacenDisecWeb/DBControllerWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DBControllerWS.xsd" MetadataType="Schema" ID="3fcb5500-5b8f-48f1-bf6f-a408d1586e5c" SourceId="1" SourceUrl="http://192.168.207.227:8080/AlmacenDisecWeb/DBControllerWS?xsd=1" />
-    <MetadataFile FileName="DBControllerWS.wsdl" MetadataType="Wsdl" ID="7de3a03d-d1f7-439c-b50b-cb20b917dd40" SourceId="1" SourceUrl="http://192.168.207.227:8080/AlmacenDisecWeb/DBControllerWS?WSDL" />
+    <MetadataFile FileName="DBControllerWS.xsd" MetadataType="Schema" ID="0f446f89-d6b2-42e3-927f-c952088f4fac" SourceId="1" SourceUrl="http://192.168.207.226:8080/AlmacenDisecWeb/DBControllerWS?xsd=1" />
+    <MetadataFile FileName="DBControllerWS.wsdl" MetadataType="Wsdl" ID="03959fb8-b975-41b9-9848-0f33444c2592" SourceId="1" SourceUrl="http://192.168.207.226:8080/AlmacenDisecWeb/DBControllerWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

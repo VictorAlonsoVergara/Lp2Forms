@@ -48,28 +48,13 @@
             this.btnFamiliy = new System.Windows.Forms.Button();
             this.btnStore = new System.Windows.Forms.Button();
             this.plMenu = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.plWork = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.btnSearchW = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.plGUser = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.btnSearchUser = new System.Windows.Forms.Button();
-            this.plSupplier = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.btnSearchSupplier = new System.Windows.Forms.Button();
             this.plStore = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnSearchStore = new System.Windows.Forms.Button();
             this.btnTransfer = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.plTool = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.btnBH = new System.Windows.Forms.Button();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.plSubmenuM = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -101,7 +86,6 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.plPrincipal = new System.Windows.Forms.Panel();
             this.plContent = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
             this.plBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
@@ -110,11 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdjust)).BeginInit();
             this.plMenu.SuspendLayout();
-            this.plWork.SuspendLayout();
-            this.plGUser.SuspendLayout();
-            this.plSupplier.SuspendLayout();
             this.plStore.SuspendLayout();
-            this.plTool.SuspendLayout();
             this.plSubmenuM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDisconnect)).BeginInit();
             this.plUser.SuspendLayout();
@@ -411,12 +391,8 @@
             // 
             this.plMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(72)))), ((int)(((byte)(183)))));
             this.plMenu.Controls.Add(this.plStore);
-            this.plMenu.Controls.Add(this.plTool);
             this.plMenu.Controls.Add(this.panel19);
-            this.plMenu.Controls.Add(this.plWork);
             this.plMenu.Controls.Add(this.btnBack);
-            this.plMenu.Controls.Add(this.plGUser);
-            this.plMenu.Controls.Add(this.plSupplier);
             this.plMenu.Controls.Add(this.plSubmenuM);
             this.plMenu.Controls.Add(this.panel5);
             this.plMenu.Controls.Add(this.panel10);
@@ -448,178 +424,6 @@
             this.plMenu.Size = new System.Drawing.Size(255, 710);
             this.plMenu.TabIndex = 1;
             // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel19.Location = new System.Drawing.Point(0, 50);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(5, 40);
-            this.panel19.TabIndex = 19;
-            // 
-            // plWork
-            // 
-            this.plWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(46)))), ((int)(((byte)(117)))));
-            this.plWork.Controls.Add(this.panel22);
-            this.plWork.Controls.Add(this.panel24);
-            this.plWork.Controls.Add(this.btnSearchW);
-            this.plWork.Location = new System.Drawing.Point(39, 182);
-            this.plWork.Name = "plWork";
-            this.plWork.Size = new System.Drawing.Size(218, 46);
-            this.plWork.TabIndex = 1;
-            this.plWork.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlWork_MouseDown);
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel22.Location = new System.Drawing.Point(0, 0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(5, 40);
-            this.panel22.TabIndex = 6;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel24.Location = new System.Drawing.Point(0, 92);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(5, 40);
-            this.panel24.TabIndex = 7;
-            // 
-            // btnSearchW
-            // 
-            this.btnSearchW.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchW.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnSearchW.FlatAppearance.BorderSize = 0;
-            this.btnSearchW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnSearchW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchW.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchW.ForeColor = System.Drawing.Color.White;
-            this.btnSearchW.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchW.Image")));
-            this.btnSearchW.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchW.Location = new System.Drawing.Point(5, 0);
-            this.btnSearchW.Name = "btnSearchW";
-            this.btnSearchW.Size = new System.Drawing.Size(156, 40);
-            this.btnSearchW.TabIndex = 3;
-            this.btnSearchW.Text = "  Buscar";
-            this.btnSearchW.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearchW.UseVisualStyleBackColor = true;
-            this.btnSearchW.Click += new System.EventHandler(this.btnSearchW_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(3, 50);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(255, 40);
-            this.btnBack.TabIndex = 18;
-            this.btnBack.Text = " Inicio";
-            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // plGUser
-            // 
-            this.plGUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(46)))), ((int)(((byte)(117)))));
-            this.plGUser.Controls.Add(this.panel25);
-            this.plGUser.Controls.Add(this.panel30);
-            this.plGUser.Controls.Add(this.btnSearchUser);
-            this.plGUser.Location = new System.Drawing.Point(36, 595);
-            this.plGUser.Name = "plGUser";
-            this.plGUser.Size = new System.Drawing.Size(218, 41);
-            this.plGUser.TabIndex = 3;
-            this.plGUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlGUser_MouseDown);
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel25.Location = new System.Drawing.Point(0, 0);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(5, 40);
-            this.panel25.TabIndex = 6;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel30.Location = new System.Drawing.Point(0, 92);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(5, 40);
-            this.panel30.TabIndex = 7;
-            // 
-            // btnSearchUser
-            // 
-            this.btnSearchUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnSearchUser.FlatAppearance.BorderSize = 0;
-            this.btnSearchUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnSearchUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchUser.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchUser.ForeColor = System.Drawing.Color.White;
-            this.btnSearchUser.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchUser.Image")));
-            this.btnSearchUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchUser.Location = new System.Drawing.Point(5, 0);
-            this.btnSearchUser.Name = "btnSearchUser";
-            this.btnSearchUser.Size = new System.Drawing.Size(156, 40);
-            this.btnSearchUser.TabIndex = 3;
-            this.btnSearchUser.Text = "  Buscar";
-            this.btnSearchUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearchUser.UseVisualStyleBackColor = true;
-            this.btnSearchUser.Click += new System.EventHandler(this.BtnSearchUser_Click);
-            // 
-            // plSupplier
-            // 
-            this.plSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(46)))), ((int)(((byte)(117)))));
-            this.plSupplier.Controls.Add(this.panel26);
-            this.plSupplier.Controls.Add(this.panel28);
-            this.plSupplier.Controls.Add(this.btnSearchSupplier);
-            this.plSupplier.Location = new System.Drawing.Point(37, 504);
-            this.plSupplier.Name = "plSupplier";
-            this.plSupplier.Size = new System.Drawing.Size(218, 46);
-            this.plSupplier.TabIndex = 2;
-            this.plSupplier.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlSupplier_MouseDown_1);
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel26.Location = new System.Drawing.Point(0, 0);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(5, 40);
-            this.panel26.TabIndex = 6;
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel28.Location = new System.Drawing.Point(0, 92);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(5, 40);
-            this.panel28.TabIndex = 7;
-            // 
-            // btnSearchSupplier
-            // 
-            this.btnSearchSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchSupplier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnSearchSupplier.FlatAppearance.BorderSize = 0;
-            this.btnSearchSupplier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnSearchSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchSupplier.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchSupplier.ForeColor = System.Drawing.Color.White;
-            this.btnSearchSupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchSupplier.Image")));
-            this.btnSearchSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchSupplier.Location = new System.Drawing.Point(5, 0);
-            this.btnSearchSupplier.Name = "btnSearchSupplier";
-            this.btnSearchSupplier.Size = new System.Drawing.Size(156, 40);
-            this.btnSearchSupplier.TabIndex = 3;
-            this.btnSearchSupplier.Text = "  Buscar";
-            this.btnSearchSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearchSupplier.UseVisualStyleBackColor = true;
-            this.btnSearchSupplier.Click += new System.EventHandler(this.BtnSearchSupplier_Click);
-            // 
             // plStore
             // 
             this.plStore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(46)))), ((int)(((byte)(117)))));
@@ -627,7 +431,7 @@
             this.plStore.Controls.Add(this.btnSearchStore);
             this.plStore.Controls.Add(this.btnTransfer);
             this.plStore.Controls.Add(this.panel20);
-            this.plStore.Location = new System.Drawing.Point(39, 228);
+            this.plStore.Location = new System.Drawing.Point(37, 228);
             this.plStore.Name = "plStore";
             this.plStore.Size = new System.Drawing.Size(218, 86);
             this.plStore.TabIndex = 1;
@@ -689,45 +493,33 @@
             this.panel20.Size = new System.Drawing.Size(5, 40);
             this.panel20.TabIndex = 7;
             // 
-            // plTool
+            // panel19
             // 
-            this.plTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(46)))), ((int)(((byte)(117)))));
-            this.plTool.Controls.Add(this.panel16);
-            this.plTool.Controls.Add(this.panel18);
-            this.plTool.Controls.Add(this.btnBH);
-            this.plTool.Location = new System.Drawing.Point(40, 272);
-            this.plTool.Name = "plTool";
-            this.plTool.Size = new System.Drawing.Size(218, 42);
-            this.plTool.TabIndex = 0;
-            this.plTool.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlTool_MouseDown);
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
+            this.panel19.Location = new System.Drawing.Point(0, 50);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(5, 40);
+            this.panel19.TabIndex = 19;
             // 
-            // panel16
+            // btnBack
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(5, 40);
-            this.panel16.TabIndex = 6;
-            // 
-            // btnBH
-            // 
-            this.btnBH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnBH.FlatAppearance.BorderSize = 0;
-            this.btnBH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBH.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBH.ForeColor = System.Drawing.Color.White;
-            this.btnBH.Image = ((System.Drawing.Image)(resources.GetObject("btnBH.Image")));
-            this.btnBH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBH.Location = new System.Drawing.Point(5, 0);
-            this.btnBH.Name = "btnBH";
-            this.btnBH.Size = new System.Drawing.Size(156, 40);
-            this.btnBH.TabIndex = 3;
-            this.btnBH.Text = "  Buscar";
-            this.btnBH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBH.UseVisualStyleBackColor = true;
-            this.btnBH.Click += new System.EventHandler(this.BtnBH_Click);
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBack.Location = new System.Drawing.Point(3, 50);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(255, 40);
+            this.btnBack.TabIndex = 18;
+            this.btnBack.Text = " Inicio";
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // plSubmenuM
             // 
@@ -1058,14 +850,6 @@
             this.plContent.Size = new System.Drawing.Size(739, 610);
             this.plContent.TabIndex = 4;
             // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.panel18.Location = new System.Drawing.Point(0, 92);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(5, 40);
-            this.panel18.TabIndex = 7;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1087,11 +871,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdjust)).EndInit();
             this.plMenu.ResumeLayout(false);
-            this.plWork.ResumeLayout(false);
-            this.plGUser.ResumeLayout(false);
-            this.plSupplier.ResumeLayout(false);
             this.plStore.ResumeLayout(false);
-            this.plTool.ResumeLayout(false);
             this.plSubmenuM.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnDisconnect)).EndInit();
             this.plUser.ResumeLayout(false);
@@ -1151,30 +931,14 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button btnUnit;
         private System.Windows.Forms.Button btnSearchM;
-        private System.Windows.Forms.Panel plTool;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Button btnBH;
         private System.Windows.Forms.Panel plStore;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button btnTransfer;
-        private System.Windows.Forms.Panel plWork;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Button btnSearchW;
-        private System.Windows.Forms.Panel plSupplier;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Button btnSearchSupplier;
-        private System.Windows.Forms.Panel plGUser;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.Button btnSearchUser;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnSearchStore;
         public System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel18;
     }
 }

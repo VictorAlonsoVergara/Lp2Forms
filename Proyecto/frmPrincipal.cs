@@ -16,11 +16,10 @@ namespace AlmacenDisecForms
         {
             InitializeComponent();
             plSubmenuM.Visible = false;
-            plTool.Visible = false;
+          
             plStore.Visible = false;
-            plWork.Visible = false;
-            plSupplier.Visible = false;
-            plGUser.Visible = false;
+        
+         
 
         }
 
@@ -226,12 +225,9 @@ namespace AlmacenDisecForms
 
         private void BtnWorkOrder_Click(object sender, EventArgs e)
         {
-            panel3.Visible = false;
-            panel4.Visible = false;
-            plWork.Visible = true;
-            btnStore.Visible = false;
-            btnTool.Visible = false;
-           
+            frmSearchWorkOrder fm = new frmSearchWorkOrder();
+            OpenFormPanel(fm);
+
         }
 
         private void BtnBrand_Click(object sender, EventArgs e)
@@ -253,28 +249,28 @@ namespace AlmacenDisecForms
 
         private void BtnGUser_Click(object sender, EventArgs e)
         {
-            plGUser.Visible = true;
-            btnDisconnect.Visible = false;
+        
+            frmSearchUser fm = new frmSearchUser();
+            // fm.FormClosed += new FormClosedEventHandler(ShowFormInitialCloseForms);
+            OpenFormPanel(fm);
         }
 
         private void BtnTool_Click(object sender, EventArgs e)
         {
-            panel6.Visible = false;
-            panel8.Visible = false;
-            btnMaterial.Visible = false;
-            btnBrand.Visible = false;
-            plTool.Visible = true;
-            
+            frmSearchTool fm = new frmSearchTool();
+            //   fm.FormClosed += new FormClosedEventHandler(ShowFormInitialCloseForms);
+            OpenFormPanel(fm);
+
         }
 
         private void BtnMaterial_Click(object sender, EventArgs e)
         {
-            panel5.Visible = false;
+       
             panel6.Visible = false;
             panel7.Visible = false;
             btnBrand.Visible = false;
             btnCategory.Visible = false;
-            btnFamiliy.Visible = false;
+          
             plSubmenuM.Visible = true;
 
  
@@ -300,8 +296,7 @@ namespace AlmacenDisecForms
         {
             panel3.Visible = false;
             panel8.Visible = false;
-            panel6.Visible = false;
-            btnBrand.Visible = false;
+           
             plStore.Visible = true;
             btnTool.Visible = false;
 
@@ -315,11 +310,9 @@ namespace AlmacenDisecForms
 
         private void btnSupplier_Click(object sender, EventArgs e)
         {
-            panel10.Visible=false;
-            panel11.Visible=false;
-            plSupplier.Visible = true;
-            btnReport.Visible = false;
-            btnGUser.Visible = false;
+            frmSearchSupplier fm = new frmSearchSupplier();
+            // fm.FormClosed += new FormClosedEventHandler(ShowFormInitialCloseForms);
+            OpenFormPanel(fm);
         }
 
         private void BtnSearchM_Click(object sender, EventArgs e)
@@ -369,12 +362,10 @@ namespace AlmacenDisecForms
         {
             panel6.Visible = true;
             panel8.Visible = true;
-            plTool.Visible = false;
+        
             btnMaterial.Visible = true;
             btnBrand.Visible = true;
-            frmSearchTool fm = new frmSearchTool();
-            //   fm.FormClosed += new FormClosedEventHandler(ShowFormInitialCloseForms);
-            OpenFormPanel(fm);
+            
         }
 
      
@@ -387,7 +378,7 @@ namespace AlmacenDisecForms
         {
             panel6.Visible = true;
             panel8.Visible = true;
-            plTool.Visible = false;
+         
             btnMaterial.Visible = true;
             btnBrand.Visible = true;
         }
@@ -438,7 +429,7 @@ namespace AlmacenDisecForms
             panel6.Visible = true;
             btnBrand.Visible = true;
             plStore.Visible = false;
-            plTool.Visible = false;
+          
             btnTool.Visible = true;
             btnMaterial.Visible = true;
             frmSearchTransfer fm = new frmSearchTransfer();
@@ -453,7 +444,7 @@ namespace AlmacenDisecForms
         {
             panel3.Visible = true;
             panel4.Visible = true;
-            plWork.Visible = false;
+          
             btnStore.Visible = true;
             btnTool.Visible = true;
             frmWorkOrder fm = new frmWorkOrder();
@@ -464,7 +455,7 @@ namespace AlmacenDisecForms
         {
             panel10.Visible = true;
             panel11.Visible = true;
-            plSupplier.Visible = false;
+          
             btnReport.Visible = true;
             btnGUser.Visible = true;
             frmSearchSupplier fm = new frmSearchSupplier();
@@ -476,8 +467,7 @@ namespace AlmacenDisecForms
         {
             panel10.Visible = true;
             panel11.Visible = true;
-            plSupplier.Visible = false;
-            btnReport.Visible = true;
+          btnReport.Visible = true;
             btnGUser.Visible = true;
             frmSupplier fm = new frmSupplier();
             // fm.FormClosed += new FormClosedEventHandler(ShowFormInitialCloseForms);
@@ -489,7 +479,7 @@ namespace AlmacenDisecForms
         {
             panel3.Visible = true;
             panel4.Visible = true;
-            plWork.Visible = false;
+        
             btnStore.Visible = true;
             btnTool.Visible = true;
         }
@@ -498,23 +488,21 @@ namespace AlmacenDisecForms
         {
             panel10.Visible = true;
             panel11.Visible = true;
-            plSupplier.Visible = false;
+          
             btnReport.Visible = true;
             btnGUser.Visible = true;
         }
 
         private void BtnSearchUser_Click(object sender, EventArgs e)
         {
-            plGUser.Visible = false;
+         
             btnDisconnect.Visible = true;
-            frmSearchUser fm = new frmSearchUser();
-            // fm.FormClosed += new FormClosedEventHandler(ShowFormInitialCloseForms);
-            OpenFormPanel(fm);
+          
         }
 
         private void BtnGUsers_Click(object sender, EventArgs e)
         {
-            plGUser.Visible = false;
+          
             btnDisconnect.Visible = true;
             frmUser fm = new frmUser();
             // fm.FormClosed += new FormClosedEventHandler(ShowFormInitialCloseForms);
@@ -523,7 +511,7 @@ namespace AlmacenDisecForms
 
         private void PlGUser_MouseDown(object sender, MouseEventArgs e)
         {
-            plGUser.Visible = false;
+           
             btnDisconnect.Visible = true;
         }
 
@@ -531,7 +519,7 @@ namespace AlmacenDisecForms
         {
             panel10.Visible = true;
             panel11.Visible = true;
-            plSupplier.Visible = false;
+        
             btnReport.Visible = true;
             btnGUser.Visible = true;
         }
@@ -551,7 +539,7 @@ namespace AlmacenDisecForms
             panel6.Visible = true;
             btnBrand.Visible = true;
             plStore.Visible = false;
-            plTool.Visible = false;
+          
             btnTool.Visible = true;
             btnMaterial.Visible = true;
             frmSearchStoreHouse fm = new frmSearchStoreHouse();
@@ -559,16 +547,7 @@ namespace AlmacenDisecForms
             OpenFormPanel(fm);
         }
 
-        private void btnSearchW_Click(object sender, EventArgs e)
-        {
-            panel3.Visible = true;
-            panel4.Visible = true;
-            plWork.Visible = false;
-            btnStore.Visible = true;
-            btnTool.Visible = true;
-            frmSearchWorkOrder fm = new frmSearchWorkOrder();
-            OpenFormPanel(fm);
-        }
+    
 
         
         private void BtnDisconnect_Click(object sender, EventArgs e)
