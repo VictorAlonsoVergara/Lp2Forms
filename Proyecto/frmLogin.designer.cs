@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+         //   this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+          //  this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+           // this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.btnEntrarLogin = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -68,6 +68,8 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox3_MouseDown);
+           
+            /*
             // 
             // shapeContainer1
             // 
@@ -99,7 +101,7 @@
             this.lineShape1.X1 = 316;
             this.lineShape1.X2 = 717;
             this.lineShape1.Y1 = 115;
-            this.lineShape1.Y2 = 115;
+            this.lineShape1.Y2 = 115;*/
             // 
             // btnEntrarLogin
             // 
@@ -207,7 +209,7 @@
             this.Controls.Add(this.btnEntrarLogin);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.shapeContainer1);
+            //this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.Opacity = 0.9D;
@@ -225,9 +227,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+    //    private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+     //   private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
+       // private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Button btnEntrarLogin;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
