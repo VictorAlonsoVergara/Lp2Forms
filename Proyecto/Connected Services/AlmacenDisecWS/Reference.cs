@@ -16,6 +16,33 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     public interface DBControllerWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertCategoryRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertCategoryResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.insertCategoryResponse insertCategory(AlmacenDisecForms.AlmacenDisecWS.insertCategoryRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertCategoryRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertCategoryResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertCategoryResponse> insertCategoryAsync(AlmacenDisecForms.AlmacenDisecWS.insertCategoryRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse updateBrand(AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse> updateBrandAsync(AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse querySupplierByName(AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameResponse")]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse> querySupplierByNameAsync(AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferPendingRequest" +
             "", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferPendingRespons" +
             "e")]
@@ -156,215 +183,47 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class transfer : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class category : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.DateTime departure_dateField;
+        private int category_idField;
         
-        private bool departure_dateFieldSpecified;
+        private string category_nameField;
         
-        private internEmployee employee_destinyField;
-        
-        private internEmployee employee_originField;
-        
-        private System.DateTime entry_dateField;
-        
-        private bool entry_dateFieldSpecified;
-        
-        private int id_transferField;
-        
-        private string license_plateField;
-        
-        private int status_tranferField;
-        
-        private storehouse storehouse_destinyField;
-        
-        private storehouse storehouse_originField;
-        
-        private technician technicianField;
-        
-        private transferLine[] tranfer_linesField;
-        
-        private double transfer_feeField;
-        
-        private bool transfer_feeFieldSpecified;
+        private int category_statusField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime departure_date {
+        public int category_id {
             get {
-                return this.departure_dateField;
+                return this.category_idField;
             }
             set {
-                this.departure_dateField = value;
-                this.RaisePropertyChanged("departure_date");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool departure_dateSpecified {
-            get {
-                return this.departure_dateFieldSpecified;
-            }
-            set {
-                this.departure_dateFieldSpecified = value;
-                this.RaisePropertyChanged("departure_dateSpecified");
+                this.category_idField = value;
+                this.RaisePropertyChanged("category_id");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public internEmployee employee_destiny {
+        public string category_name {
             get {
-                return this.employee_destinyField;
+                return this.category_nameField;
             }
             set {
-                this.employee_destinyField = value;
-                this.RaisePropertyChanged("employee_destiny");
+                this.category_nameField = value;
+                this.RaisePropertyChanged("category_name");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public internEmployee employee_origin {
+        public int category_status {
             get {
-                return this.employee_originField;
+                return this.category_statusField;
             }
             set {
-                this.employee_originField = value;
-                this.RaisePropertyChanged("employee_origin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime entry_date {
-            get {
-                return this.entry_dateField;
-            }
-            set {
-                this.entry_dateField = value;
-                this.RaisePropertyChanged("entry_date");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool entry_dateSpecified {
-            get {
-                return this.entry_dateFieldSpecified;
-            }
-            set {
-                this.entry_dateFieldSpecified = value;
-                this.RaisePropertyChanged("entry_dateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_transfer {
-            get {
-                return this.id_transferField;
-            }
-            set {
-                this.id_transferField = value;
-                this.RaisePropertyChanged("id_transfer");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string license_plate {
-            get {
-                return this.license_plateField;
-            }
-            set {
-                this.license_plateField = value;
-                this.RaisePropertyChanged("license_plate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int status_tranfer {
-            get {
-                return this.status_tranferField;
-            }
-            set {
-                this.status_tranferField = value;
-                this.RaisePropertyChanged("status_tranfer");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public storehouse storehouse_destiny {
-            get {
-                return this.storehouse_destinyField;
-            }
-            set {
-                this.storehouse_destinyField = value;
-                this.RaisePropertyChanged("storehouse_destiny");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public storehouse storehouse_origin {
-            get {
-                return this.storehouse_originField;
-            }
-            set {
-                this.storehouse_originField = value;
-                this.RaisePropertyChanged("storehouse_origin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public technician technician {
-            get {
-                return this.technicianField;
-            }
-            set {
-                this.technicianField = value;
-                this.RaisePropertyChanged("technician");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("tranfer_lines", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
-        public transferLine[] tranfer_lines {
-            get {
-                return this.tranfer_linesField;
-            }
-            set {
-                this.tranfer_linesField = value;
-                this.RaisePropertyChanged("tranfer_lines");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public double transfer_fee {
-            get {
-                return this.transfer_feeField;
-            }
-            set {
-                this.transfer_feeField = value;
-                this.RaisePropertyChanged("transfer_fee");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool transfer_feeSpecified {
-            get {
-                return this.transfer_feeFieldSpecified;
-            }
-            set {
-                this.transfer_feeFieldSpecified = value;
-                this.RaisePropertyChanged("transfer_feeSpecified");
+                this.category_statusField = value;
+                this.RaisePropertyChanged("category_status");
             }
         }
         
@@ -376,233 +235,6 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class internEmployee : employee {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(technician))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(internEmployee))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class employee : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string dniField;
-        
-        private string email_employeeField;
-        
-        private int employee_idField;
-        
-        private string employee_nameField;
-        
-        private int employee_statusField;
-        
-        private string eployee_codeField;
-        
-        private string genderField;
-        
-        private string last_nameField;
-        
-        private string passwordField;
-        
-        private privilege privilegeField;
-        
-        private bool privilegeFieldSpecified;
-        
-        private double salaryField;
-        
-        private string second_last_nameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string dni {
-            get {
-                return this.dniField;
-            }
-            set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string email_employee {
-            get {
-                return this.email_employeeField;
-            }
-            set {
-                this.email_employeeField = value;
-                this.RaisePropertyChanged("email_employee");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int employee_id {
-            get {
-                return this.employee_idField;
-            }
-            set {
-                this.employee_idField = value;
-                this.RaisePropertyChanged("employee_id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string employee_name {
-            get {
-                return this.employee_nameField;
-            }
-            set {
-                this.employee_nameField = value;
-                this.RaisePropertyChanged("employee_name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int employee_status {
-            get {
-                return this.employee_statusField;
-            }
-            set {
-                this.employee_statusField = value;
-                this.RaisePropertyChanged("employee_status");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string eployee_code {
-            get {
-                return this.eployee_codeField;
-            }
-            set {
-                this.eployee_codeField = value;
-                this.RaisePropertyChanged("eployee_code");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string gender {
-            get {
-                return this.genderField;
-            }
-            set {
-                this.genderField = value;
-                this.RaisePropertyChanged("gender");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string last_name {
-            get {
-                return this.last_nameField;
-            }
-            set {
-                this.last_nameField = value;
-                this.RaisePropertyChanged("last_name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("password");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public privilege privilege {
-            get {
-                return this.privilegeField;
-            }
-            set {
-                this.privilegeField = value;
-                this.RaisePropertyChanged("privilege");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool privilegeSpecified {
-            get {
-                return this.privilegeFieldSpecified;
-            }
-            set {
-                this.privilegeFieldSpecified = value;
-                this.RaisePropertyChanged("privilegeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public double salary {
-            get {
-                return this.salaryField;
-            }
-            set {
-                this.salaryField = value;
-                this.RaisePropertyChanged("salary");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string second_last_name {
-            get {
-                return this.second_last_nameField;
-            }
-            set {
-                this.second_last_nameField = value;
-                this.RaisePropertyChanged("second_last_name");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public enum privilege {
-        
-        /// <remarks/>
-        MANAGER,
-        
-        /// <remarks/>
-        STOREKEEPER,
-        
-        /// <remarks/>
-        TECHNICIAN,
     }
     
     /// <remarks/>
@@ -671,61 +303,75 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class measureUnit : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class transferLine : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string abbrevation_measure_unitField;
+        private System.DateTime departure_dateField;
         
-        private string descriptionField;
+        private bool departure_dateFieldSpecified;
         
-        private int id_measure_unitField;
+        private int id_transfer_lineField;
         
-        private int status_measure_unitField;
+        private material materialField;
+        
+        private int quantityField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string abbrevation_measure_unit {
+        public System.DateTime departure_date {
             get {
-                return this.abbrevation_measure_unitField;
+                return this.departure_dateField;
             }
             set {
-                this.abbrevation_measure_unitField = value;
-                this.RaisePropertyChanged("abbrevation_measure_unit");
+                this.departure_dateField = value;
+                this.RaisePropertyChanged("departure_date");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool departure_dateSpecified {
+            get {
+                return this.departure_dateFieldSpecified;
+            }
+            set {
+                this.departure_dateFieldSpecified = value;
+                this.RaisePropertyChanged("departure_dateSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string description {
+        public int id_transfer_line {
             get {
-                return this.descriptionField;
+                return this.id_transfer_lineField;
             }
             set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("description");
+                this.id_transfer_lineField = value;
+                this.RaisePropertyChanged("id_transfer_line");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_measure_unit {
+        public material material {
             get {
-                return this.id_measure_unitField;
+                return this.materialField;
             }
             set {
-                this.id_measure_unitField = value;
-                this.RaisePropertyChanged("id_measure_unit");
+                this.materialField = value;
+                this.RaisePropertyChanged("material");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int status_measure_unit {
+        public int quantity {
             get {
-                return this.status_measure_unitField;
+                return this.quantityField;
             }
             set {
-                this.status_measure_unitField = value;
-                this.RaisePropertyChanged("status_measure_unit");
+                this.quantityField = value;
+                this.RaisePropertyChanged("quantity");
             }
         }
         
@@ -735,6 +381,85 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class material : item {
+        
+        private int id_materialField;
+        
+        private materialDetail[] material_detailsField;
+        
+        private int material_stateField;
+        
+        private int min_quantityField;
+        
+        private int state_materialField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_material {
+            get {
+                return this.id_materialField;
+            }
+            set {
+                this.id_materialField = value;
+                this.RaisePropertyChanged("id_material");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("material_details", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public materialDetail[] material_details {
+            get {
+                return this.material_detailsField;
+            }
+            set {
+                this.material_detailsField = value;
+                this.RaisePropertyChanged("material_details");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int material_state {
+            get {
+                return this.material_stateField;
+            }
+            set {
+                this.material_stateField = value;
+                this.RaisePropertyChanged("material_state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int min_quantity {
+            get {
+                return this.min_quantityField;
+            }
+            set {
+                this.min_quantityField = value;
+                this.RaisePropertyChanged("min_quantity");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int state_material {
+            get {
+                return this.state_materialField;
+            }
+            set {
+                this.state_materialField = value;
+                this.RaisePropertyChanged("state_material");
             }
         }
     }
@@ -833,205 +558,61 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class supplier : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class measureUnit : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string adressField;
+        private string abbrevation_measure_unitField;
         
-        private city cityField;
+        private string descriptionField;
         
-        private string emailField;
+        private int id_measure_unitField;
         
-        private int id_supplierField;
-        
-        private item[] items_supplierField;
-        
-        private int phone_numberField;
-        
-        private string rucField;
-        
-        private string supplier_nameField;
-        
-        private int supplier_statusField;
+        private int status_measure_unitField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string adress {
+        public string abbrevation_measure_unit {
             get {
-                return this.adressField;
+                return this.abbrevation_measure_unitField;
             }
             set {
-                this.adressField = value;
-                this.RaisePropertyChanged("adress");
+                this.abbrevation_measure_unitField = value;
+                this.RaisePropertyChanged("abbrevation_measure_unit");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public city city {
+        public string description {
             get {
-                return this.cityField;
+                return this.descriptionField;
             }
             set {
-                this.cityField = value;
-                this.RaisePropertyChanged("city");
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string email {
+        public int id_measure_unit {
             get {
-                return this.emailField;
+                return this.id_measure_unitField;
             }
             set {
-                this.emailField = value;
-                this.RaisePropertyChanged("email");
+                this.id_measure_unitField = value;
+                this.RaisePropertyChanged("id_measure_unit");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_supplier {
+        public int status_measure_unit {
             get {
-                return this.id_supplierField;
+                return this.status_measure_unitField;
             }
             set {
-                this.id_supplierField = value;
-                this.RaisePropertyChanged("id_supplier");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("items_supplier", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public item[] items_supplier {
-            get {
-                return this.items_supplierField;
-            }
-            set {
-                this.items_supplierField = value;
-                this.RaisePropertyChanged("items_supplier");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int phone_number {
-            get {
-                return this.phone_numberField;
-            }
-            set {
-                this.phone_numberField = value;
-                this.RaisePropertyChanged("phone_number");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string ruc {
-            get {
-                return this.rucField;
-            }
-            set {
-                this.rucField = value;
-                this.RaisePropertyChanged("ruc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string supplier_name {
-            get {
-                return this.supplier_nameField;
-            }
-            set {
-                this.supplier_nameField = value;
-                this.RaisePropertyChanged("supplier_name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int supplier_status {
-            get {
-                return this.supplier_statusField;
-            }
-            set {
-                this.supplier_statusField = value;
-                this.RaisePropertyChanged("supplier_status");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class city : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string countryField;
-        
-        private int id_cityField;
-        
-        private string name_cityField;
-        
-        private int status_cityField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string country {
-            get {
-                return this.countryField;
-            }
-            set {
-                this.countryField = value;
-                this.RaisePropertyChanged("country");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_city {
-            get {
-                return this.id_cityField;
-            }
-            set {
-                this.id_cityField = value;
-                this.RaisePropertyChanged("id_city");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string name_city {
-            get {
-                return this.name_cityField;
-            }
-            set {
-                this.name_cityField = value;
-                this.RaisePropertyChanged("name_city");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int status_city {
-            get {
-                return this.status_cityField;
-            }
-            set {
-                this.status_cityField = value;
-                this.RaisePropertyChanged("status_city");
+                this.status_measure_unitField = value;
+                this.RaisePropertyChanged("status_measure_unit");
             }
         }
         
@@ -1302,66 +883,6 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class category : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int category_idField;
-        
-        private string category_nameField;
-        
-        private int category_statusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int category_id {
-            get {
-                return this.category_idField;
-            }
-            set {
-                this.category_idField = value;
-                this.RaisePropertyChanged("category_id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string category_name {
-            get {
-                return this.category_nameField;
-            }
-            set {
-                this.category_nameField = value;
-                this.RaisePropertyChanged("category_name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int category_status {
-            get {
-                return this.category_statusField;
-            }
-            set {
-                this.category_statusField = value;
-                this.RaisePropertyChanged("category_status");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
     public partial class stock : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int actual_quantityField;
@@ -1524,75 +1045,70 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class material : item {
+    public partial class city : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int id_materialField;
+        private string countryField;
         
-        private materialDetail[] material_detailsField;
+        private int id_cityField;
         
-        private int material_stateField;
+        private string name_cityField;
         
-        private int min_quantityField;
-        
-        private int state_materialField;
+        private int status_cityField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_material {
+        public string country {
             get {
-                return this.id_materialField;
+                return this.countryField;
             }
             set {
-                this.id_materialField = value;
-                this.RaisePropertyChanged("id_material");
+                this.countryField = value;
+                this.RaisePropertyChanged("country");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("material_details", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public materialDetail[] material_details {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_city {
             get {
-                return this.material_detailsField;
+                return this.id_cityField;
             }
             set {
-                this.material_detailsField = value;
-                this.RaisePropertyChanged("material_details");
+                this.id_cityField = value;
+                this.RaisePropertyChanged("id_city");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int material_state {
+        public string name_city {
             get {
-                return this.material_stateField;
+                return this.name_cityField;
             }
             set {
-                this.material_stateField = value;
-                this.RaisePropertyChanged("material_state");
+                this.name_cityField = value;
+                this.RaisePropertyChanged("name_city");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int min_quantity {
+        public int status_city {
             get {
-                return this.min_quantityField;
+                return this.status_cityField;
             }
             set {
-                this.min_quantityField = value;
-                this.RaisePropertyChanged("min_quantity");
+                this.status_cityField = value;
+                this.RaisePropertyChanged("status_city");
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int state_material {
-            get {
-                return this.state_materialField;
-            }
-            set {
-                this.state_materialField = value;
-                this.RaisePropertyChanged("state_material");
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -1603,17 +1119,417 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class transferLine : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class supplier : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string adressField;
+        
+        private city cityField;
+        
+        private string emailField;
+        
+        private int id_supplierField;
+        
+        private item[] items_supplierField;
+        
+        private int phone_numberField;
+        
+        private string rucField;
+        
+        private string supplier_nameField;
+        
+        private int supplier_statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string adress {
+            get {
+                return this.adressField;
+            }
+            set {
+                this.adressField = value;
+                this.RaisePropertyChanged("adress");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public city city {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+                this.RaisePropertyChanged("city");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_supplier {
+            get {
+                return this.id_supplierField;
+            }
+            set {
+                this.id_supplierField = value;
+                this.RaisePropertyChanged("id_supplier");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("items_supplier", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        public item[] items_supplier {
+            get {
+                return this.items_supplierField;
+            }
+            set {
+                this.items_supplierField = value;
+                this.RaisePropertyChanged("items_supplier");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int phone_number {
+            get {
+                return this.phone_numberField;
+            }
+            set {
+                this.phone_numberField = value;
+                this.RaisePropertyChanged("phone_number");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string ruc {
+            get {
+                return this.rucField;
+            }
+            set {
+                this.rucField = value;
+                this.RaisePropertyChanged("ruc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string supplier_name {
+            get {
+                return this.supplier_nameField;
+            }
+            set {
+                this.supplier_nameField = value;
+                this.RaisePropertyChanged("supplier_name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int supplier_status {
+            get {
+                return this.supplier_statusField;
+            }
+            set {
+                this.supplier_statusField = value;
+                this.RaisePropertyChanged("supplier_status");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(technician))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(internEmployee))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class employee : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dniField;
+        
+        private string email_employeeField;
+        
+        private int employee_idField;
+        
+        private string employee_nameField;
+        
+        private int employee_statusField;
+        
+        private string eployee_codeField;
+        
+        private string genderField;
+        
+        private string last_nameField;
+        
+        private string passwordField;
+        
+        private privilege privilegeField;
+        
+        private bool privilegeFieldSpecified;
+        
+        private double salaryField;
+        
+        private string second_last_nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string email_employee {
+            get {
+                return this.email_employeeField;
+            }
+            set {
+                this.email_employeeField = value;
+                this.RaisePropertyChanged("email_employee");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int employee_id {
+            get {
+                return this.employee_idField;
+            }
+            set {
+                this.employee_idField = value;
+                this.RaisePropertyChanged("employee_id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string employee_name {
+            get {
+                return this.employee_nameField;
+            }
+            set {
+                this.employee_nameField = value;
+                this.RaisePropertyChanged("employee_name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int employee_status {
+            get {
+                return this.employee_statusField;
+            }
+            set {
+                this.employee_statusField = value;
+                this.RaisePropertyChanged("employee_status");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string eployee_code {
+            get {
+                return this.eployee_codeField;
+            }
+            set {
+                this.eployee_codeField = value;
+                this.RaisePropertyChanged("eployee_code");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string gender {
+            get {
+                return this.genderField;
+            }
+            set {
+                this.genderField = value;
+                this.RaisePropertyChanged("gender");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string last_name {
+            get {
+                return this.last_nameField;
+            }
+            set {
+                this.last_nameField = value;
+                this.RaisePropertyChanged("last_name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public privilege privilege {
+            get {
+                return this.privilegeField;
+            }
+            set {
+                this.privilegeField = value;
+                this.RaisePropertyChanged("privilege");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool privilegeSpecified {
+            get {
+                return this.privilegeFieldSpecified;
+            }
+            set {
+                this.privilegeFieldSpecified = value;
+                this.RaisePropertyChanged("privilegeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public double salary {
+            get {
+                return this.salaryField;
+            }
+            set {
+                this.salaryField = value;
+                this.RaisePropertyChanged("salary");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string second_last_name {
+            get {
+                return this.second_last_nameField;
+            }
+            set {
+                this.second_last_nameField = value;
+                this.RaisePropertyChanged("second_last_name");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public enum privilege {
+        
+        /// <remarks/>
+        MANAGER,
+        
+        /// <remarks/>
+        STOREKEEPER,
+        
+        /// <remarks/>
+        TECHNICIAN,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class technician : employee {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class internEmployee : employee {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class transfer : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.DateTime departure_dateField;
         
         private bool departure_dateFieldSpecified;
         
-        private int id_transfer_lineField;
+        private internEmployee employee_destinyField;
         
-        private material materialField;
+        private internEmployee employee_originField;
         
-        private int quantityField;
+        private System.DateTime entry_dateField;
+        
+        private bool entry_dateFieldSpecified;
+        
+        private int id_transferField;
+        
+        private string license_plateField;
+        
+        private int status_tranferField;
+        
+        private storehouse storehouse_destinyField;
+        
+        private storehouse storehouse_originField;
+        
+        private technician technicianField;
+        
+        private transferLine[] tranfer_linesField;
+        
+        private double transfer_feeField;
+        
+        private bool transfer_feeFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1641,37 +1557,157 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_transfer_line {
+        public internEmployee employee_destiny {
             get {
-                return this.id_transfer_lineField;
+                return this.employee_destinyField;
             }
             set {
-                this.id_transfer_lineField = value;
-                this.RaisePropertyChanged("id_transfer_line");
+                this.employee_destinyField = value;
+                this.RaisePropertyChanged("employee_destiny");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public material material {
+        public internEmployee employee_origin {
             get {
-                return this.materialField;
+                return this.employee_originField;
             }
             set {
-                this.materialField = value;
-                this.RaisePropertyChanged("material");
+                this.employee_originField = value;
+                this.RaisePropertyChanged("employee_origin");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int quantity {
+        public System.DateTime entry_date {
             get {
-                return this.quantityField;
+                return this.entry_dateField;
             }
             set {
-                this.quantityField = value;
-                this.RaisePropertyChanged("quantity");
+                this.entry_dateField = value;
+                this.RaisePropertyChanged("entry_date");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool entry_dateSpecified {
+            get {
+                return this.entry_dateFieldSpecified;
+            }
+            set {
+                this.entry_dateFieldSpecified = value;
+                this.RaisePropertyChanged("entry_dateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_transfer {
+            get {
+                return this.id_transferField;
+            }
+            set {
+                this.id_transferField = value;
+                this.RaisePropertyChanged("id_transfer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string license_plate {
+            get {
+                return this.license_plateField;
+            }
+            set {
+                this.license_plateField = value;
+                this.RaisePropertyChanged("license_plate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int status_tranfer {
+            get {
+                return this.status_tranferField;
+            }
+            set {
+                this.status_tranferField = value;
+                this.RaisePropertyChanged("status_tranfer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public storehouse storehouse_destiny {
+            get {
+                return this.storehouse_destinyField;
+            }
+            set {
+                this.storehouse_destinyField = value;
+                this.RaisePropertyChanged("storehouse_destiny");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public storehouse storehouse_origin {
+            get {
+                return this.storehouse_originField;
+            }
+            set {
+                this.storehouse_originField = value;
+                this.RaisePropertyChanged("storehouse_origin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public technician technician {
+            get {
+                return this.technicianField;
+            }
+            set {
+                this.technicianField = value;
+                this.RaisePropertyChanged("technician");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("tranfer_lines", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
+        public transferLine[] tranfer_lines {
+            get {
+                return this.tranfer_linesField;
+            }
+            set {
+                this.tranfer_linesField = value;
+                this.RaisePropertyChanged("tranfer_lines");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public double transfer_fee {
+            get {
+                return this.transfer_feeField;
+            }
+            set {
+                this.transfer_feeField = value;
+                this.RaisePropertyChanged("transfer_fee");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool transfer_feeSpecified {
+            get {
+                return this.transfer_feeFieldSpecified;
+            }
+            set {
+                this.transfer_feeFieldSpecified = value;
+                this.RaisePropertyChanged("transfer_feeSpecified");
             }
         }
         
@@ -1685,13 +1721,112 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
-    public partial class technician : employee {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertCategory", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertCategoryRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.category arg0;
+        
+        public insertCategoryRequest() {
+        }
+        
+        public insertCategoryRequest(AlmacenDisecForms.AlmacenDisecWS.category arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertCategoryResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertCategoryResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertCategoryResponse() {
+        }
+        
+        public insertCategoryResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrand", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateBrandRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.brand arg0;
+        
+        public updateBrandRequest() {
+        }
+        
+        public updateBrandRequest(AlmacenDisecForms.AlmacenDisecWS.brand arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrandResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateBrandResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateBrandResponse() {
+        }
+        
+        public updateBrandResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySupplierByName", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySupplierByNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public querySupplierByNameRequest() {
+        }
+        
+        public querySupplierByNameRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySupplierByNameResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySupplierByNameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.supplier @return;
+        
+        public querySupplierByNameResponse() {
+        }
+        
+        public querySupplierByNameResponse(AlmacenDisecForms.AlmacenDisecWS.supplier @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2151,6 +2286,75 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         
         public DBControllerWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.insertCategoryResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.insertCategory(AlmacenDisecForms.AlmacenDisecWS.insertCategoryRequest request) {
+            return base.Channel.insertCategory(request);
+        }
+        
+        public int insertCategory(AlmacenDisecForms.AlmacenDisecWS.category arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.insertCategoryRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.insertCategoryRequest();
+            inValue.arg0 = arg0;
+            AlmacenDisecForms.AlmacenDisecWS.insertCategoryResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).insertCategory(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertCategoryResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.insertCategoryAsync(AlmacenDisecForms.AlmacenDisecWS.insertCategoryRequest request) {
+            return base.Channel.insertCategoryAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertCategoryResponse> insertCategoryAsync(AlmacenDisecForms.AlmacenDisecWS.category arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.insertCategoryRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.insertCategoryRequest();
+            inValue.arg0 = arg0;
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).insertCategoryAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.updateBrand(AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest request) {
+            return base.Channel.updateBrand(request);
+        }
+        
+        public int updateBrand(AlmacenDisecForms.AlmacenDisecWS.brand arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest();
+            inValue.arg0 = arg0;
+            AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).updateBrand(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.updateBrandAsync(AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest request) {
+            return base.Channel.updateBrandAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse> updateBrandAsync(AlmacenDisecForms.AlmacenDisecWS.brand arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest();
+            inValue.arg0 = arg0;
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).updateBrandAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.querySupplierByName(AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest request) {
+            return base.Channel.querySupplierByName(request);
+        }
+        
+        public AlmacenDisecForms.AlmacenDisecWS.supplier querySupplierByName(string arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest();
+            inValue.arg0 = arg0;
+            AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse retVal = ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).querySupplierByName(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse> AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.querySupplierByNameAsync(AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest request) {
+            return base.Channel.querySupplierByNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse> querySupplierByNameAsync(string arg0) {
+            AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest inValue = new AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest();
+            inValue.arg0 = arg0;
+            return ((AlmacenDisecForms.AlmacenDisecWS.DBControllerWS)(this)).querySupplierByNameAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

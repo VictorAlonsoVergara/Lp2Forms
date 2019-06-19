@@ -6,6 +6,8 @@
   <xs:element name="helloResponse" type="tns:helloResponse" />
   <xs:element name="insertBrand" type="tns:insertBrand" />
   <xs:element name="insertBrandResponse" type="tns:insertBrandResponse" />
+  <xs:element name="insertCategory" type="tns:insertCategory" />
+  <xs:element name="insertCategoryResponse" type="tns:insertCategoryResponse" />
   <xs:element name="queryAllBrand" type="tns:queryAllBrand" />
   <xs:element name="queryAllBrandResponse" type="tns:queryAllBrandResponse" />
   <xs:element name="queryAllCategory" type="tns:queryAllCategory" />
@@ -28,6 +30,10 @@
   <xs:element name="queryAllTransferPendingResponse" type="tns:queryAllTransferPendingResponse" />
   <xs:element name="queryBrandByName" type="tns:queryBrandByName" />
   <xs:element name="queryBrandByNameResponse" type="tns:queryBrandByNameResponse" />
+  <xs:element name="querySupplierByName" type="tns:querySupplierByName" />
+  <xs:element name="querySupplierByNameResponse" type="tns:querySupplierByNameResponse" />
+  <xs:element name="updateBrand" type="tns:updateBrand" />
+  <xs:element name="updateBrandResponse" type="tns:updateBrandResponse" />
   <xs:complexType name="queryAllTransferPending">
     <xs:sequence />
   </xs:complexType>
@@ -201,6 +207,16 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="querySupplierByName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="querySupplierByNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:supplier" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryAllStorehouse">
     <xs:sequence />
   </xs:complexType>
@@ -215,6 +231,16 @@
   <xs:complexType name="queryAllMeasurement_UnitResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:measureUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateBrand">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:brand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateBrandResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryAllTransferDone">
@@ -284,6 +310,16 @@
       <xs:element name="customer_id" type="xs:int" />
       <xs:element minOccurs="0" name="customer_name" type="xs:string" />
       <xs:element minOccurs="0" name="customer_ruc" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertCategoryResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryBrandByName">

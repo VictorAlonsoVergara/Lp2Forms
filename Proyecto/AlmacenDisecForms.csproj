@@ -436,6 +436,9 @@
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.insertCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.measureUnit.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -472,6 +475,9 @@
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.storehouse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -479,6 +485,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.transfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenDisecWS\DBControllerWS.wsdl" />
