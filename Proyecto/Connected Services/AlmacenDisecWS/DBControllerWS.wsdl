@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://web.almacendisec.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="DBControllerWS" targetNamespace="http://web.almacendisec.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.207.227:8080/AlmacenDisecWeb/DBControllerWS?xsd=1" namespace="http://web.almacendisec.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="queryAllTransferPending">
+    <part name="parameters" element="tns:queryAllTransferPending" />
+  </message>
+  <message name="queryAllTransferPendingResponse">
+    <part name="parameters" element="tns:queryAllTransferPendingResponse" />
+  </message>
+  <message name="queryAllTransferDone">
+    <part name="parameters" element="tns:queryAllTransferDone" />
+  </message>
+  <message name="queryAllTransferDoneResponse">
+    <part name="parameters" element="tns:queryAllTransferDoneResponse" />
+  </message>
+  <message name="queryAllMeasurement_Unit">
+    <part name="parameters" element="tns:queryAllMeasurement_Unit" />
+  </message>
+  <message name="queryAllMeasurement_UnitResponse">
+    <part name="parameters" element="tns:queryAllMeasurement_UnitResponse" />
+  </message>
+  <message name="queryAllStorehouse">
+    <part name="parameters" element="tns:queryAllStorehouse" />
+  </message>
+  <message name="queryAllStorehouseResponse">
+    <part name="parameters" element="tns:queryAllStorehouseResponse" />
+  </message>
+  <message name="queryAllFamily">
+    <part name="parameters" element="tns:queryAllFamily" />
+  </message>
+  <message name="queryAllFamilyResponse">
+    <part name="parameters" element="tns:queryAllFamilyResponse" />
+  </message>
+  <message name="insertBrand">
+    <part name="parameters" element="tns:insertBrand" />
+  </message>
+  <message name="insertBrandResponse">
+    <part name="parameters" element="tns:insertBrandResponse" />
+  </message>
+  <message name="queryAllSupplier">
+    <part name="parameters" element="tns:queryAllSupplier" />
+  </message>
+  <message name="queryAllSupplierResponse">
+    <part name="parameters" element="tns:queryAllSupplierResponse" />
+  </message>
+  <message name="queryAllCategory">
+    <part name="parameters" element="tns:queryAllCategory" />
+  </message>
+  <message name="queryAllCategoryResponse">
+    <part name="parameters" element="tns:queryAllCategoryResponse" />
+  </message>
+  <message name="queryAllCustomer">
+    <part name="parameters" element="tns:queryAllCustomer" />
+  </message>
+  <message name="queryAllCustomerResponse">
+    <part name="parameters" element="tns:queryAllCustomerResponse" />
+  </message>
+  <message name="queryAllBrand">
+    <part name="parameters" element="tns:queryAllBrand" />
+  </message>
+  <message name="queryAllBrandResponse">
+    <part name="parameters" element="tns:queryAllBrandResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="queryAllEmployee">
+    <part name="parameters" element="tns:queryAllEmployee" />
+  </message>
+  <message name="queryAllEmployeeResponse">
+    <part name="parameters" element="tns:queryAllEmployeeResponse" />
+  </message>
+  <portType name="DBControllerWS">
+    <operation name="queryAllTransferPending">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferPendingRequest" message="tns:queryAllTransferPending" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferPendingResponse" message="tns:queryAllTransferPendingResponse" />
+    </operation>
+    <operation name="queryAllTransferDone">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneRequest" message="tns:queryAllTransferDone" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneResponse" message="tns:queryAllTransferDoneResponse" />
+    </operation>
+    <operation name="queryAllMeasurement_Unit">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllMeasurement_UnitRequest" message="tns:queryAllMeasurement_Unit" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllMeasurement_UnitResponse" message="tns:queryAllMeasurement_UnitResponse" />
+    </operation>
+    <operation name="queryAllStorehouse">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseRequest" message="tns:queryAllStorehouse" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseResponse" message="tns:queryAllStorehouseResponse" />
+    </operation>
+    <operation name="queryAllFamily">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" message="tns:queryAllFamily" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllFamilyResponse" message="tns:queryAllFamilyResponse" />
+    </operation>
+    <operation name="insertBrand">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandRequest" message="tns:insertBrand" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandResponse" message="tns:insertBrandResponse" />
+    </operation>
+    <operation name="queryAllSupplier">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierRequest" message="tns:queryAllSupplier" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierResponse" message="tns:queryAllSupplierResponse" />
+    </operation>
+    <operation name="queryAllCategory">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryRequest" message="tns:queryAllCategory" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryResponse" message="tns:queryAllCategoryResponse" />
+    </operation>
+    <operation name="queryAllCustomer">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerRequest" message="tns:queryAllCustomer" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerResponse" message="tns:queryAllCustomerResponse" />
+    </operation>
+    <operation name="queryAllBrand">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllBrandRequest" message="tns:queryAllBrand" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllBrandResponse" message="tns:queryAllBrandResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="queryAllEmployee">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllEmployeeRequest" message="tns:queryAllEmployee" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllEmployeeResponse" message="tns:queryAllEmployeeResponse" />
+    </operation>
+  </portType>
+  <binding name="DBControllerWSPortBinding" type="tns:DBControllerWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="queryAllTransferPending">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllTransferDone">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllMeasurement_Unit">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllStorehouse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllFamily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllSupplier">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCategory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DBControllerWS">
+    <port name="DBControllerWSPort" binding="tns:DBControllerWSPortBinding">
+      <soap:address location="http://192.168.207.227:8080/AlmacenDisecWeb/DBControllerWS" />
+    </port>
+  </service>
+</definitions>

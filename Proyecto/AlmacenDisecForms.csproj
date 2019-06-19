@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{486F04A3-8DD6-41FD-83D1-EE1940BA67E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AlmacenDisecForms</RootNamespace>
+    <AssemblyName>AlmacenDisecForms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BotonRedondeado.cs" />
+    <Compile Include="Connected Services\AlmacenDisecWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxError.Designer.cs">
+      <DependentUpon>frmMessageBoxError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchTool.Designer.cs">
+      <DependentUpon>frmSearchTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchTransfer.Designer.cs">
+      <DependentUpon>frmSearchTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTool.Designer.cs">
+      <DependentUpon>frmTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxCancel.Designer.cs">
+      <DependentUpon>frmMessageBoxCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxAdd.Designer.cs">
+      <DependentUpon>frmMessageBoxAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchWorkOrder.Designer.cs">
+      <DependentUpon>frmSearchWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchInventoryTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchInventoryTool.Designer.cs">
+      <DependentUpon>frmSearchInventoryTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchInventoryMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchInventoryMaterial.Designer.cs">
+      <DependentUpon>frmSearchInventoryMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchStoreHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchStoreHouse.Designer.cs">
+      <DependentUpon>frmSearchStoreHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchUser.Designer.cs">
+      <DependentUpon>frmSearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchSupplier.Designer.cs">
+      <DependentUpon>frmSearchSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStoreHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStoreHouse.Designer.cs">
+      <DependentUpon>frmStoreHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxCategory.Designer.cs">
+      <DependentUpon>frmMessageBoxCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrand.Designer.cs">
+      <DependentUpon>frmBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFamily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFamily.Designer.cs">
+      <DependentUpon>frmFamily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMeasurementUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMeasurementUnit.Designer.cs">
+      <DependentUpon>frmMeasurementUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxFillNull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxFillNull.Designer.cs">
+      <DependentUpon>frmMessageBoxFillNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxNew.Designer.cs">
+      <DependentUpon>frmMessageBoxNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxDataGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxDataGeneral.Designer.cs">
+      <DependentUpon>frmMessageBoxDataGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxBack.Designer.cs">
+      <DependentUpon>frmMessageBoxBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxInvalidData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxInvalidData.Designer.cs">
+      <DependentUpon>frmMessageBoxInvalidData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchMaterial.Designer.cs">
+      <DependentUpon>frmSearchMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInitial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInitial.Designer.cs">
+      <DependentUpon>frmInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaterial.Designer.cs">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxSelectRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxSelectRow.Designer.cs">
+      <DependentUpon>frmMessageBoxSelectRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxDelete.Designer.cs">
+      <DependentUpon>frmMessageBoxDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxSave.Designer.cs">
+      <DependentUpon>frmMessageBoxSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrasnfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrasnfer.Designer.cs">
+      <DependentUpon>frmTrasnfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkOrder.Designer.cs">
+      <DependentUpon>frmWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sede.cs" />
+    <EmbeddedResource Include="frmBrand.resx">
+      <DependentUpon>frmBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFamily.resx">
+      <DependentUpon>frmFamily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxError.resx">
+      <DependentUpon>frmMessageBoxError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchTool.resx">
+      <DependentUpon>frmSearchTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchTransfer.resx">
+      <DependentUpon>frmSearchTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTool.resx">
+      <DependentUpon>frmTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxCancel.resx">
+      <DependentUpon>frmMessageBoxCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxAdd.resx">
+      <DependentUpon>frmMessageBoxAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchWorkOrder.resx">
+      <DependentUpon>frmSearchWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchInventoryTool.resx">
+      <DependentUpon>frmSearchInventoryTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchInventoryMaterial.resx">
+      <DependentUpon>frmSearchInventoryMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchStoreHouse.resx">
+      <DependentUpon>frmSearchStoreHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchUser.resx">
+      <DependentUpon>frmSearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchSupplier.resx">
+      <DependentUpon>frmSearchSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStoreHouse.resx">
+      <DependentUpon>frmStoreHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMeasurementUnit.resx">
+      <DependentUpon>frmMeasurementUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxCategory.resx">
+      <DependentUpon>frmMessageBoxCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxInvalidData.resx">
+      <DependentUpon>frmMessageBoxInvalidData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchMaterial.resx">
+      <DependentUpon>frmSearchMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInitial.resx">
+      <DependentUpon>frmInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterial.resx">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxSelectRow.resx">
+      <DependentUpon>frmMessageBoxSelectRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxFillNull.resx">
+      <DependentUpon>frmMessageBoxFillNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxNew.resx">
+      <DependentUpon>frmMessageBoxNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxDataGeneral.resx">
+      <DependentUpon>frmMessageBoxDataGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxBack.resx">
+      <DependentUpon>frmMessageBoxBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxDelete.resx">
+      <DependentUpon>frmMessageBoxDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxSave.resx">
+      <DependentUpon>frmMessageBoxSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrasnfer.resx">
+      <DependentUpon>frmTrasnfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkOrder.resx">
+      <DependentUpon>frmWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.brand.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.family.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.measureUnit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllBrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllFamilyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllMeasurement_UnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllTransferPendingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.storehouse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.supplier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.transfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\DBControllerWS.wsdl" />
+    <None Include="Connected Services\AlmacenDisecWS\DBControllerWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AlmacenDisec.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AlmacenDisecWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AlmacenDisecWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AlmacenDisecWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AlmacenDisecWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
