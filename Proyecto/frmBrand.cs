@@ -12,26 +12,16 @@ namespace AlmacenDisecForms
 {
     public partial class frmBrand : Form
     {
-        Brand brandItem = new Brand("Artesco", 1, 1, "ar1");
-        Brand barnd2 = new Brand("Faber Castell", 2, 1, "fab1");
-        BindingList<Brand> brands = new BindingList<Brand>();
+        private String nombreTextoAnterior = null;
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
 
         bool flag = false;
         public frmBrand()
         {
             InitializeComponent();
-
-            brands.Add(brandItem);
-            brands.Add(barnd2);
-            
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
-            
-
-
             txtId.Enabled = false;
             btnDelete.Enabled = false;
-
         }
 
         private void reiniciar() {
@@ -51,8 +41,6 @@ namespace AlmacenDisecForms
             btnNew.Enabled = false;
             // txtName.Clear();
 
-
-
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -65,29 +53,24 @@ namespace AlmacenDisecForms
             }
             else
             {
-
-
                 if (flag == true)
                 {
-                   
-
                         frmMessageBoxSave frm = new frmMessageBoxSave();
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
-
                             String name = txtName.Text;
-                            
-                            
+                            AlmacenDisecWS.brand b = new AlmacenDisecWS.brand();
+                            b.brand_name = name;
+                            int result = serviceDA.insertBrand(b);
+
+                            dgvSearch.AutoGenerateColumns = false;
+                            dgvSearch.DataSource = serviceDA.queryAllBrand();
                             reiniciar();
                         }
-
-
-                 
-
                 }
                 else
                 {
-                    if (String.IsNullOrEmpty(txtId.Text))
+                    if (String.IsNullOrEmpty(txtId.Text) || nombreTextoAnterior==null)
                     {
 
                         frmMessageBoxFillNull frm2 = new frmMessageBoxFillNull();
@@ -103,8 +86,11 @@ namespace AlmacenDisecForms
 
                             int id = Int32.Parse(txtId.Text);
                             String name = txtName.Text;
-                            //Category cat = new category(name,0);
-                            //Se llama al update
+                            AlmacenDisecWS.brand b = serviceDA.queryBrandByName(nombreTextoAnterior);
+                            b.brand_name = name;
+                            int result = serviceDA.updateBrand(b);
+                            dgvSearch.AutoGenerateColumns = false;
+                            dgvSearch.DataSource = serviceDA.queryAllBrand();
                             reiniciar();
                         }
                     }
@@ -147,9 +133,7 @@ namespace AlmacenDisecForms
         }
 
         private void BtnModify_Click(object sender, EventArgs e)
-        {
-
-            
+        {            
             if (dgvSearch.SelectedRows.Count > 0)
                 {
                     if (dgvSearch.CurrentRow.Cells[0].Value == null)
@@ -163,10 +147,11 @@ namespace AlmacenDisecForms
                         flag = false;
                         btnNew.Enabled = false;
                         btnDelete.Enabled = true;
-                    btnModify.Enabled = false;
-                    txtId.Text = dgvSearch.CurrentRow.Cells[0].Value.ToString();
+                        btnModify.Enabled = false;
+                        txtId.Text = dgvSearch.CurrentRow.Cells[0].Value.ToString();
                         txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
-                    }
+                        nombreTextoAnterior = dgvSearch.CurrentRow.Cells[1].Value.ToString();
+                }
 
                 }
                 else
@@ -191,10 +176,12 @@ namespace AlmacenDisecForms
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         int id = Int32.Parse(txtId.Text);
-                        String name = txtName.Text;
-                        ////Category cat = new category(name,0);
                         //Se llama al delete 
-                        reiniciar();
+                        int result = serviceDA.deleteBrand(id);
+
+                        dgvSearch.AutoGenerateColumns = false;
+                        dgvSearch.DataSource = serviceDA.queryAllBrand();
+                    reiniciar();
                     }
 
 

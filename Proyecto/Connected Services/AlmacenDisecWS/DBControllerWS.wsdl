@@ -17,6 +17,7 @@
   <message name="updateBrandResponse">
     <part name="parameters" element="tns:updateBrandResponse" />
   </message>
+<<<<<<< HEAD
   <message name="updateCategory">
     <part name="parameters" element="tns:updateCategory" />
   </message>
@@ -41,6 +42,8 @@
   <message name="insertFamilyResponse">
     <part name="parameters" element="tns:insertFamilyResponse" />
   </message>
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
   <message name="querySupplierByName">
     <part name="parameters" element="tns:querySupplierByName" />
   </message>
@@ -140,6 +143,7 @@
       <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateBrandRequest" message="tns:updateBrand" />
       <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateBrandResponse" message="tns:updateBrandResponse" />
     </operation>
+<<<<<<< HEAD
     <operation name="updateCategory">
       <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateCategoryRequest" message="tns:updateCategory" />
       <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateCategoryResponse" message="tns:updateCategoryResponse" />
@@ -156,6 +160,8 @@
       <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertFamilyRequest" message="tns:insertFamily" />
       <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertFamilyResponse" message="tns:insertFamilyResponse" />
     </operation>
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
     <operation name="querySupplierByName">
       <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameRequest" message="tns:querySupplierByName" />
       <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameResponse" message="tns:querySupplierByNameResponse" />
@@ -237,6 +243,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
     <operation name="updateCategory">
       <soap:operation soapAction="" />
       <input>
@@ -273,6 +280,8 @@
         <soap:body use="literal" />
       </output>
     </operation>
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
     <operation name="querySupplierByName">
       <soap:operation soapAction="" />
       <input>

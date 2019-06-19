@@ -10,8 +10,11 @@
   <xs:element name="insertBrandResponse" type="tns:insertBrandResponse" />
   <xs:element name="insertCategory" type="tns:insertCategory" />
   <xs:element name="insertCategoryResponse" type="tns:insertCategoryResponse" />
+<<<<<<< HEAD
   <xs:element name="insertFamily" type="tns:insertFamily" />
   <xs:element name="insertFamilyResponse" type="tns:insertFamilyResponse" />
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
   <xs:element name="queryAllBrand" type="tns:queryAllBrand" />
   <xs:element name="queryAllBrandResponse" type="tns:queryAllBrandResponse" />
   <xs:element name="queryAllCategory" type="tns:queryAllCategory" />
@@ -38,6 +41,7 @@
   <xs:element name="querySupplierByNameResponse" type="tns:querySupplierByNameResponse" />
   <xs:element name="updateBrand" type="tns:updateBrand" />
   <xs:element name="updateBrandResponse" type="tns:updateBrandResponse" />
+<<<<<<< HEAD
   <xs:element name="updateCategory" type="tns:updateCategory" />
   <xs:element name="updateCategoryResponse" type="tns:updateCategoryResponse" />
   <xs:element name="updateFamily" type="tns:updateFamily" />
@@ -52,6 +56,8 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
   <xs:complexType name="queryAllTransferPending">
     <xs:sequence />
   </xs:complexType>
@@ -235,6 +241,7 @@
       <xs:element minOccurs="0" name="return" type="tns:supplier" />
     </xs:sequence>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:complexType name="insertFamily">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="tns:family" />
@@ -245,6 +252,8 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
   <xs:complexType name="queryAllStorehouse">
     <xs:sequence />
   </xs:complexType>
@@ -271,6 +280,7 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:complexType name="updateCategory">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="tns:category" />
@@ -281,6 +291,8 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
   <xs:complexType name="queryAllTransferDone">
     <xs:sequence />
   </xs:complexType>

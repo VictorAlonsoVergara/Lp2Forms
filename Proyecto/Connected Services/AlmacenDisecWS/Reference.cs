@@ -34,6 +34,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse> updateBrandAsync(AlmacenDisecForms.AlmacenDisecWS.updateBrandRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateCategoryRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateCategoryResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -70,6 +71,8 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         System.Threading.Tasks.Task<AlmacenDisecForms.AlmacenDisecWS.insertFamilyResponse> insertFamilyAsync(AlmacenDisecForms.AlmacenDisecWS.insertFamilyRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
         [System.ServiceModel.OperationContractAttribute(Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameRequest", ReplyAction="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -264,6 +267,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+<<<<<<< HEAD
         
         protected void RaisePropertyChanged(string propertyName) {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
@@ -296,10 +300,74 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.customer_idField = value;
                 this.RaisePropertyChanged("customer_id");
+=======
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class customer : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int customer_idField;
+        
+        private string customer_nameField;
+        
+        private string customer_rucField;
+        
+        /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string customer_name {
+            get {
+                return this.customer_nameField;
+            }
+            set {
+                this.customer_nameField = value;
+                this.RaisePropertyChanged("customer_name");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int customer_id {
+            get {
+                return this.customer_idField;
+            }
+            set {
+                this.customer_idField = value;
+                this.RaisePropertyChanged("customer_id");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string customer_ruc {
+            get {
+                return this.customer_rucField;
+            }
+            set {
+                this.customer_rucField = value;
+                this.RaisePropertyChanged("customer_ruc");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+=======
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string customer_name {
             get {
@@ -320,15 +388,47 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.customer_rucField = value;
                 this.RaisePropertyChanged("customer_ruc");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class transferLine : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private System.DateTime departure_dateField;
+        
+        private bool departure_dateFieldSpecified;
+        
+        private int id_transfer_lineField;
+        
+        private material materialField;
+        
+        private int quantityField;
+        
+<<<<<<< HEAD
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime departure_date {
+            get {
+                return this.departure_dateField;
+            }
+            set {
+                this.departure_dateField = value;
+                this.RaisePropertyChanged("departure_date");
+=======
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
     }
@@ -352,18 +452,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         private int quantityField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime departure_date {
-            get {
-                return this.departure_dateField;
-            }
-            set {
-                this.departure_dateField = value;
-                this.RaisePropertyChanged("departure_date");
-            }
-        }
-        
-        /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool departure_dateSpecified {
             get {
@@ -372,10 +461,21 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.departure_dateFieldSpecified = value;
                 this.RaisePropertyChanged("departure_dateSpecified");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime departure_date {
+            get {
+                return this.departure_dateField;
+            }
+            set {
+                this.departure_dateField = value;
+                this.RaisePropertyChanged("departure_date");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id_transfer_line {
             get {
@@ -384,10 +484,51 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.id_transfer_lineField = value;
                 this.RaisePropertyChanged("id_transfer_line");
+=======
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool departure_dateSpecified {
+            get {
+                return this.departure_dateFieldSpecified;
+            }
+            set {
+                this.departure_dateFieldSpecified = value;
+                this.RaisePropertyChanged("departure_dateSpecified");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public material material {
+            get {
+                return this.materialField;
+            }
+            set {
+                this.materialField = value;
+                this.RaisePropertyChanged("material");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_transfer_line {
+            get {
+                return this.id_transfer_lineField;
+            }
+            set {
+                this.id_transfer_lineField = value;
+                this.RaisePropertyChanged("id_transfer_line");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+=======
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public material material {
             get {
@@ -406,6 +547,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
                 return this.quantityField;
             }
             set {
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
                 this.quantityField = value;
                 this.RaisePropertyChanged("quantity");
             }
@@ -1308,6 +1450,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         private string email_employeeField;
         
         private int employee_idField;
+<<<<<<< HEAD
         
         private string employee_nameField;
         
@@ -1329,6 +1472,29 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         
         private string second_last_nameField;
         
+=======
+        
+        private string employee_nameField;
+        
+        private int employee_statusField;
+        
+        private string eployee_codeField;
+        
+        private string genderField;
+        
+        private string last_nameField;
+        
+        private string passwordField;
+        
+        private privilege privilegeField;
+        
+        private bool privilegeFieldSpecified;
+        
+        private double salaryField;
+        
+        private string second_last_nameField;
+        
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string dni {
@@ -1362,6 +1528,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.employee_idField = value;
                 this.RaisePropertyChanged("employee_id");
+<<<<<<< HEAD
             }
         }
         
@@ -1482,17 +1649,343 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.second_last_nameField = value;
                 this.RaisePropertyChanged("second_last_name");
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string employee_name {
+            get {
+                return this.employee_nameField;
+            }
+            set {
+                this.employee_nameField = value;
+                this.RaisePropertyChanged("employee_name");
             }
         }
+<<<<<<< HEAD
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public enum privilege {
+        
+        /// <remarks/>
+        MANAGER,
+        
+        /// <remarks/>
+        STOREKEEPER,
+        
+        /// <remarks/>
+        TECHNICIAN,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class technician : employee {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class internEmployee : employee {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/")]
+    public partial class transfer : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime departure_dateField;
+        
+        private bool departure_dateFieldSpecified;
+        
+        private internEmployee employee_destinyField;
+        
+        private internEmployee employee_originField;
+        
+        private System.DateTime entry_dateField;
+        
+        private bool entry_dateFieldSpecified;
+        
+        private int id_transferField;
+        
+        private string license_plateField;
+        
+        private int status_tranferField;
+        
+        private storehouse storehouse_destinyField;
+        
+        private storehouse storehouse_originField;
+        
+        private technician technicianField;
+        
+        private transferLine[] tranfer_linesField;
+        
+        private double transfer_feeField;
+        
+        private bool transfer_feeFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime departure_date {
+            get {
+                return this.departure_dateField;
+            }
+            set {
+                this.departure_dateField = value;
+                this.RaisePropertyChanged("departure_date");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool departure_dateSpecified {
+            get {
+                return this.departure_dateFieldSpecified;
+            }
+            set {
+                this.departure_dateFieldSpecified = value;
+                this.RaisePropertyChanged("departure_dateSpecified");
+=======
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int employee_status {
+            get {
+                return this.employee_statusField;
+            }
+            set {
+                this.employee_statusField = value;
+                this.RaisePropertyChanged("employee_status");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string eployee_code {
+            get {
+                return this.eployee_codeField;
+            }
+            set {
+                this.eployee_codeField = value;
+                this.RaisePropertyChanged("eployee_code");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string gender {
+            get {
+                return this.genderField;
+            }
+            set {
+                this.genderField = value;
+                this.RaisePropertyChanged("gender");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string last_name {
+            get {
+                return this.last_nameField;
+            }
+            set {
+                this.last_nameField = value;
+                this.RaisePropertyChanged("last_name");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public internEmployee employee_destiny {
+            get {
+                return this.employee_destinyField;
+            }
+            set {
+                this.employee_destinyField = value;
+                this.RaisePropertyChanged("employee_destiny");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public internEmployee employee_origin {
+            get {
+                return this.employee_originField;
+            }
+            set {
+                this.employee_originField = value;
+                this.RaisePropertyChanged("employee_origin");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public privilege privilege {
+            get {
+                return this.privilegeField;
+            }
+            set {
+                this.privilegeField = value;
+                this.RaisePropertyChanged("privilege");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime entry_date {
+            get {
+                return this.entry_dateField;
+            }
+            set {
+                this.entry_dateField = value;
+                this.RaisePropertyChanged("entry_date");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool entry_dateSpecified {
+            get {
+                return this.entry_dateFieldSpecified;
+            }
+            set {
+                this.entry_dateFieldSpecified = value;
+                this.RaisePropertyChanged("entry_dateSpecified");
+=======
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool privilegeSpecified {
+            get {
+                return this.privilegeFieldSpecified;
+            }
+            set {
+                this.privilegeFieldSpecified = value;
+                this.RaisePropertyChanged("privilegeSpecified");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_transfer {
+            get {
+                return this.id_transferField;
+            }
+            set {
+                this.id_transferField = value;
+                this.RaisePropertyChanged("id_transfer");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public double salary {
+            get {
+                return this.salaryField;
+            }
+            set {
+                this.salaryField = value;
+                this.RaisePropertyChanged("salary");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string license_plate {
+            get {
+                return this.license_plateField;
+            }
+            set {
+                this.license_plateField = value;
+                this.RaisePropertyChanged("license_plate");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string second_last_name {
+            get {
+                return this.second_last_nameField;
+            }
+            set {
+                this.second_last_nameField = value;
+                this.RaisePropertyChanged("second_last_name");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int status_tranfer {
+            get {
+                return this.status_tranferField;
+            }
+            set {
+                this.status_tranferField = value;
+                this.RaisePropertyChanged("status_tranfer");
+            }
+        }
+<<<<<<< HEAD
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public storehouse storehouse_destiny {
+            get {
+                return this.storehouse_destinyField;
+            }
+            set {
+                this.storehouse_destinyField = value;
+                this.RaisePropertyChanged("storehouse_destiny");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public storehouse storehouse_origin {
+            get {
+                return this.storehouse_originField;
+            }
+            set {
+                this.storehouse_originField = value;
+                this.RaisePropertyChanged("storehouse_origin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public technician technician {
+            get {
+                return this.technicianField;
+            }
+            set {
+                this.technicianField = value;
+                this.RaisePropertyChanged("technician");
+=======
     }
     
     /// <remarks/>
@@ -1612,106 +2105,12 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.employee_originField = value;
                 this.RaisePropertyChanged("employee_origin");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime entry_date {
-            get {
-                return this.entry_dateField;
-            }
-            set {
-                this.entry_dateField = value;
-                this.RaisePropertyChanged("entry_date");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool entry_dateSpecified {
-            get {
-                return this.entry_dateFieldSpecified;
-            }
-            set {
-                this.entry_dateFieldSpecified = value;
-                this.RaisePropertyChanged("entry_dateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_transfer {
-            get {
-                return this.id_transferField;
-            }
-            set {
-                this.id_transferField = value;
-                this.RaisePropertyChanged("id_transfer");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string license_plate {
-            get {
-                return this.license_plateField;
-            }
-            set {
-                this.license_plateField = value;
-                this.RaisePropertyChanged("license_plate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int status_tranfer {
-            get {
-                return this.status_tranferField;
-            }
-            set {
-                this.status_tranferField = value;
-                this.RaisePropertyChanged("status_tranfer");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public storehouse storehouse_destiny {
-            get {
-                return this.storehouse_destinyField;
-            }
-            set {
-                this.storehouse_destinyField = value;
-                this.RaisePropertyChanged("storehouse_destiny");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public storehouse storehouse_origin {
-            get {
-                return this.storehouse_originField;
-            }
-            set {
-                this.storehouse_originField = value;
-                this.RaisePropertyChanged("storehouse_origin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public technician technician {
-            get {
-                return this.technicianField;
-            }
-            set {
-                this.technicianField = value;
-                this.RaisePropertyChanged("technician");
-            }
-        }
-        
-        /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute("tranfer_lines", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
         public transferLine[] tranfer_lines {
             get {
@@ -1720,10 +2119,21 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.tranfer_linesField = value;
                 this.RaisePropertyChanged("tranfer_lines");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime entry_date {
+            get {
+                return this.entry_dateField;
+            }
+            set {
+                this.entry_dateField = value;
+                this.RaisePropertyChanged("entry_date");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public double transfer_fee {
             get {
@@ -1732,10 +2142,21 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             set {
                 this.transfer_feeField = value;
                 this.RaisePropertyChanged("transfer_fee");
+=======
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool entry_dateSpecified {
+            get {
+                return this.entry_dateFieldSpecified;
+            }
+            set {
+                this.entry_dateFieldSpecified = value;
+                this.RaisePropertyChanged("entry_dateSpecified");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool transfer_feeSpecified {
             get {
@@ -1753,6 +2174,16 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_transfer {
+            get {
+                return this.id_transferField;
+            }
+            set {
+                this.id_transferField = value;
+                this.RaisePropertyChanged("id_transfer");
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
             }
         }
     }
@@ -1878,8 +2309,21 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         public deleteCategoryRequest() {
         }
         
+<<<<<<< HEAD
         public deleteCategoryRequest(int arg0) {
             this.arg0 = arg0;
+=======
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string license_plate {
+            get {
+                return this.license_plateField;
+            }
+            set {
+                this.license_plateField = value;
+                this.RaisePropertyChanged("license_plate");
+            }
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
         }
     }
     
@@ -1889,6 +2333,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="deleteCategoryResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
     public partial class deleteCategoryResponse {
         
+<<<<<<< HEAD
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
@@ -1934,6 +2379,42 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         
         public updateFamilyResponse(int @return) {
             this.@return = @return;
+=======
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int status_tranfer {
+            get {
+                return this.status_tranferField;
+            }
+            set {
+                this.status_tranferField = value;
+                this.RaisePropertyChanged("status_tranfer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public storehouse storehouse_destiny {
+            get {
+                return this.storehouse_destinyField;
+            }
+            set {
+                this.storehouse_destinyField = value;
+                this.RaisePropertyChanged("storehouse_destiny");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public storehouse storehouse_origin {
+            get {
+                return this.storehouse_originField;
+            }
+            set {
+                this.storehouse_originField = value;
+                this.RaisePropertyChanged("storehouse_origin");
+            }
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
         }
     }
     
@@ -1943,6 +2424,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertFamily", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertFamilyRequest {
         
+<<<<<<< HEAD
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public AlmacenDisecForms.AlmacenDisecWS.family arg0;
@@ -1952,6 +2434,30 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         
         public insertFamilyRequest(AlmacenDisecForms.AlmacenDisecWS.family arg0) {
             this.arg0 = arg0;
+=======
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public technician technician {
+            get {
+                return this.technicianField;
+            }
+            set {
+                this.technicianField = value;
+                this.RaisePropertyChanged("technician");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("tranfer_lines", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
+        public transferLine[] tranfer_lines {
+            get {
+                return this.tranfer_linesField;
+            }
+            set {
+                this.tranfer_linesField = value;
+                this.RaisePropertyChanged("tranfer_lines");
+            }
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
         }
     }
     
@@ -1961,6 +2467,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertFamilyResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertFamilyResponse {
         
+<<<<<<< HEAD
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
@@ -1969,6 +2476,122 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         public insertFamilyResponse(int @return) {
+            this.@return = @return;
+=======
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public double transfer_fee {
+            get {
+                return this.transfer_feeField;
+            }
+            set {
+                this.transfer_feeField = value;
+                this.RaisePropertyChanged("transfer_fee");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool transfer_feeSpecified {
+            get {
+                return this.transfer_feeFieldSpecified;
+            }
+            set {
+                this.transfer_feeFieldSpecified = value;
+                this.RaisePropertyChanged("transfer_feeSpecified");
+            }
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySupplierByName", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySupplierByNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public querySupplierByNameRequest() {
+        }
+        
+        public querySupplierByNameRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertCategory", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertCategoryRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.category arg0;
+        
+        public insertCategoryRequest() {
+        }
+        
+        public insertCategoryRequest(AlmacenDisecForms.AlmacenDisecWS.category arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertCategoryResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertCategoryResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertCategoryResponse() {
+        }
+        
+        public insertCategoryResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrand", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateBrandRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public AlmacenDisecForms.AlmacenDisecWS.brand arg0;
+        
+        public updateBrandRequest() {
+        }
+        
+        public updateBrandRequest(AlmacenDisecForms.AlmacenDisecWS.brand arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrandResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateBrandResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://web.almacendisec.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateBrandResponse() {
+        }
+        
+        public updateBrandResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1994,6 +2617,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
     [System.ServiceModel.MessageContractAttribute(WrapperName="querySupplierByNameResponse", WrapperNamespace="http://web.almacendisec.pucp.edu.pe/", IsWrapped=true)]
     public partial class querySupplierByNameResponse {
         
@@ -2515,6 +3139,7 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         AlmacenDisecForms.AlmacenDisecWS.updateCategoryResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.updateCategory(AlmacenDisecForms.AlmacenDisecWS.updateCategoryRequest request) {
             return base.Channel.updateCategory(request);
         }
@@ -2607,6 +3232,8 @@ namespace AlmacenDisecForms.AlmacenDisecWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+=======
+>>>>>>> 850d9b4f40f96ab422308336452952d1e1e5df6c
         AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse AlmacenDisecForms.AlmacenDisecWS.DBControllerWS.querySupplierByName(AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameRequest request) {
             return base.Channel.querySupplierByName(request);
         }
