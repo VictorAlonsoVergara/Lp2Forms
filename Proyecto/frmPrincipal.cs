@@ -16,7 +16,7 @@ namespace AlmacenDisecForms
         {
             InitializeComponent();
             plSubmenuM.Visible = false;
-          
+        
             plStore.Visible = false;
         
          
@@ -552,7 +552,10 @@ namespace AlmacenDisecForms
         
         private void BtnDisconnect_Click(object sender, EventArgs e)
         {
-
+            frmLogin login = new frmLogin();
+            this.Hide();
+            login.Closed += (s, args) => this.Close();
+            login.Show();
         }
 
 

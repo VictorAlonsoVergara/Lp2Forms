@@ -59,7 +59,62 @@ namespace AlmacenDisecForms
 
         private void BtnEntrarLogin_Click(object sender, EventArgs e)
         {
+            if (txtUsername.Text == "Admin1234")
+            {
+                //txtPassword.Text = "1234567";)
+                if (txtPassword.Text == "12")
+                {
+                    MessageBox.Show("Bienvenido administrador");
+                    this.Hide();
+                    frmPrincipal mainWindow = new frmPrincipal();
+                    mainWindow.Closed += (s, args) => this.Close();
+                    mainWindow.Show();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos");
+                    return;
+                }
+            }
 
+            if (txtUsername.Text == "Worker1234")
+            {
+                //txtPassword.Text = "1234567";)
+                if (txtPassword.Text == "12")
+                {
+                    MessageBox.Show("Bienvenido trabajador de almacen");
+                    this.Hide();
+                    frmPrincipal mainWindow = new frmPrincipal();
+                    mainWindow.Closed += (s, args) => this.Close();
+                    mainWindow.Show();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos");
+                    return;
+                }
+            }
+
+            if (txtUsername.Text == "Technician1234")
+            {
+                //txtPassword.Text = "1234567";)
+                if (txtPassword.Text == "12")
+                {
+                    MessageBox.Show("Bienvenido técnico");
+                    this.Hide();
+                    frmPrincipal mainWindow = new frmPrincipal();
+                    mainWindow.Closed += (s, args) => this.Close();
+                    mainWindow.Show();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos");
+                    return;
+                }
+            }
         }
 
         private void TxtPassword_Leave(object sender, EventArgs e)
@@ -97,7 +152,16 @@ namespace AlmacenDisecForms
             SendMessage(this.Handle, 0x112, 0xf012, 0);
 
         }
-    
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
 
@@ -107,7 +171,8 @@ namespace AlmacenDisecForms
 
 
 
-        /*  private void BtnSalirLogin_Click(object sender, EventArgs e)
+        /*
+          private void BtnSalirLogin_Click(object sender, EventArgs e)
           {
               Application.Exit();
           }
@@ -124,69 +189,69 @@ namespace AlmacenDisecForms
               txtPassword.PasswordChar = '*';
               btnDontLookPassword.Visible = false;
               btnLookPassword.Visible = true;
-          }
-
-          private void btnEntrarLogin_Click(object sender, EventArgs e)
-          {
-
-
-              if (txtUsername.Text == "Admin1234") {
-                  //txtPassword.Text = "1234567";)
-                  if (txtPassword.Text == "12")
-                  {
-                      MessageBox.Show("Bienvenido administrador");
-                      this.Hide();
-                      frmMain mainWindow = new frmMain(1);
-                      mainWindow.Closed += (s, args) => this.Close();
-                      mainWindow.Show();
-                      return;
-                  }
-                  else {
-                      MessageBox.Show("Datos incorrectos");
-                      return;
-                  }
-              }
-
-              if (txtUsername.Text == "Worker1234")                {
-                  //txtPassword.Text = "1234567";)
-                  if (txtPassword.Text == "12")
-                  {
-                      MessageBox.Show("Bienvenido trabajador de almacen");
-                      this.Hide();
-                      frmMain mainWindow = new frmMain(2);
-                      mainWindow.Closed += (s, args) => this.Close();
-                      mainWindow.Show();
-                      return;
-                  }
-                  else              {
-                      MessageBox.Show("Datos incorrectos");
-                      return;
-                  }
-              }
-
-               if (txtUsername.Text == "Technician1234")
-                  {
-                      //txtPassword.Text = "1234567";)
-                      if (txtPassword.Text == "12")
-                      {
-                          MessageBox.Show("Bienvenido técnico");
-                          this.Hide();
-                          frmMain mainWindow = new frmMain(3);
-                          mainWindow.Closed += (s, args) => this.Close();
-                          mainWindow.Show();
-                      return;
-                      }
-                      else
-                      {
-                          MessageBox.Show("Datos incorrectos");
-                          return;
-                      }
-                  }
-          }
-
-          private void frmLogin_Load(object sender, EventArgs e)
-          {
-
           }*/
+        /*
+        private void btnEntrarLogin_Click(object sender, EventArgs e)
+        {
+
+
+            if (txtUsername.Text == "Admin1234") {
+                //txtPassword.Text = "1234567";)
+                if (txtPassword.Text == "12")
+                {
+                    MessageBox.Show("Bienvenido administrador");
+                    this.Hide();
+                    frmMain mainWindow = new frmMain(1);
+                    mainWindow.Closed += (s, args) => this.Close();
+                    mainWindow.Show();
+                    return;
+                }
+                else {
+                    MessageBox.Show("Datos incorrectos");
+                    return;
+                }
+            }
+
+            if (txtUsername.Text == "Worker1234")                {
+                //txtPassword.Text = "1234567";)
+                if (txtPassword.Text == "12")
+                {
+                    MessageBox.Show("Bienvenido trabajador de almacen");
+                    this.Hide();
+                    frmMain mainWindow = new frmMain(2);
+                    mainWindow.Closed += (s, args) => this.Close();
+                    mainWindow.Show();
+                    return;
+                }
+                else              {
+                    MessageBox.Show("Datos incorrectos");
+                    return;
+                }
+            }
+
+             if (txtUsername.Text == "Technician1234")
+                {
+                    //txtPassword.Text = "1234567";)
+                    if (txtPassword.Text == "12")
+                    {
+                        MessageBox.Show("Bienvenido técnico");
+                        this.Hide();
+                        frmMain mainWindow = new frmMain(3);
+                        mainWindow.Closed += (s, args) => this.Close();
+                        mainWindow.Show();
+                    return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos incorrectos");
+                        return;
+                    }
+                }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }*/
     }
 }

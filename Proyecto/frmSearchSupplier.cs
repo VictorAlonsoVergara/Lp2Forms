@@ -13,12 +13,15 @@ namespace AlmacenDisecForms
 {
     public partial class frmSearchSupplier : Form
     {
-      
+        private String nombreTextoAnterior = null;
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
+
         public frmSearchSupplier()
         {
             InitializeComponent();
-            dgvSearch.Rows.Insert(0, "Cod1", "Maestro", "8899889898", "Av.  Brasil", "Lima", "Perú", "4532345","a@mail.com");
-          
+            //dgvSearch.Rows.Insert(0, "Cod1", "Maestro", "8899889898", "Av.  Brasil", "Lima", "Perú", "4532345","a@mail.com");
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+
         }
 
         private void OpenFormPanel(object formHijo)
@@ -32,16 +35,6 @@ namespace AlmacenDisecForms
             this.panel1.Controls.Add(fh);
             this.panel1.Tag = fh;
             fh.Show();
-        }
-
-
-
-
-       
-
-        private void BtnSearch_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnModify_Click(object sender, EventArgs e)
@@ -65,10 +58,10 @@ namespace AlmacenDisecForms
                         frm.txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
                         frm.txtRuc.Text = dgvSearch.CurrentRow.Cells[2].Value.ToString();
                         frm.txtAddress.Text = dgvSearch.CurrentRow.Cells[3].Value.ToString();
-                    //Los combo box se rellenan diferente asi no   
-                    //frm.cboCity.SelectedValue = dgvSearch.CurrentRow.Cells[4].Value.ToString();
-                    //frm.cboCountry.SelectedValue = dgvSearch.CurrentRow.Cells[5].Value.ToString();
-                    frm.txtPhone.Text = dgvSearch.CurrentRow.Cells[6].Value.ToString();
+                        //Los combo box se rellenan diferente asi no   
+                        //frm.cboCity.SelectedValue = dgvSearch.CurrentRow.Cells[4].Value.ToString();
+                        //frm.cboCountry.SelectedValue = dgvSearch.CurrentRow.Cells[5].Value.ToString();
+                        frm.txtPhone.Text = dgvSearch.CurrentRow.Cells[6].Value.ToString();
                         frm.txtEmail.Text = dgvSearch.CurrentRow.Cells[7].Value.ToString();
                         
                         OpenFormPanel(frm);
@@ -88,6 +81,24 @@ namespace AlmacenDisecForms
             frmSupplier frm = new frmSupplier();
             frm.flag = true;
             OpenFormPanel(frm);
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtSearch.Text))
+            {
+
+                dgvSearch.AutoGenerateColumns = false;
+                dgvSearch.DataSource = serviceDA.queryAllSupplier();
+
+            }
+            else
+            {
+                String name = txtSearch.Text;
+
+                //Insertar el codigo de busqueda por nombre
+
+            }
         }
     }
 }

@@ -28,28 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchSupplier));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchSupplier));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMaterial = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnNew = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.PictureBox();
             this.btnModify = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
-            this.CodC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SerieC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrandC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Columnac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNew = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,6 +125,27 @@
             this.panel2.Size = new System.Drawing.Size(678, 457);
             this.panel2.TabIndex = 14;
             // 
+            // btnNew
+            // 
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(125, 356);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(159, 38);
+            this.btnNew.TabIndex = 18;
+            this.btnNew.Text = " Nuevo";
+            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
+            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -139,6 +157,7 @@
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSearch.TabIndex = 16;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // btnModify
             // 
@@ -197,12 +216,9 @@
             this.dgvSearch.ColumnHeadersHeight = 30;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodC,
             this.NombreC,
             this.SerieC,
             this.BrandC,
-            this.QuantityC,
-            this.UnitC,
             this.StatusC,
             this.Columnac});
             this.dgvSearch.EnableHeadersVisualStyles = false;
@@ -230,15 +246,9 @@
             this.dgvSearch.Size = new System.Drawing.Size(637, 259);
             this.dgvSearch.TabIndex = 6;
             // 
-            // CodC
-            // 
-            this.CodC.HeaderText = "Código";
-            this.CodC.Name = "CodC";
-            this.CodC.ReadOnly = true;
-            this.CodC.Width = 102;
-            // 
             // NombreC
             // 
+            this.NombreC.DataPropertyName = "supplier_name";
             this.NombreC.HeaderText = "Proveedor";
             this.NombreC.Name = "NombreC";
             this.NombreC.ReadOnly = true;
@@ -246,6 +256,7 @@
             // 
             // SerieC
             // 
+            this.SerieC.DataPropertyName = "ruc";
             this.SerieC.HeaderText = "RUC";
             this.SerieC.Name = "SerieC";
             this.SerieC.ReadOnly = true;
@@ -253,27 +264,15 @@
             // 
             // BrandC
             // 
+            this.BrandC.DataPropertyName = "adress";
             this.BrandC.HeaderText = "Dirección";
             this.BrandC.Name = "BrandC";
             this.BrandC.ReadOnly = true;
             this.BrandC.Width = 120;
             // 
-            // QuantityC
-            // 
-            this.QuantityC.HeaderText = "Ciudad";
-            this.QuantityC.Name = "QuantityC";
-            this.QuantityC.ReadOnly = true;
-            this.QuantityC.Width = 103;
-            // 
-            // UnitC
-            // 
-            this.UnitC.HeaderText = "Pais";
-            this.UnitC.Name = "UnitC";
-            this.UnitC.ReadOnly = true;
-            this.UnitC.Width = 68;
-            // 
             // StatusC
             // 
+            this.StatusC.DataPropertyName = "phone_number";
             this.StatusC.HeaderText = "Teléfono";
             this.StatusC.Name = "StatusC";
             this.StatusC.ReadOnly = true;
@@ -281,31 +280,11 @@
             // 
             // Columnac
             // 
+            this.Columnac.DataPropertyName = "email";
             this.Columnac.HeaderText = "Email";
             this.Columnac.Name = "Columnac";
             this.Columnac.ReadOnly = true;
             this.Columnac.Width = 80;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
-            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(125, 356);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(159, 38);
-            this.btnNew.TabIndex = 18;
-            this.btnNew.Text = " Nuevo";
-            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
             // frmSearchSupplier
             // 
@@ -338,15 +317,12 @@
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dgvSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodC;
+        private System.Windows.Forms.PictureBox btnSearch;
+        public System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
         private System.Windows.Forms.DataGridViewTextBoxColumn SerieC;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrandC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitC;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusC;
         private System.Windows.Forms.DataGridViewTextBoxColumn Columnac;
-        private System.Windows.Forms.PictureBox btnSearch;
-        public System.Windows.Forms.Button btnNew;
     }
 }

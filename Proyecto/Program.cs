@@ -17,7 +17,7 @@ namespace AlmacenDisecForms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //  Application.Run(new TrasladoAlmacenForm());
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmLogin());
         }
     }
 }
