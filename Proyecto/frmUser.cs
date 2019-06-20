@@ -13,9 +13,8 @@ namespace AlmacenDisecForms
     public partial class frmUser : Form
     {
         public bool flag = false;
-
-        private List<String> listas = new List<String>();
-        private List<String> listas2 = new List<String>();
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
+        private List<AlmacenDisecWS.privilege> userTypes = Enum.GetValues(typeof(AlmacenDisecWS.privilege)).Cast<AlmacenDisecWS.privilege>().ToList();
         public frmUser()
         {
             InitializeComponent();
@@ -25,12 +24,16 @@ namespace AlmacenDisecForms
             // this.BackgroundImageLayout = ImageLayout.Stretch;
             txtCode.Enabled = false;
             btnDelete.Enabled = false;
-            listas.Add("Perú");
-            listas.Add("Ecuador");
-          
-            cboPrivilege.DataSource = listas;
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+
+
+
+
+            cboPrivilege.DataSource = userTypes;
             cboPrivilege.SelectedIndex = -1;
 
+            // c.category_name = name;
+            // c.category_id = id;
 
         }
 
@@ -96,13 +99,61 @@ namespace AlmacenDisecForms
                         if (String.IsNullOrEmpty(txtCode.Text))
                         {
 
-                           
-                                frmMessageBoxSave frm = new frmMessageBoxSave();
+                            AlmacenDisecWS.employee emp = new AlmacenDisecWS.employee();
+
+                                 frmMessageBoxSave frm = new frmMessageBoxSave();
                                 if (frm.ShowDialog() == DialogResult.OK)
                                 {
 
                                     String name = txtName.Text;
-                                    //Category cat = new category(name,1);
+                                    String apP = txtLastName1.Text;
+                                    String apM = txtLastName2.Text;
+                                    String DNI = txtDNI.Text;
+                                String email = txtEmail.Text;
+                                String pass = txtPassword.Text;
+                                Double sueldo = Double.Parse(txtSalary.Text);
+
+
+
+                                emp.employee_name = name;
+                                emp.last_name = apP;
+                                emp.second_last_name = apM;
+                                emp.dni = DNI;
+                                emp.email_employee = email;
+                                emp.salary = sueldo;
+                                emp.password = pass;
+                             
+                                
+                             if (cboPrivilege.SelectedValue.ToString() == "MANAGER") {
+                                    emp.privilege = AlmacenDisecWS.privilege.MANAGER;
+
+                                } else if (cboPrivilege.SelectedValue.ToString() == "STOREKEEPER") {
+
+                                    emp.privilege = AlmacenDisecWS.privilege.STOREKEEPER;
+                                }
+                            else
+                                {
+                                   
+
+                                         emp.privilege = AlmacenDisecWS.privilege.TECHNICIAN;
+
+                                }
+
+    
+
+
+                                if (rbMan.Checked)
+                                {
+                                    emp.gender = "M";
+                                }
+                                else {
+                                    emp.gender = "F";
+
+                                }
+
+
+                                int result= serviceDA.insertEmployee(emp);
+                                    
                                     //Se llama al insert
                                     reiniciar();
                                 }

@@ -13,13 +13,13 @@ namespace AlmacenDisecForms
     public partial class frmBrand : Form
     {
         private String nombreTextoAnterior = null;
-      //  private AlmacenDisecWS.DBControllerWSClient serviceDA;
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
 
         bool flag = false;
         public frmBrand()
         {
             InitializeComponent();
-        //    serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
             txtId.Enabled = false;
             btnDelete.Enabled = false;
         }
@@ -59,12 +59,12 @@ namespace AlmacenDisecForms
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
                             String name = txtName.Text;
-                        //    AlmacenDisecWS.brand b = new AlmacenDisecWS.brand();
-                            //b.brand_name = name;
-                          //  int result = serviceDA.insertBrand(b);
+                           AlmacenDisecWS.brand b = new AlmacenDisecWS.brand();
+                            b.brand_name = name;
+                           int result = serviceDA.insertBrand(b);
 
                             dgvSearch.AutoGenerateColumns = false;
-                            //dgvSearch.DataSource = serviceDA.queryAllBrand();
+                            dgvSearch.DataSource = serviceDA.queryAllBrand();
                             reiniciar();
                         }
                 }
@@ -86,11 +86,11 @@ namespace AlmacenDisecForms
 
                             int id = Int32.Parse(txtId.Text);
                             String name = txtName.Text;
-                          //  AlmacenDisecWS.brand b = serviceDA.queryBrandByName(nombreTextoAnterior);
-                            //b.brand_name = name;
-                            //int result = serviceDA.updateBrand(b);
+                            AlmacenDisecWS.brand b = serviceDA.queryBrandByName(nombreTextoAnterior);
+                            b.brand_name = name;
+                            int result = serviceDA.updateBrand(b);
                             dgvSearch.AutoGenerateColumns = false;
-                           // dgvSearch.DataSource = serviceDA.queryAllBrand();
+                            dgvSearch.DataSource = serviceDA.queryAllBrand();
                             reiniciar();
                         }
                     }
@@ -121,7 +121,7 @@ namespace AlmacenDisecForms
             if ( String.IsNullOrEmpty (txtSearch.Text))
             {
                 dgvSearch.AutoGenerateColumns = false;
-              //  dgvSearch.DataSource = serviceDA.queryAllBrand();
+                dgvSearch.DataSource = serviceDA.queryAllBrand();
             }
             else {
                 String name = txtSearch.Text;
@@ -177,10 +177,10 @@ namespace AlmacenDisecForms
                     {
                         int id = Int32.Parse(txtId.Text);
                         //Se llama al delete 
-                     //   int result = serviceDA.deleteBrand(id);
+                       int result = serviceDA.deleteBrand(id);
 
                         dgvSearch.AutoGenerateColumns = false;
-                       // dgvSearch.DataSource = serviceDA.queryAllBrand();
+                        dgvSearch.DataSource = serviceDA.queryAllBrand();
                     reiniciar();
                     }
 

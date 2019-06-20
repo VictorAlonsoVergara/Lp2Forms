@@ -14,7 +14,7 @@ namespace AlmacenDisecForms
     {
         
         
-     //   private AlmacenDisecWS.DBControllerWSClient serviceDA;
+       private AlmacenDisecWS.DBControllerWSClient serviceDA;
 
         bool flag = false;
         public frmCategory()
@@ -26,7 +26,7 @@ namespace AlmacenDisecForms
 
             txtId.Enabled = false;
             btnDelete.Enabled = false;
-          ///  serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
            
 
         }
@@ -71,11 +71,11 @@ namespace AlmacenDisecForms
                         {
 
                             String name = txtName.Text;
-                       //     AlmacenDisecWS.category c = new AlmacenDisecWS.category();
-                           // c.category_name = name;
-                         //   serviceDA.insertCategory(c);
+                            AlmacenDisecWS.category c = new AlmacenDisecWS.category();
+                            c.category_name = name;
+                            serviceDA.insertCategory(c);
                             dgvSearch.AutoGenerateColumns = false;
-                           // dgvSearch.DataSource = serviceDA.queryAllCategory();
+                            dgvSearch.DataSource = serviceDA.queryAllCategory();
                         //Se llama al insert
                         reiniciar();
                         }
@@ -99,13 +99,13 @@ namespace AlmacenDisecForms
 
                             int id = Int32.Parse(txtId.Text);
                             String name = txtName.Text;
-                           // AlmacenDisecWS.category c = new AlmacenDisecWS.category();
-                            //c.category_name = name;
-                            //c.category_id = id;
-                            //serviceDA.updateCategory(c);
+                            AlmacenDisecWS.category c = new AlmacenDisecWS.category();
+                            c.category_name = name;
+                            c.category_id = id;
+                            serviceDA.updateCategory(c);
 
                             dgvSearch.AutoGenerateColumns = false;
-                            //dgvSearch.DataSource = serviceDA.queryAllCategory();
+                            dgvSearch.DataSource = serviceDA.queryAllCategory();
 
                             reiniciar();
                         }
@@ -138,7 +138,7 @@ namespace AlmacenDisecForms
             {
 
                 dgvSearch.AutoGenerateColumns = false;
-             //   dgvSearch.DataSource = serviceDA.queryAllCategory();
+                dgvSearch.DataSource = serviceDA.queryAllCategory();
 
             }
             else {
@@ -194,9 +194,9 @@ namespace AlmacenDisecForms
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         int id = Int32.Parse(txtId.Text);
-                 //   int result = serviceDA.deleteCategory(id);
+                    int result = serviceDA.deleteCategory(id);
                     dgvSearch.AutoGenerateColumns = false;
-                   // dgvSearch.DataSource = serviceDA.queryAllCategory();
+                    dgvSearch.DataSource = serviceDA.queryAllCategory();
                     reiniciar();
                     }
 

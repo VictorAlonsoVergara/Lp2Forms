@@ -13,11 +13,16 @@ namespace AlmacenDisecForms
 {
     public partial class frmSearchUser : Form
     {
-      
-        public frmSearchUser()
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
+
+     
+           
+            public frmSearchUser()
         {
             InitializeComponent();
-            dgvSearch.Rows.Insert( 0,"Cod1" ,"Juan", "Perez", "Jimenez", "23562389", "Femenino", "a@mail.com","2555","1");
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+            
+            
           
         }
 
@@ -39,10 +44,7 @@ namespace AlmacenDisecForms
 
        
 
-        private void BtnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void BtnModify_Click(object sender, EventArgs e)
         {
@@ -59,7 +61,7 @@ namespace AlmacenDisecForms
                     else
                     {
                         frm.flag = false;
-    
+                    frm.txtPassword.Enabled = false;
                         frm.btnDelete.Enabled = true;
                         frm.txtCode.Text = dgvSearch.CurrentRow.Cells[0].Value.ToString();
                         frm.txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
@@ -106,6 +108,25 @@ namespace AlmacenDisecForms
             frmUser frm = new frmUser();
             frm.flag = true;
             OpenFormPanel(frm);
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtSearch.Text))
+            {
+
+                dgvSearch.AutoGenerateColumns = false;
+                dgvSearch.DataSource = serviceDA.queryAllEmployee();
+
+            }
+            else
+            {
+                String name = txtSearch.Text;
+
+                //Insertar el codigo de busqueda por nombre
+
+            }
+           
         }
     }
 }
