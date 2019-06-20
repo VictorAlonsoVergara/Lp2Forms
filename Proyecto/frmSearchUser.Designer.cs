@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchUser));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchUser));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMaterial = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnNew = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.PictureBox();
@@ -50,7 +51,6 @@
             this.Columnac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNew = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,6 +129,27 @@
             this.panel2.Size = new System.Drawing.Size(678, 457);
             this.panel2.TabIndex = 14;
             // 
+            // btnNew
+            // 
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(91, 356);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(159, 38);
+            this.btnNew.TabIndex = 18;
+            this.btnNew.Text = " Nuevo";
+            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
+            // 
             // btnModify
             // 
             this.btnModify.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -174,6 +195,7 @@
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSearch.TabIndex = 8;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // dgvSearch
             // 
@@ -234,6 +256,7 @@
             // 
             // CodC
             // 
+            this.CodC.DataPropertyName = "eployee_code";
             this.CodC.HeaderText = "Código";
             this.CodC.Name = "CodC";
             this.CodC.ReadOnly = true;
@@ -241,6 +264,7 @@
             // 
             // NombreC
             // 
+            this.NombreC.DataPropertyName = "employee_name";
             this.NombreC.HeaderText = "Nombre";
             this.NombreC.Name = "NombreC";
             this.NombreC.ReadOnly = true;
@@ -248,6 +272,7 @@
             // 
             // SerieC
             // 
+            this.SerieC.DataPropertyName = "last_name";
             this.SerieC.HeaderText = "Ap. Materno";
             this.SerieC.Name = "SerieC";
             this.SerieC.ReadOnly = true;
@@ -255,6 +280,7 @@
             // 
             // BrandC
             // 
+            this.BrandC.DataPropertyName = "second_last_name";
             this.BrandC.HeaderText = "Ap. Paterno";
             this.BrandC.Name = "BrandC";
             this.BrandC.ReadOnly = true;
@@ -262,6 +288,7 @@
             // 
             // QuantityC
             // 
+            this.QuantityC.DataPropertyName = "dni";
             this.QuantityC.HeaderText = "DNI";
             this.QuantityC.Name = "QuantityC";
             this.QuantityC.ReadOnly = true;
@@ -269,6 +296,7 @@
             // 
             // StatusC
             // 
+            this.StatusC.DataPropertyName = "gender";
             this.StatusC.HeaderText = "Género";
             this.StatusC.Name = "StatusC";
             this.StatusC.ReadOnly = true;
@@ -276,6 +304,7 @@
             // 
             // Columnac
             // 
+            this.Columnac.DataPropertyName = "email_employee";
             this.Columnac.HeaderText = "Email";
             this.Columnac.Name = "Columnac";
             this.Columnac.ReadOnly = true;
@@ -283,6 +312,7 @@
             // 
             // Column46
             // 
+            this.Column46.DataPropertyName = "salary";
             this.Column46.HeaderText = "Salario";
             this.Column46.Name = "Column46";
             this.Column46.ReadOnly = true;
@@ -290,31 +320,11 @@
             // 
             // Column90
             // 
+            this.Column90.DataPropertyName = "privilege";
             this.Column90.HeaderText = "Privilegio";
             this.Column90.Name = "Column90";
             this.Column90.ReadOnly = true;
             this.Column90.Width = 113;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
-            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(91, 356);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(159, 38);
-            this.btnNew.TabIndex = 18;
-            this.btnNew.Text = " Nuevo";
-            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
             // frmSearchUser
             // 
@@ -348,6 +358,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox btnSearch;
         private System.Windows.Forms.DataGridView dgvSearch;
+        public System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodC;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
         private System.Windows.Forms.DataGridViewTextBoxColumn SerieC;
@@ -357,6 +368,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Columnac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column46;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column90;
-        public System.Windows.Forms.Button btnNew;
     }
 }

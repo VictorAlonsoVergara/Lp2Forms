@@ -14,7 +14,11 @@ namespace AlmacenDisecForms
     {
         
         
+<<<<<<< HEAD
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
+=======
+       private AlmacenDisecWS.DBControllerWSClient serviceDA;
+>>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
 
         bool flag = false;
         public frmCategory()
@@ -23,7 +27,11 @@ namespace AlmacenDisecForms
             txtId.Enabled = false;
             btnDelete.Enabled = false;
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+<<<<<<< HEAD
             txtName.Enabled = false;
+=======
+           
+>>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
 
         }
 
@@ -72,8 +80,13 @@ namespace AlmacenDisecForms
                             serviceDA.insertCategory(c);
                             dgvSearch.AutoGenerateColumns = false;
                             dgvSearch.DataSource = serviceDA.queryAllCategory();
+<<<<<<< HEAD
                             //Se llama al insert
                             reiniciar();
+=======
+                        //Se llama al insert
+                        reiniciar();
+>>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
                         }
 
                 }
@@ -101,7 +114,12 @@ namespace AlmacenDisecForms
                             serviceDA.updateCategory(c);
 
                             dgvSearch.AutoGenerateColumns = false;
+<<<<<<< HEAD
                             dgvSearch.DataSource = serviceDA.queryAllCategory();                            
+=======
+                            dgvSearch.DataSource = serviceDA.queryAllCategory();
+
+>>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
                             reiniciar();
                         }
                     }
