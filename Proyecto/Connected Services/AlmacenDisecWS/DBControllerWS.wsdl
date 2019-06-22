@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://web.almacendisec.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="DBControllerWS" targetNamespace="http://web.almacendisec.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/AlmacenDisecWeb/DBControllerWS?xsd=1" namespace="http://web.almacendisec.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="queryAllCustomer">
+    <part name="parameters" element="tns:queryAllCustomer" />
+  </message>
+  <message name="queryAllCustomerResponse">
+    <part name="parameters" element="tns:queryAllCustomerResponse" />
+  </message>
+  <message name="insertCategory">
+    <part name="parameters" element="tns:insertCategory" />
+  </message>
+  <message name="insertCategoryResponse">
+    <part name="parameters" element="tns:insertCategoryResponse" />
+  </message>
+  <message name="queryAllCountry">
+    <part name="parameters" element="tns:queryAllCountry" />
+  </message>
+  <message name="queryAllCountryResponse">
+    <part name="parameters" element="tns:queryAllCountryResponse" />
+  </message>
+  <message name="queryAllCategory">
+    <part name="parameters" element="tns:queryAllCategory" />
+  </message>
+  <message name="queryAllCategoryResponse">
+    <part name="parameters" element="tns:queryAllCategoryResponse" />
+  </message>
+  <message name="insertEmployee">
+    <part name="parameters" element="tns:insertEmployee" />
+  </message>
+  <message name="insertEmployeeResponse">
+    <part name="parameters" element="tns:insertEmployeeResponse" />
+  </message>
+  <message name="updateFamily">
+    <part name="parameters" element="tns:updateFamily" />
+  </message>
+  <message name="updateFamilyResponse">
+    <part name="parameters" element="tns:updateFamilyResponse" />
+  </message>
+  <message name="insertFamily">
+    <part name="parameters" element="tns:insertFamily" />
+  </message>
+  <message name="insertFamilyResponse">
+    <part name="parameters" element="tns:insertFamilyResponse" />
+  </message>
+  <message name="EmployeeByCode">
+    <part name="parameters" element="tns:EmployeeByCode" />
+  </message>
+  <message name="EmployeeByCodeResponse">
+    <part name="parameters" element="tns:EmployeeByCodeResponse" />
+  </message>
+  <message name="updateEmployee">
+    <part name="parameters" element="tns:updateEmployee" />
+  </message>
+  <message name="updateEmployeeResponse">
+    <part name="parameters" element="tns:updateEmployeeResponse" />
+  </message>
+  <message name="queryAllCitybyId">
+    <part name="parameters" element="tns:queryAllCitybyId" />
+  </message>
+  <message name="queryAllCitybyIdResponse">
+    <part name="parameters" element="tns:queryAllCitybyIdResponse" />
+  </message>
+  <message name="queryBrandByName">
+    <part name="parameters" element="tns:queryBrandByName" />
+  </message>
+  <message name="queryBrandByNameResponse">
+    <part name="parameters" element="tns:queryBrandByNameResponse" />
+  </message>
+  <message name="deleteBrand">
+    <part name="parameters" element="tns:deleteBrand" />
+  </message>
+  <message name="deleteBrandResponse">
+    <part name="parameters" element="tns:deleteBrandResponse" />
+  </message>
+  <message name="queryAllSupplier">
+    <part name="parameters" element="tns:queryAllSupplier" />
+  </message>
+  <message name="queryAllSupplierResponse">
+    <part name="parameters" element="tns:queryAllSupplierResponse" />
+  </message>
+  <message name="ConfirmUsuario">
+    <part name="parameters" element="tns:ConfirmUsuario" />
+  </message>
+  <message name="ConfirmUsuarioResponse">
+    <part name="parameters" element="tns:ConfirmUsuarioResponse" />
+  </message>
+  <message name="deleteEmployee">
+    <part name="parameters" element="tns:deleteEmployee" />
+  </message>
+  <message name="deleteEmployeeResponse">
+    <part name="parameters" element="tns:deleteEmployeeResponse" />
+  </message>
+  <message name="queryAllEmployee">
+    <part name="parameters" element="tns:queryAllEmployee" />
+  </message>
+  <message name="queryAllEmployeeResponse">
+    <part name="parameters" element="tns:queryAllEmployeeResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="queryAllBrand">
+    <part name="parameters" element="tns:queryAllBrand" />
+  </message>
+  <message name="queryAllBrandResponse">
+    <part name="parameters" element="tns:queryAllBrandResponse" />
+  </message>
+  <message name="insertBrand">
+    <part name="parameters" element="tns:insertBrand" />
+  </message>
+  <message name="insertBrandResponse">
+    <part name="parameters" element="tns:insertBrandResponse" />
+  </message>
+  <message name="updateCategory">
+    <part name="parameters" element="tns:updateCategory" />
+  </message>
+  <message name="updateCategoryResponse">
+    <part name="parameters" element="tns:updateCategoryResponse" />
+  </message>
+  <message name="deleteFamily">
+    <part name="parameters" element="tns:deleteFamily" />
+  </message>
+  <message name="deleteFamilyResponse">
+    <part name="parameters" element="tns:deleteFamilyResponse" />
+  </message>
+  <message name="ChangePassword">
+    <part name="parameters" element="tns:ChangePassword" />
+  </message>
+  <message name="ChangePasswordResponse">
+    <part name="parameters" element="tns:ChangePasswordResponse" />
+  </message>
+  <message name="insertarWorkOrder">
+    <part name="parameters" element="tns:insertarWorkOrder" />
+  </message>
+  <message name="insertarWorkOrderResponse">
+    <part name="parameters" element="tns:insertarWorkOrderResponse" />
+  </message>
+  <message name="deleteCategory">
+    <part name="parameters" element="tns:deleteCategory" />
+  </message>
+  <message name="deleteCategoryResponse">
+    <part name="parameters" element="tns:deleteCategoryResponse" />
+  </message>
+  <message name="updateBrand">
+    <part name="parameters" element="tns:updateBrand" />
+  </message>
+  <message name="updateBrandResponse">
+    <part name="parameters" element="tns:updateBrandResponse" />
+  </message>
+  <message name="queryAllCustomerByName">
+    <part name="parameters" element="tns:queryAllCustomerByName" />
+  </message>
+  <message name="queryAllCustomerByNameResponse">
+    <part name="parameters" element="tns:queryAllCustomerByNameResponse" />
+  </message>
+  <message name="queryAllMeasurement_Unit">
+    <part name="parameters" element="tns:queryAllMeasurement_Unit" />
+  </message>
+  <message name="queryAllMeasurement_UnitResponse">
+    <part name="parameters" element="tns:queryAllMeasurement_UnitResponse" />
+  </message>
+  <message name="querySupplierByName">
+    <part name="parameters" element="tns:querySupplierByName" />
+  </message>
+  <message name="querySupplierByNameResponse">
+    <part name="parameters" element="tns:querySupplierByNameResponse" />
+  </message>
+  <message name="queryAllStorehouse">
+    <part name="parameters" element="tns:queryAllStorehouse" />
+  </message>
+  <message name="queryAllStorehouseResponse">
+    <part name="parameters" element="tns:queryAllStorehouseResponse" />
+  </message>
+  <message name="queryAllFamily">
+    <part name="parameters" element="tns:queryAllFamily" />
+  </message>
+  <message name="queryAllFamilyResponse">
+    <part name="parameters" element="tns:queryAllFamilyResponse" />
+  </message>
+  <message name="queryAllTransferDone">
+    <part name="parameters" element="tns:queryAllTransferDone" />
+  </message>
+  <message name="queryAllTransferDoneResponse">
+    <part name="parameters" element="tns:queryAllTransferDoneResponse" />
+  </message>
+  <message name="queryAllCategoryByName">
+    <part name="parameters" element="tns:queryAllCategoryByName" />
+  </message>
+  <message name="queryAllCategoryByNameResponse">
+    <part name="parameters" element="tns:queryAllCategoryByNameResponse" />
+  </message>
+  <message name="queryAllTransferPending">
+    <part name="parameters" element="tns:queryAllTransferPending" />
+  </message>
+  <message name="queryAllTransferPendingResponse">
+    <part name="parameters" element="tns:queryAllTransferPendingResponse" />
+  </message>
+  <portType name="DBControllerWS">
+    <operation name="queryAllCustomer">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerRequest" message="tns:queryAllCustomer" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerResponse" message="tns:queryAllCustomerResponse" />
+    </operation>
+    <operation name="insertCategory">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertCategoryRequest" message="tns:insertCategory" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertCategoryResponse" message="tns:insertCategoryResponse" />
+    </operation>
+    <operation name="queryAllCountry">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCountryRequest" message="tns:queryAllCountry" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCountryResponse" message="tns:queryAllCountryResponse" />
+    </operation>
+    <operation name="queryAllCategory">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryRequest" message="tns:queryAllCategory" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryResponse" message="tns:queryAllCategoryResponse" />
+    </operation>
+    <operation name="insertEmployee">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" message="tns:insertEmployee" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertEmployeeResponse" message="tns:insertEmployeeResponse" />
+    </operation>
+    <operation name="updateFamily">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateFamilyRequest" message="tns:updateFamily" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateFamilyResponse" message="tns:updateFamilyResponse" />
+    </operation>
+    <operation name="insertFamily">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertFamilyRequest" message="tns:insertFamily" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertFamilyResponse" message="tns:insertFamilyResponse" />
+    </operation>
+    <operation name="EmployeeByCode">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/EmployeeByCodeRequest" message="tns:EmployeeByCode" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/EmployeeByCodeResponse" message="tns:EmployeeByCodeResponse" />
+    </operation>
+    <operation name="updateEmployee">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" message="tns:updateEmployee" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateEmployeeResponse" message="tns:updateEmployeeResponse" />
+    </operation>
+    <operation name="queryAllCitybyId">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCitybyIdRequest" message="tns:queryAllCitybyId" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCitybyIdResponse" message="tns:queryAllCitybyIdResponse" />
+    </operation>
+    <operation name="queryBrandByName">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryBrandByNameRequest" message="tns:queryBrandByName" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryBrandByNameResponse" message="tns:queryBrandByNameResponse" />
+    </operation>
+    <operation name="deleteBrand">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteBrandRequest" message="tns:deleteBrand" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteBrandResponse" message="tns:deleteBrandResponse" />
+    </operation>
+    <operation name="queryAllSupplier">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierRequest" message="tns:queryAllSupplier" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllSupplierResponse" message="tns:queryAllSupplierResponse" />
+    </operation>
+    <operation name="ConfirmUsuario">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/ConfirmUsuarioRequest" message="tns:ConfirmUsuario" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/ConfirmUsuarioResponse" message="tns:ConfirmUsuarioResponse" />
+    </operation>
+    <operation name="deleteEmployee">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteEmployeeRequest" message="tns:deleteEmployee" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteEmployeeResponse" message="tns:deleteEmployeeResponse" />
+    </operation>
+    <operation name="queryAllEmployee">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllEmployeeRequest" message="tns:queryAllEmployee" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllEmployeeResponse" message="tns:queryAllEmployeeResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="queryAllBrand">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllBrandRequest" message="tns:queryAllBrand" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllBrandResponse" message="tns:queryAllBrandResponse" />
+    </operation>
+    <operation name="insertBrand">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandRequest" message="tns:insertBrand" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertBrandResponse" message="tns:insertBrandResponse" />
+    </operation>
+    <operation name="updateCategory">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateCategoryRequest" message="tns:updateCategory" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateCategoryResponse" message="tns:updateCategoryResponse" />
+    </operation>
+    <operation name="deleteFamily">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteFamilyRequest" message="tns:deleteFamily" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteFamilyResponse" message="tns:deleteFamilyResponse" />
+    </operation>
+    <operation name="ChangePassword">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/ChangePasswordRequest" message="tns:ChangePassword" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/ChangePasswordResponse" message="tns:ChangePasswordResponse" />
+    </operation>
+    <operation name="insertarWorkOrder">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertarWorkOrderRequest" message="tns:insertarWorkOrder" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/insertarWorkOrderResponse" message="tns:insertarWorkOrderResponse" />
+    </operation>
+    <operation name="deleteCategory">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteCategoryRequest" message="tns:deleteCategory" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/deleteCategoryResponse" message="tns:deleteCategoryResponse" />
+    </operation>
+    <operation name="updateBrand">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateBrandRequest" message="tns:updateBrand" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/updateBrandResponse" message="tns:updateBrandResponse" />
+    </operation>
+    <operation name="queryAllCustomerByName">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerByNameRequest" message="tns:queryAllCustomerByName" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCustomerByNameResponse" message="tns:queryAllCustomerByNameResponse" />
+    </operation>
+    <operation name="queryAllMeasurement_Unit">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllMeasurement_UnitRequest" message="tns:queryAllMeasurement_Unit" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllMeasurement_UnitResponse" message="tns:queryAllMeasurement_UnitResponse" />
+    </operation>
+    <operation name="querySupplierByName">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameRequest" message="tns:querySupplierByName" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/querySupplierByNameResponse" message="tns:querySupplierByNameResponse" />
+    </operation>
+    <operation name="queryAllStorehouse">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseRequest" message="tns:queryAllStorehouse" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllStorehouseResponse" message="tns:queryAllStorehouseResponse" />
+    </operation>
+    <operation name="queryAllFamily">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" message="tns:queryAllFamily" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllFamilyResponse" message="tns:queryAllFamilyResponse" />
+    </operation>
+    <operation name="queryAllTransferDone">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneRequest" message="tns:queryAllTransferDone" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferDoneResponse" message="tns:queryAllTransferDoneResponse" />
+    </operation>
+    <operation name="queryAllCategoryByName">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryByNameRequest" message="tns:queryAllCategoryByName" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllCategoryByNameResponse" message="tns:queryAllCategoryByNameResponse" />
+    </operation>
+    <operation name="queryAllTransferPending">
+      <input wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferPendingRequest" message="tns:queryAllTransferPending" />
+      <output wsam:Action="http://web.almacendisec.pucp.edu.pe/DBControllerWS/queryAllTransferPendingResponse" message="tns:queryAllTransferPendingResponse" />
+    </operation>
+  </portType>
+  <binding name="DBControllerWSPortBinding" type="tns:DBControllerWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="queryAllCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertCategory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCountry">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCategory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateFamily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertFamily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EmployeeByCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCitybyId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryBrandByName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllSupplier">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ConfirmUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateCategory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteFamily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangePassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarWorkOrder">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCategory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCustomerByName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllMeasurement_Unit">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="querySupplierByName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllStorehouse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllFamily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllTransferDone">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCategoryByName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllTransferPending">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DBControllerWS">
+    <port name="DBControllerWSPort" binding="tns:DBControllerWSPortBinding">
+      <soap:address location="http://localhost:8080/AlmacenDisecWeb/DBControllerWS" />
+    </port>
+  </service>
+</definitions>
