@@ -769,6 +769,7 @@
             this.btnUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnUser.TabIndex = 3;
             this.btnUser.TabStop = false;
+            this.btnUser.Click += new System.EventHandler(this.BtnUser_Click);
             // 
             // lblNombre
             // 
@@ -777,9 +778,9 @@
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(110, 44);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(61, 17);
+            this.lblNombre.Size = new System.Drawing.Size(55, 17);
             this.lblNombre.TabIndex = 5;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Alberto";
             // 
             // lblApellidos
             // 
@@ -788,9 +789,9 @@
             this.lblApellidos.ForeColor = System.Drawing.Color.White;
             this.lblApellidos.Location = new System.Drawing.Point(110, 23);
             this.lblApellidos.Name = "lblApellidos";
-            this.lblApellidos.Size = new System.Drawing.Size(66, 17);
+            this.lblApellidos.Size = new System.Drawing.Size(111, 17);
             this.lblApellidos.TabIndex = 4;
-            this.lblApellidos.Text = "Apellidos";
+            this.lblApellidos.Text = "Lozano Jimenez";
             // 
             // lblCargo
             // 
@@ -799,9 +800,9 @@
             this.lblCargo.ForeColor = System.Drawing.Color.White;
             this.lblCargo.Location = new System.Drawing.Point(110, 64);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(50, 17);
+            this.lblCargo.Size = new System.Drawing.Size(98, 17);
             this.lblCargo.TabIndex = 3;
-            this.lblCargo.Text = "Cargo";
+            this.lblCargo.Text = "Administrador";
             // 
             // lblHora
             // 

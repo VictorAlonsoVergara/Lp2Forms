@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchTool));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchTool));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMaterial = new System.Windows.Forms.Label();
@@ -45,7 +45,6 @@
             this.SerieC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrandC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnAddMaterial = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
@@ -54,7 +53,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,15 +67,13 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
-            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.05954F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.55751F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.247632F));
             this.tableLayoutPanel1.Controls.Add(this.lblMaterial, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -97,7 +93,7 @@
             this.lblMaterial.BackColor = System.Drawing.Color.Transparent;
             this.lblMaterial.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.lblMaterial.Location = new System.Drawing.Point(24, 23);
+            this.lblMaterial.Location = new System.Drawing.Point(33, 23);
             this.lblMaterial.Name = "lblMaterial";
             this.lblMaterial.Size = new System.Drawing.Size(222, 38);
             this.lblMaterial.TabIndex = 12;
@@ -108,7 +104,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label8.Location = new System.Drawing.Point(24, 80);
+            this.label8.Location = new System.Drawing.Point(33, 80);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(258, 23);
             this.label8.TabIndex = 13;
@@ -120,12 +116,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(86)))), ((int)(((byte)(161)))));
+            this.panel2.Controls.Add(this.btnNew);
             this.panel2.Controls.Add(this.btnSearch);
+            this.panel2.Controls.Add(this.btnAddMaterial);
+            this.panel2.Controls.Add(this.btnModify);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.dgvSearch);
-            this.panel2.Location = new System.Drawing.Point(24, 121);
+            this.panel2.Location = new System.Drawing.Point(33, 121);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(495, 457);
+            this.panel2.Size = new System.Drawing.Size(678, 457);
             this.panel2.TabIndex = 14;
             // 
             // btnSearch
@@ -133,7 +132,7 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(333, 28);
+            this.btnSearch.Location = new System.Drawing.Point(516, 13);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(40, 41);
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,9 +147,9 @@
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(146, 38);
+            this.txtSearch.Location = new System.Drawing.Point(146, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(164, 22);
+            this.txtSearch.Size = new System.Drawing.Size(347, 22);
             this.txtSearch.TabIndex = 7;
             // 
             // dgvSearch
@@ -183,7 +182,7 @@
             this.StatusC});
             this.dgvSearch.EnableHeadersVisualStyles = false;
             this.dgvSearch.GridColor = System.Drawing.SystemColors.Window;
-            this.dgvSearch.Location = new System.Drawing.Point(26, 81);
+            this.dgvSearch.Location = new System.Drawing.Point(26, 66);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             this.dgvSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -203,7 +202,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvSearch.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(441, 339);
+            this.dgvSearch.Size = new System.Drawing.Size(624, 295);
             this.dgvSearch.TabIndex = 6;
             // 
             // CodC
@@ -241,20 +240,6 @@
             this.StatusC.ReadOnly = true;
             this.StatusC.Width = 96;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(86)))), ((int)(((byte)(161)))));
-            this.panel3.Controls.Add(this.btnNew);
-            this.panel3.Controls.Add(this.btnAddMaterial);
-            this.panel3.Controls.Add(this.btnModify);
-            this.panel3.Location = new System.Drawing.Point(525, 121);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(192, 457);
-            this.panel3.TabIndex = 15;
-            // 
             // btnNew
             // 
             this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -266,7 +251,7 @@
             this.btnNew.ForeColor = System.Drawing.Color.White;
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(19, 81);
+            this.btnNew.Location = new System.Drawing.Point(63, 390);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(159, 38);
             this.btnNew.TabIndex = 21;
@@ -287,9 +272,9 @@
             this.btnAddMaterial.ForeColor = System.Drawing.Color.White;
             this.btnAddMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMaterial.Image")));
             this.btnAddMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddMaterial.Location = new System.Drawing.Point(16, 179);
+            this.btnAddMaterial.Location = new System.Drawing.Point(237, 385);
             this.btnAddMaterial.Name = "btnAddMaterial";
-            this.btnAddMaterial.Size = new System.Drawing.Size(162, 88);
+            this.btnAddMaterial.Size = new System.Drawing.Size(162, 51);
             this.btnAddMaterial.TabIndex = 20;
             this.btnAddMaterial.Text = "  Agregar\n     material ";
             this.btnAddMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -308,7 +293,7 @@
             this.btnModify.ForeColor = System.Drawing.Color.White;
             this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
             this.btnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModify.Location = new System.Drawing.Point(19, 135);
+            this.btnModify.Location = new System.Drawing.Point(437, 390);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(159, 38);
             this.btnModify.TabIndex = 19;
@@ -334,7 +319,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -354,7 +338,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SerieC;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrandC;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusC;
-        private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnAddMaterial;
         private System.Windows.Forms.Button btnModify;

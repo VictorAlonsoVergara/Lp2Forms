@@ -500,14 +500,7 @@ namespace AlmacenDisecForms
           
         }
 
-        private void BtnGUsers_Click(object sender, EventArgs e)
-        {
-          
-            btnDisconnect.Visible = true;
-            frmUser fm = new frmUser();
-            // fm.FormClosed += new FormClosedEventHandler(ShowFormInitialCloseForms);
-            OpenFormPanel(fm);
-        }
+     
 
         private void PlGUser_MouseDown(object sender, MouseEventArgs e)
         {
@@ -547,9 +540,12 @@ namespace AlmacenDisecForms
             OpenFormPanel(fm);
         }
 
-    
+        private void BtnUser_Click(object sender, EventArgs e)
+        {
+            frmUserAccount fm = new frmUserAccount();
+            OpenFormPanel(fm);
+        }
 
-        
         private void BtnDisconnect_Click(object sender, EventArgs e)
         {
             frmLogin login = new frmLogin();

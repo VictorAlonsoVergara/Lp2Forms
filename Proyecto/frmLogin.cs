@@ -13,28 +13,15 @@ namespace AlmacenDisecForms
 {
     public partial class frmLogin : Form
     {
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
+        private int cont = 1;
+        private System.Timers.Timer aTimer;
         public frmLogin()
         {
             InitializeComponent();
-            //BotonRedondeado.BordeRedondo(btnEntrarLogin);
-            //BotonRedondeado.BordeRedondo(btnSalirLogin);
- 
-            
-        }
-
-        private void BtnDontLookPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnLookPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnSalirLogin_Click(object sender, EventArgs e)
-        {
-
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+            aTimer = new System.Timers.Timer();
+            aTimer.Interval = 6000;
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -59,6 +46,7 @@ namespace AlmacenDisecForms
 
         private void BtnEntrarLogin_Click(object sender, EventArgs e)
         {
+            /*
             if (txtUsername.Text == "Admin1234")
             {
                 //txtPassword.Text = "1234567";)
@@ -114,7 +102,11 @@ namespace AlmacenDisecForms
                     MessageBox.Show("Datos incorrectos");
                     return;
                 }
-            }
+            }*/
+            frmPrincipal mainWindow = new frmPrincipal();
+            mainWindow.Closed += (s, args) => this.Close();
+            mainWindow.Show();
+            return;
         }
 
         private void TxtPassword_Leave(object sender, EventArgs e)
@@ -145,22 +137,84 @@ namespace AlmacenDisecForms
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void PictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
-
-
-
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            txtPassword.PasswordChar = '*';
+            pctDontLookPassword.Visible = false;
+            pctLookPassword.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            txtPassword.PasswordChar = '\0';
+            pctLookPassword.Visible = false;
+            pctDontLookPassword.Visible = true;
+        }
 
+        private void btnEntrarLogin_Click_1(object sender, EventArgs e)
+        {
+            
+            String pass=txtPassword.Text;
+            String user = txtUsername.Text;
+            int result=serviceDA.ConfirmUsuario(user, pass);
+            if (cont < 4) {
+                if (result == 1)
+                {
+
+                    // mainWindow.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    frmPrincipal mainWindow = new frmPrincipal();
+                    serviceDA.EmployeeByCode(user);
+                    mainWindow.Show();
+
+                    return;
+
+
+                }
+                else {
+
+                    MessageBox.Show("Noobs");
+                    cont++;
+
+               
+                }
+            } else {
+                MessageBox.Show("Se bloqueara el sistema");
+                btnEntrarLogin.Enabled = false;
+               long  cont2 = 0;
+               while(true)
+                {
+                    /*
+                     cont2++;
+                    if (cont2 == 150000000) {
+                        btnEntrarLogin.Enabled = true;
+                        cont = 0;
+                        MessageBox.Show(cont2.ToString() );
+                        break;
+                    }*/
+                    Task.Delay(15000).ContinueWith(t=>
+                    {
+                        btnEntrarLogin.Enabled = true;
+                    });
+
+                }
+
+              
+              
+                    
+
+            }
+         
+        }
+
+
+        private void eventTimer(object sender, EventArgs e)
+        {     
+            MessageBox.Show("Holi");
         }
 
 

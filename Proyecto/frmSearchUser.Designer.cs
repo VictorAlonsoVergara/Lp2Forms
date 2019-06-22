@@ -141,7 +141,7 @@
             this.btnNew.ForeColor = System.Drawing.Color.White;
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(91, 356);
+            this.btnNew.Location = new System.Drawing.Point(91, 376);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(159, 38);
             this.btnNew.TabIndex = 18;
@@ -152,7 +152,7 @@
             // 
             // btnModify
             // 
-            this.btnModify.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModify.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModify.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
             this.btnModify.FlatAppearance.BorderSize = 0;
@@ -162,7 +162,7 @@
             this.btnModify.ForeColor = System.Drawing.Color.White;
             this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
             this.btnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModify.Location = new System.Drawing.Point(407, 356);
+            this.btnModify.Location = new System.Drawing.Point(407, 376);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(159, 38);
             this.btnModify.TabIndex = 15;
@@ -231,7 +231,7 @@
             this.Column90});
             this.dgvSearch.EnableHeadersVisualStyles = false;
             this.dgvSearch.GridColor = System.Drawing.Color.White;
-            this.dgvSearch.Location = new System.Drawing.Point(7, 79);
+            this.dgvSearch.Location = new System.Drawing.Point(19, 91);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             this.dgvSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -251,7 +251,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvSearch.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(668, 259);
+            this.dgvSearch.Size = new System.Drawing.Size(646, 259);
             this.dgvSearch.TabIndex = 6;
             // 
             // CodC
@@ -357,7 +357,6 @@
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox btnSearch;
-        private System.Windows.Forms.DataGridView dgvSearch;
         public System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodC;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
@@ -368,5 +367,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Columnac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column46;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column90;
+        public System.Windows.Forms.DataGridView dgvSearch;
     }
 }

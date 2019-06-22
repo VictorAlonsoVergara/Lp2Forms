@@ -14,11 +14,11 @@ namespace AlmacenDisecForms
     {
         
         
-<<<<<<< HEAD
+
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
-=======
-       private AlmacenDisecWS.DBControllerWSClient serviceDA;
->>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
+
+     
+
 
         bool flag = false;
         public frmCategory()
@@ -27,11 +27,8 @@ namespace AlmacenDisecForms
             txtId.Enabled = false;
             btnDelete.Enabled = false;
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
-<<<<<<< HEAD
+
             txtName.Enabled = false;
-=======
-           
->>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
 
         }
 
@@ -75,18 +72,18 @@ namespace AlmacenDisecForms
                         {
 
                             String name = txtName.Text;
-                            AlmacenDisecWS.category c = new AlmacenDisecWS.category();
+                          AlmacenDisecWS.category c = new AlmacenDisecWS.category();
                             c.category_name = name;
-                            serviceDA.insertCategory(c);
+                           serviceDA.insertCategory(c);
                             dgvSearch.AutoGenerateColumns = false;
                             dgvSearch.DataSource = serviceDA.queryAllCategory();
-<<<<<<< HEAD
+
                             //Se llama al insert
                             reiniciar();
-=======
+
                         //Se llama al insert
                         reiniciar();
->>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
+
                         }
 
                 }
@@ -108,18 +105,17 @@ namespace AlmacenDisecForms
 
                             int id = Int32.Parse(txtId.Text);
                             String name = txtName.Text;
-                            AlmacenDisecWS.category c = new AlmacenDisecWS.category();
-                            c.category_name = name;
-                            c.category_id = id;
-                            serviceDA.updateCategory(c);
+                          AlmacenDisecWS.category c = new AlmacenDisecWS.category();
+                           c.category_name = name;
+                          c.category_id = id;
+                           serviceDA.updateCategory(c);
 
                             dgvSearch.AutoGenerateColumns = false;
-<<<<<<< HEAD
-                            dgvSearch.DataSource = serviceDA.queryAllCategory();                            
-=======
-                            dgvSearch.DataSource = serviceDA.queryAllCategory();
 
->>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
+                           dgvSearch.DataSource = serviceDA.queryAllCategory();                            
+
+                   
+
                             reiniciar();
                         }
                     }
@@ -151,7 +147,7 @@ namespace AlmacenDisecForms
             {
 
                 dgvSearch.AutoGenerateColumns = false;
-                dgvSearch.DataSource = serviceDA.queryAllCategory();
+              dgvSearch.DataSource = serviceDA.queryAllCategory();
 
             }
             else {
@@ -209,9 +205,9 @@ namespace AlmacenDisecForms
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         int id = Int32.Parse(txtId.Text);
-                    int result = serviceDA.deleteCategory(id);
+                   int result = serviceDA.deleteCategory(id);
                     dgvSearch.AutoGenerateColumns = false;
-                    dgvSearch.DataSource = serviceDA.queryAllCategory();
+                  dgvSearch.DataSource = serviceDA.queryAllCategory();
                     reiniciar();
                     }
 

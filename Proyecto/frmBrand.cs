@@ -60,15 +60,11 @@ namespace AlmacenDisecForms
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
                             String name = txtName.Text;
-<<<<<<< HEAD
+
                             AlmacenDisecWS.brand b = new AlmacenDisecWS.brand();
                             b.brand_name = name;
                             int result = serviceDA.insertBrand(b);
-=======
-                           AlmacenDisecWS.brand b = new AlmacenDisecWS.brand();
-                            b.brand_name = name;
-                           int result = serviceDA.insertBrand(b);
->>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
+
 
                             dgvSearch.AutoGenerateColumns = false;
                             dgvSearch.DataSource = serviceDA.queryAllBrand();
@@ -185,19 +181,15 @@ namespace AlmacenDisecForms
                     {
                         int id = Int32.Parse(txtId.Text);
                         //Se llama al delete 
-<<<<<<< HEAD
+
                         int result = serviceDA.deleteBrand(id);
 
-                        dgvSearch.AutoGenerateColumns = false;
-                        dgvSearch.DataSource = serviceDA.queryAllBrand();
+                       dgvSearch.AutoGenerateColumns = false;
+                       dgvSearch.DataSource = serviceDA.queryAllBrand();
                         reiniciar();
-=======
-                       int result = serviceDA.deleteBrand(id);
 
-                        dgvSearch.AutoGenerateColumns = false;
-                        dgvSearch.DataSource = serviceDA.queryAllBrand();
                     reiniciar();
->>>>>>> b0ffe917aafb205ec3f4c3bbed4d77c39d5803bc
+
                     }
 
 

@@ -21,7 +21,7 @@ namespace AlmacenDisecForms
         {
             InitializeComponent();
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
-            
+            btnModify.Enabled = false;
             
           
         }
@@ -42,72 +42,73 @@ namespace AlmacenDisecForms
 
 
 
-       
 
-  
+
+
 
         private void BtnModify_Click(object sender, EventArgs e)
         {
-           
-                frmUser frm = new frmUser();
-                if (dgvSearch.SelectedRows.Count > 0)
-                {
-                    if (dgvSearch.CurrentRow.Cells[0].Value == null)
-                    {
+            frmUser frm = new frmUser();
+            frm.flag = false;
 
-                        frmMessageBoxInvalidData frm3 = new frmMessageBoxInvalidData();
-                        frm3.ShowDialog();
-                    }
-                    else
-                    {
-                        frm.flag = false;
-                    frm.txtPassword.Enabled = false;
-                        frm.btnDelete.Enabled = true;
-                        frm.txtCode.Text = dgvSearch.CurrentRow.Cells[0].Value.ToString();
-                        frm.txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
-                        frm.txtLastName1.Text = dgvSearch.CurrentRow.Cells[2].Value.ToString();
-                        frm.txtLastName2.Text = dgvSearch.CurrentRow.Cells[3].Value.ToString();
-                        frm.txtDNI.Text = dgvSearch.CurrentRow.Cells[4].Value.ToString();
-                    if (dgvSearch.CurrentRow.Cells[5].Value.ToString() == "Femenino")
-                    {
-                        frm.rbWoman.Checked = true;
-                    }
-                    else {
-                        frm.rbMan.Checked = true;
-                    }
+            AddOwnedForm(frm);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.Controls.Add(frm);
+            this.Tag = frm;
+            frm.cboPrivilege.Enabled = false;
 
-                        frm.txtEmail.Text = dgvSearch.CurrentRow.Cells[6].Value.ToString();
-                        frm.txtSalary.Text = dgvSearch.CurrentRow.Cells[7].Value.ToString();
+            String cod = dgvSearch.CurrentRow.Cells[0].Value.ToString();
+            AlmacenDisecWS.employee emp = new AlmacenDisecWS.employee();
+            emp = serviceDA.EmployeeByCode(cod);
 
-                    //Los combo box se rellenan diferente asi no     
-                    //frm.cboPrivilege.SelectedValue = dgvSearch.CurrentRow.Cells[8].Value.ToString();
-                    frm.txtPassword.Enabled = false;
+            frm.lblId.Text = emp.employee_id.ToString();
+            frm.txtCode.Text = emp.eployee_code;
+            frm.txtName.Text = emp.employee_name;
+            frm.txtLastName1.Text = emp.last_name;
+            frm.txtLastName2.Text = emp.second_last_name;
+            frm.txtEmail.Text = emp.email_employee;
+            frm.txtDNI.Text = emp.dni;
+            frm.txtPassword.Enabled = false;
+            frm.txtSalary.Text = emp.salary.ToString();
+            frm.cboPrivilege.Text= dgvSearch.CurrentRow.Cells[8].Value.ToString();
+            frm.btnDelete.Enabled = true;
+            if (emp.gender == "F")
+            {
 
-                        /*La contraseña no deberia mostrarse en el grip por lo de la seguridad para capturarla se saca desde la base de datos
-                        Worker w = new worker();
-                        w= busquedadeempleado(cod);
-                        frm.txtPassword.text= w.getPassword();
-                        Seria algo asi
-                     
-                     */
-                       
-                        OpenFormPanel(frm);
-                    }
+                frm.rbWoman.Checked = true;
 
-                }
-                else
-                {
-                    frmMessageBoxSelectRow frm2 = new frmMessageBoxSelectRow();
-                    frm2.ShowDialog();
-                }
-            
+            }
+            else {
+
+                frm.rbMan.Checked = true;
+            }
+
+
+            frm.BringToFront();
+            frm.Show();           
+          
+
+
         }
 
         private void BtnNew_Click(object sender, EventArgs e)
         {
             frmUser frm = new frmUser();
             frm.flag = true;
-            OpenFormPanel(frm);
+
+            AddOwnedForm(frm);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.Controls.Add(frm);
+            this.Tag = frm;
+            frm.BringToFront();
+            frm.Show();
+
+
+
         }
 
         private void btnSearch_Click_1(object sender, EventArgs e)
@@ -117,6 +118,7 @@ namespace AlmacenDisecForms
 
                 dgvSearch.AutoGenerateColumns = false;
                 dgvSearch.DataSource = serviceDA.queryAllEmployee();
+               
 
             }
             else
@@ -126,7 +128,7 @@ namespace AlmacenDisecForms
                 //Insertar el codigo de busqueda por nombre
 
             }
-           
+            btnModify.Enabled = true;
         }
     }
 }
