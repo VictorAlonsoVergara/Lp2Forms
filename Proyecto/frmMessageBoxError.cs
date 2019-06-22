@@ -21,5 +21,10 @@ namespace AlmacenDisecForms
         {
             this.Close();
         }
+
+        private void LblSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

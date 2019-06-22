@@ -68,6 +68,7 @@
             this.lblSalir.Size = new System.Drawing.Size(13, 15);
             this.lblSalir.TabIndex = 0;
             this.lblSalir.Text = "x";
+            this.lblSalir.Click += new System.EventHandler(this.LblSalir_Click);
             // 
             // btnA
             // 
@@ -96,7 +97,7 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Seleccione nuevo";
             // 
-            // frmMessageBoxAlert4
+            // frmMessageBoxNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,7 +107,7 @@
             this.Controls.Add(this.btnA);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmMessageBoxAlert4";
+            this.Name = "frmMessageBoxNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMessageBoxAlert4";
             this.panel1.ResumeLayout(false);

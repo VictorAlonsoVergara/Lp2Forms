@@ -68,6 +68,7 @@
             this.lblSalir.Size = new System.Drawing.Size(13, 15);
             this.lblSalir.TabIndex = 0;
             this.lblSalir.Text = "x";
+            this.lblSalir.Click += new System.EventHandler(this.LblSalir_Click);
             // 
             // btnA
             // 
@@ -97,7 +98,7 @@
             this.label1.Text = "Rellene todos\nlos campos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // frmMessageBoxAlert3
+            // frmMessageBoxFillNull
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -107,7 +108,7 @@
             this.Controls.Add(this.btnA);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmMessageBoxAlert3";
+            this.Name = "frmMessageBoxFillNull";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMessageBoxAlert3";
             this.panel1.ResumeLayout(false);

@@ -68,6 +68,7 @@
             this.lblSalir.Size = new System.Drawing.Size(13, 15);
             this.lblSalir.TabIndex = 0;
             this.lblSalir.Text = "x";
+            this.lblSalir.Click += new System.EventHandler(this.LblSalir_Click);
             // 
             // btnA
             // 

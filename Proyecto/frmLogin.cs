@@ -15,13 +15,13 @@ namespace AlmacenDisecForms
     {
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
         private int cont = 1;
-        private System.Timers.Timer aTimer;
+        
+     
         public frmLogin()
         {
             InitializeComponent();
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
-            aTimer = new System.Timers.Timer();
-            aTimer.Interval = 6000;
+            lblCont.Visible = false;
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -44,70 +44,7 @@ namespace AlmacenDisecForms
             }
         }
 
-        private void BtnEntrarLogin_Click(object sender, EventArgs e)
-        {
-            /*
-            if (txtUsername.Text == "Admin1234")
-            {
-                //txtPassword.Text = "1234567";)
-                if (txtPassword.Text == "12")
-                {
-                    MessageBox.Show("Bienvenido administrador");
-                    this.Hide();
-                    frmPrincipal mainWindow = new frmPrincipal();
-                    mainWindow.Closed += (s, args) => this.Close();
-                    mainWindow.Show();
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Datos incorrectos");
-                    return;
-                }
-            }
-
-            if (txtUsername.Text == "Worker1234")
-            {
-                //txtPassword.Text = "1234567";)
-                if (txtPassword.Text == "12")
-                {
-                    MessageBox.Show("Bienvenido trabajador de almacen");
-                    this.Hide();
-                    frmPrincipal mainWindow = new frmPrincipal();
-                    mainWindow.Closed += (s, args) => this.Close();
-                    mainWindow.Show();
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Datos incorrectos");
-                    return;
-                }
-            }
-
-            if (txtUsername.Text == "Technician1234")
-            {
-                //txtPassword.Text = "1234567";)
-                if (txtPassword.Text == "12")
-                {
-                    MessageBox.Show("Bienvenido técnico");
-                    this.Hide();
-                    frmPrincipal mainWindow = new frmPrincipal();
-                    mainWindow.Closed += (s, args) => this.Close();
-                    mainWindow.Show();
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Datos incorrectos");
-                    return;
-                }
-            }*/
-            frmPrincipal mainWindow = new frmPrincipal();
-            mainWindow.Closed += (s, args) => this.Close();
-            mainWindow.Show();
-            return;
-        }
+  
 
         private void TxtPassword_Leave(object sender, EventArgs e)
         {
@@ -157,64 +94,67 @@ namespace AlmacenDisecForms
 
         private void btnEntrarLogin_Click_1(object sender, EventArgs e)
         {
-            
-            String pass=txtPassword.Text;
+
+            String pass = txtPassword.Text;
             String user = txtUsername.Text;
-            int result=serviceDA.ConfirmUsuario(user, pass);
-            if (cont < 4) {
+            int result = serviceDA.ConfirmUsuario(user, pass);
+            if (cont < 4)
+            {
                 if (result == 1)
                 {
-
+                    AlmacenDisecWS.employee emp = serviceDA.EmployeeByCode(user);
                     // mainWindow.Closed += (s, args) => this.Close();
                     this.Hide();
                     frmPrincipal mainWindow = new frmPrincipal();
-                    serviceDA.EmployeeByCode(user);
+                    mainWindow.lblCargo.Text = emp.privilege.ToString();
+                    mainWindow.lblNombre.Text = emp.employee_name;
+                    mainWindow.lblApellidos.Text = emp.last_name + " " + emp.second_last_name;
+
                     mainWindow.Show();
 
                     return;
 
 
                 }
-                else {
+                else
+                {
 
-                    MessageBox.Show("Noobs");
+                    frmMessageBoxDontCoincidence fm = new frmMessageBoxDontCoincidence();
+                    fm.ShowDialog();
                     cont++;
 
-               
+
                 }
-            } else {
-                MessageBox.Show("Se bloqueara el sistema");
+            }
+            else
+            {
+                frmMessageBoxBlockSystem fm = new frmMessageBoxBlockSystem();
+                fm.ShowDialog();
+                cont = 0;
                 btnEntrarLogin.Enabled = false;
-               long  cont2 = 0;
-               while(true)
-                {
-                    /*
-                     cont2++;
-                    if (cont2 == 150000000) {
-                        btnEntrarLogin.Enabled = true;
-                        cont = 0;
-                        MessageBox.Show(cont2.ToString() );
-                        break;
-                    }*/
-                    Task.Delay(15000).ContinueWith(t=>
-                    {
-                        btnEntrarLogin.Enabled = true;
-                    });
-
-                }
-
-              
-              
-                    
+                tmLogin.Start();
 
             }
-         
+
         }
-
-
         private void eventTimer(object sender, EventArgs e)
         {     
             MessageBox.Show("Holi");
+        }
+
+        private void TmLogin_Tick(object sender, EventArgs e)
+        {
+            int r = Int32.Parse(lblCont.Text);
+            r++;
+            lblCont.Text = r.ToString();
+            if (r == 1000)
+            {
+
+                tmLogin.Stop();
+                lblCont.Text = "1";
+
+                btnEntrarLogin.Enabled = true;
+            }
         }
 
 

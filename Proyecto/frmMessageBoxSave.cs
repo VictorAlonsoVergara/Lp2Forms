@@ -31,5 +31,7 @@ namespace AlmacenDisecForms
         {
             this.Close();
         }
+
+    
     }
 }

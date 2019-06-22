@@ -778,9 +778,9 @@
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(110, 44);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(55, 17);
+            this.lblNombre.Size = new System.Drawing.Size(66, 17);
             this.lblNombre.TabIndex = 5;
-            this.lblNombre.Text = "Alberto";
+            this.lblNombre.Text = "Nombres";
             // 
             // lblApellidos
             // 
@@ -789,9 +789,9 @@
             this.lblApellidos.ForeColor = System.Drawing.Color.White;
             this.lblApellidos.Location = new System.Drawing.Point(110, 23);
             this.lblApellidos.Name = "lblApellidos";
-            this.lblApellidos.Size = new System.Drawing.Size(111, 17);
+            this.lblApellidos.Size = new System.Drawing.Size(66, 17);
             this.lblApellidos.TabIndex = 4;
-            this.lblApellidos.Text = "Lozano Jimenez";
+            this.lblApellidos.Text = "Apellidos";
             // 
             // lblCargo
             // 
@@ -800,9 +800,9 @@
             this.lblCargo.ForeColor = System.Drawing.Color.White;
             this.lblCargo.Location = new System.Drawing.Point(110, 64);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(98, 17);
+            this.lblCargo.Size = new System.Drawing.Size(50, 17);
             this.lblCargo.TabIndex = 3;
-            this.lblCargo.Text = "Administrador";
+            this.lblCargo.Text = "Cargo";
             // 
             // lblHora
             // 
@@ -911,7 +911,6 @@
         private System.Windows.Forms.Panel plUser;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.PictureBox btnUser;
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Panel plPrincipal;
@@ -941,5 +940,6 @@
         public System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.Panel panel19;
+        public System.Windows.Forms.Label lblCargo;
     }
 }

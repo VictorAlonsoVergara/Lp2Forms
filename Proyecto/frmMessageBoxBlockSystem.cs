@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AlmacenDisecForms
 {
-    public partial class frmMessageBoxFillNull : Form
+    public partial class frmMessageBoxBlockSystem : Form
     {
-        public frmMessageBoxFillNull()
+        public frmMessageBoxBlockSystem()
         {
             InitializeComponent();
         }

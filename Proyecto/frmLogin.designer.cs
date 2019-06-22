@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -42,6 +43,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnEntrarLogin = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblCont = new System.Windows.Forms.Label();
+            this.tmLogin = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -214,12 +217,26 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado tu contraseña?";
             // 
+            // lblCont
+            // 
+            this.lblCont.AutoSize = true;
+            this.lblCont.Location = new System.Drawing.Point(681, 61);
+            this.lblCont.Name = "lblCont";
+            this.lblCont.Size = new System.Drawing.Size(13, 13);
+            this.lblCont.TabIndex = 32;
+            this.lblCont.Text = "1";
+            // 
+            // tmLogin
+            // 
+            this.tmLogin.Tick += new System.EventHandler(this.TmLogin_Tick);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(42)))), ((int)(((byte)(117)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.lblCont);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnEntrarLogin);
             this.Controls.Add(this.pctLookPassword);
@@ -264,5 +281,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnEntrarLogin;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lblCont;
+        private System.Windows.Forms.Timer tmLogin;
     }
 }

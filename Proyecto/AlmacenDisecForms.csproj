@@ -51,11 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BotonRedondeado.cs" />
-    <Compile Include="Connected Services\AlmacenDisecWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="frmInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +62,12 @@
     </Compile>
     <Compile Include="frmMessageBoxAdd.Designer.cs">
       <DependentUpon>frmMessageBoxAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxBlockSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxBlockSystem.Designer.cs">
+      <DependentUpon>frmMessageBoxBlockSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMessageBoxError.cs">
       <SubType>Form</SubType>
@@ -311,6 +312,9 @@
     <EmbeddedResource Include="frmMessageBoxAdd.resx">
       <DependentUpon>frmMessageBoxAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxBlockSystem.resx">
+      <DependentUpon>frmMessageBoxBlockSystem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxError.resx">
       <DependentUpon>frmMessageBoxError.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,142 +434,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.brand.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.category.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.ChangePasswordResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.city.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.ConfirmUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.country.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.customer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.deleteBrandResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.deleteCategoryResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.deleteEmployeeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.deleteFamilyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.employee.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.EmployeeByCodeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.family.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.helloResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.insertarWorkOrderResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.insertBrandResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.insertCategoryResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.insertEmployeeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.insertFamilyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.measureUnit.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllBrandResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryByNameResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllCategoryResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllCitybyIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllCountryResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerByNameResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllCustomerResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllEmployeeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllFamilyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllMeasurement_UnitResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllStorehouseResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllSupplierResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllTransferDoneResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryAllTransferPendingResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.querySupplierByNameResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.storehouse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.supplier.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.transfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.updateBrandResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.updateCategoryResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.updateEmployeeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.updateFamilyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\AlmacenDisecWS\DBControllerWS.wsdl" />
-    <None Include="Connected Services\AlmacenDisecWS\DBControllerWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -581,21 +449,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\AlmacenDisecWS\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\AlmacenDisecWS\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\AlmacenDisecWS\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\AlmacenDisecWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
