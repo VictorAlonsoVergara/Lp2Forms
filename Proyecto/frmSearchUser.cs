@@ -22,8 +22,9 @@ namespace AlmacenDisecForms
             InitializeComponent();
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
             btnModify.Enabled = false;
-            
-          
+            txtSearch.CharacterCasing = CharacterCasing.Upper;
+
+
         }
 
         private void OpenFormPanel(object formHijo)

@@ -34,6 +34,8 @@ namespace AlmacenDisecForms
            
             txtId.Enabled = false;
             txtName.Enabled = false;
+            txtName.CharacterCasing = CharacterCasing.Upper;
+
             //cboCategory.SelectedIndex = -1;
         }
 
@@ -222,6 +224,8 @@ namespace AlmacenDisecForms
                 dgvSearch.DataSource = serviceDA.queryAllFamily(c.category_id);
             }
         }
+
+  
     }
     
 }

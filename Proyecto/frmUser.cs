@@ -23,7 +23,13 @@ namespace AlmacenDisecForms
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
             cboPrivilege.DataSource = userTypes;
             cboPrivilege.SelectedIndex = -1;
-            
+            txtName.CharacterCasing = CharacterCasing.Upper;
+            txtLastName1.CharacterCasing = CharacterCasing.Upper;
+            txtLastName2.CharacterCasing = CharacterCasing.Upper;
+            txtEmail.CharacterCasing = CharacterCasing.Upper;
+
+          
+
         }
 
 
@@ -276,7 +282,27 @@ namespace AlmacenDisecForms
             }
         }
 
-     
+        private void TxtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                frmMessageBoxNumber frm = new frmMessageBoxNumber();
+                frm.ShowDialog();
+                e.Handled = true;
+              //  return;
+            }
+        }
+
+        private void TxtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                frmMessageBoxNumber frm = new frmMessageBoxNumber();
+                frm.ShowDialog();
+                e.Handled = true;
+               // return;
+            }
+        }
     }
     }
 

@@ -90,7 +90,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.545455F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.29527F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 4);
@@ -156,7 +156,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(46, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(635, 490);
+            this.panel1.Size = new System.Drawing.Size(634, 490);
             this.panel1.TabIndex = 12;
             // 
             // panel2
@@ -165,10 +165,10 @@
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 517);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(616, 87);
+            this.panel2.Size = new System.Drawing.Size(615, 87);
             this.panel2.TabIndex = 33;
             // 
             // btnDataG
@@ -203,7 +203,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(324, 20);
+            this.btnDelete.Location = new System.Drawing.Point(323, 20);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(128, 38);
             this.btnDelete.TabIndex = 24;
@@ -224,7 +224,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(458, 21);
+            this.btnCancel.Location = new System.Drawing.Point(457, 21);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(146, 38);
             this.btnCancel.TabIndex = 23;
@@ -265,9 +265,9 @@
             this.groupBox2.Controls.Add(this.txtCode);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(17, 418);
+            this.groupBox2.Location = new System.Drawing.Point(18, 317);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(586, 200);
+            this.groupBox2.Size = new System.Drawing.Size(585, 200);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos específicos";
@@ -281,7 +281,7 @@
             this.txtSerie.ForeColor = System.Drawing.Color.White;
             this.txtSerie.Location = new System.Drawing.Point(225, 82);
             this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(343, 21);
+            this.txtSerie.Size = new System.Drawing.Size(342, 21);
             this.txtSerie.TabIndex = 64;
             // 
             // label2
@@ -318,7 +318,7 @@
             this.cboStatus.FormattingEnabled = true;
             this.cboStatus.Location = new System.Drawing.Point(224, 127);
             this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(329, 23);
+            this.cboStatus.Size = new System.Drawing.Size(328, 23);
             this.cboStatus.TabIndex = 62;
             // 
             // label4
@@ -342,7 +342,7 @@
             this.txtCode.ForeColor = System.Drawing.Color.White;
             this.txtCode.Location = new System.Drawing.Point(225, 39);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(312, 21);
+            this.txtCode.Size = new System.Drawing.Size(311, 21);
             this.txtCode.TabIndex = 61;
             // 
             // groupBox1
@@ -365,9 +365,9 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(17, 95);
+            this.groupBox1.Location = new System.Drawing.Point(18, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 308);
+            this.groupBox1.Size = new System.Drawing.Size(585, 308);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
@@ -394,7 +394,7 @@
             this.cboMoney.FormattingEnabled = true;
             this.cboMoney.Location = new System.Drawing.Point(225, 257);
             this.cboMoney.Name = "cboMoney";
-            this.cboMoney.Size = new System.Drawing.Size(284, 23);
+            this.cboMoney.Size = new System.Drawing.Size(283, 23);
             this.cboMoney.TabIndex = 72;
             // 
             // label13
@@ -418,7 +418,7 @@
             this.txtPrice.ForeColor = System.Drawing.Color.White;
             this.txtPrice.Location = new System.Drawing.Point(225, 213);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(284, 21);
+            this.txtPrice.Size = new System.Drawing.Size(283, 21);
             this.txtPrice.TabIndex = 69;
             // 
             // cboCategory
@@ -431,7 +431,7 @@
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.Location = new System.Drawing.Point(226, -28);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(312, 23);
+            this.cboCategory.Size = new System.Drawing.Size(311, 23);
             this.cboCategory.TabIndex = 68;
             this.cboCategory.SelectedIndexChanged += new System.EventHandler(this.CboCategory_SelectedIndexChanged);
             // 
@@ -457,7 +457,7 @@
             this.cboSupplier.FormattingEnabled = true;
             this.cboSupplier.Location = new System.Drawing.Point(226, 125);
             this.cboSupplier.Name = "cboSupplier";
-            this.cboSupplier.Size = new System.Drawing.Size(329, 23);
+            this.cboSupplier.Size = new System.Drawing.Size(328, 23);
             this.cboSupplier.TabIndex = 70;
             // 
             // cboBrand
@@ -470,7 +470,7 @@
             this.cboBrand.FormattingEnabled = true;
             this.cboBrand.Location = new System.Drawing.Point(226, 81);
             this.cboBrand.Name = "cboBrand";
-            this.cboBrand.Size = new System.Drawing.Size(312, 23);
+            this.cboBrand.Size = new System.Drawing.Size(311, 23);
             this.cboBrand.TabIndex = 65;
             // 
             // txtName
@@ -482,7 +482,7 @@
             this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(225, 171);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(328, 21);
+            this.txtName.Size = new System.Drawing.Size(327, 21);
             this.txtName.TabIndex = 64;
             // 
             // cboFamily
@@ -495,7 +495,7 @@
             this.cboFamily.FormattingEnabled = true;
             this.cboFamily.Location = new System.Drawing.Point(226, 37);
             this.cboFamily.Name = "cboFamily";
-            this.cboFamily.Size = new System.Drawing.Size(312, 23);
+            this.cboFamily.Size = new System.Drawing.Size(311, 23);
             this.cboFamily.TabIndex = 62;
             // 
             // label10
@@ -552,7 +552,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(35, 1980);
+            this.label14.Location = new System.Drawing.Point(35, 2038);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 19);
             this.label14.TabIndex = 30;
@@ -565,7 +565,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(46, 21);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(635, 34);
+            this.panel3.Size = new System.Drawing.Size(634, 34);
             this.panel3.TabIndex = 19;
             // 
             // btnBack
@@ -580,7 +580,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(505, -2);
+            this.btnBack.Location = new System.Drawing.Point(504, -2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(130, 36);
             this.btnBack.TabIndex = 22;

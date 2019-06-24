@@ -23,9 +23,12 @@ namespace AlmacenDisecForms
             txtId.Enabled = false;
             btnDelete.Enabled = false;
             txtName.Enabled = false;
+            txtName.CharacterCasing = CharacterCasing.Upper;
+            txtSearch.CharacterCasing = CharacterCasing.Upper;
         }
 
-        private void reiniciar() {
+        private void reiniciar()
+        {
             flag = false;
             txtId.Clear();
             txtName.Clear();
@@ -40,6 +43,7 @@ namespace AlmacenDisecForms
             flag = true;
             txtId.Clear();
             btnNew.Enabled = false;
+            txtName.Enabled = true;
             // txtName.Clear();
 
         }
@@ -56,24 +60,24 @@ namespace AlmacenDisecForms
             {
                 if (flag == true)
                 {
-                        frmMessageBoxSave frm = new frmMessageBoxSave();
-                        if (frm.ShowDialog() == DialogResult.OK)
-                        {
-                            String name = txtName.Text;
+                    frmMessageBoxSave frm = new frmMessageBoxSave();
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        String name = txtName.Text;
 
-                            AlmacenDisecWS.brand b = new AlmacenDisecWS.brand();
-                            b.brand_name = name;
-                            int result = serviceDA.insertBrand(b);
+                        AlmacenDisecWS.brand b = new AlmacenDisecWS.brand();
+                        b.brand_name = name;
+                        int result = serviceDA.insertBrand(b);
 
 
-                            dgvSearch.AutoGenerateColumns = false;
-                            dgvSearch.DataSource = serviceDA.queryAllBrand();
-                            reiniciar();
-                        }
+                        dgvSearch.AutoGenerateColumns = false;
+                        dgvSearch.DataSource = serviceDA.queryAllBrand();
+                        reiniciar();
+                    }
                 }
                 else
                 {
-                    if (String.IsNullOrEmpty(txtId.Text) || nombreTextoAnterior==null)
+                    if (String.IsNullOrEmpty(txtId.Text) || nombreTextoAnterior == null)
                     {
 
                         frmMessageBoxFillNull frm2 = new frmMessageBoxFillNull();
@@ -113,93 +117,93 @@ namespace AlmacenDisecForms
             }
         }
 
-     
-    
 
-   
+
+
+
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            
-            if ( String.IsNullOrEmpty (txtSearch.Text))
+
+            if (String.IsNullOrEmpty(txtSearch.Text))
             {
                 dgvSearch.AutoGenerateColumns = false;
                 dgvSearch.DataSource = serviceDA.queryAllBrand();
             }
-            else {
+            else
+            {
                 String name = txtSearch.Text;
-      
-              //  Insertar el codigo de busqueda por nombre
+
+                //  Insertar el codigo de busqueda por nombre
 
             }
 
         }
 
         private void BtnModify_Click(object sender, EventArgs e)
-        {            
+        {
             if (dgvSearch.SelectedRows.Count > 0)
+            {
+                if (dgvSearch.CurrentRow.Cells[0].Value == null)
                 {
-                    if (dgvSearch.CurrentRow.Cells[0].Value == null)
-                    {
 
-                        frmMessageBoxInvalidData frm = new frmMessageBoxInvalidData();
-                        frm.ShowDialog();
-                    }
-                    else
-                    {
-                        flag = false;
-                        btnNew.Enabled = false;
-                        btnDelete.Enabled = true;
-                        btnModify.Enabled = false;
-                        txtId.Text = dgvSearch.CurrentRow.Cells[0].Value.ToString();
-                        txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
-                        nombreTextoAnterior = dgvSearch.CurrentRow.Cells[1].Value.ToString();
-                        txtName.Enabled = true;
-                }
-
+                    frmMessageBoxInvalidData frm = new frmMessageBoxInvalidData();
+                    frm.ShowDialog();
                 }
                 else
                 {
-                    frmMessageBoxSelectRow frm2 = new frmMessageBoxSelectRow();
-                    frm2.ShowDialog();
+                    flag = false;
+                    btnNew.Enabled = false;
+                    btnDelete.Enabled = true;
+                    btnModify.Enabled = false;
+                    txtId.Text = dgvSearch.CurrentRow.Cells[0].Value.ToString();
+                    txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
+                    nombreTextoAnterior = dgvSearch.CurrentRow.Cells[1].Value.ToString();
+                    txtName.Enabled = true;
                 }
+
+            }
+            else
+            {
+                frmMessageBoxSelectRow frm2 = new frmMessageBoxSelectRow();
+                frm2.ShowDialog();
+            }
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-           
-                if ( String.IsNullOrEmpty(txtId.Text))
+
+            if (String.IsNullOrEmpty(txtId.Text))
+            {
+                frmMessageBoxFillNull frm = new frmMessageBoxFillNull();
+                frm.ShowDialog();
+
+            }
+            else
+            {
+                frmMessageBoxDelete frm = new frmMessageBoxDelete();
+                if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    frmMessageBoxFillNull frm = new frmMessageBoxFillNull();
-                    frm.ShowDialog();
+                    int id = Int32.Parse(txtId.Text);
+                    //Se llama al delete 
 
-                }
-                else
-                {
-                    frmMessageBoxDelete frm = new frmMessageBoxDelete();
-                    if (frm.ShowDialog() == DialogResult.OK)
-                    {
-                        int id = Int32.Parse(txtId.Text);
-                        //Se llama al delete 
+                    int result = serviceDA.deleteBrand(id);
 
-                        int result = serviceDA.deleteBrand(id);
-
-                       dgvSearch.AutoGenerateColumns = false;
-                       dgvSearch.DataSource = serviceDA.queryAllBrand();
-                        reiniciar();
+                    dgvSearch.AutoGenerateColumns = false;
+                    dgvSearch.DataSource = serviceDA.queryAllBrand();
+                    reiniciar();
 
                     reiniciar();
 
-                    }
-
-
                 }
 
 
-            
+            }
+
+
+
         }
 
-      
     }
     
 }

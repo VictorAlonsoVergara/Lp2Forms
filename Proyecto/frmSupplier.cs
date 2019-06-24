@@ -16,9 +16,11 @@ namespace AlmacenDisecForms
 
         private List<String> listas = new List<String>();
         private List<String> listas2 = new List<String>();
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
         public frmSupplier()
         {
             InitializeComponent();
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
             //txtCode.Enabled = false;
             // Bitmap img = new Bitmap(Application.StartupPath+@"\img\fondo.jpg");
             // this.BackgroundImage = img;
@@ -30,17 +32,23 @@ namespace AlmacenDisecForms
             listas.Add("Ecuador");
             listas2.Add("Lima");
             listas2.Add("Quitor");
-            cboCountry.DataSource = listas;
-            cboCity.DataSource = listas2;
+           
+            cboCountry.DataSource = serviceDA.queryAllCountry();
+           cboCountry.DisplayMember = "name_country";
+            cboCountry.ValueMember = "id_country";
             cboCity.SelectedIndex = -1;
             cboCountry.SelectedIndex = -1;
+            txtName.CharacterCasing = CharacterCasing.Upper;
+            txtEmail.CharacterCasing = CharacterCasing.Upper;
+            txtAddress.CharacterCasing = CharacterCasing.Upper;
+          
 
         }
 
 
         private void reiniciar() {
 
-            flag = false;
+            flag = true;
             btnDelete.Enabled = false;
             txtAddress.Clear();
             txtCode.Clear();
@@ -50,10 +58,30 @@ namespace AlmacenDisecForms
             txtPhone.Clear();
             cboCity.SelectedIndex = -1;
             cboCountry.SelectedIndex = -1;
-     
-            
+            cboCountry.Enabled = true;
+            cboCity.Enabled = true;
+
+
         }
 
+        private void reiniciar2()
+        {
+
+            flag = false;
+            btnDelete.Enabled = true;
+            txtAddress.Clear();
+            
+            txtName.Clear();
+            txtRuc.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+            cboCity.SelectedIndex = -1;
+            cboCountry.SelectedIndex = -1;
+            cboCountry.Enabled = false;
+            cboCity.Enabled = false;
+
+
+        }
         private void LblSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -66,7 +94,18 @@ namespace AlmacenDisecForms
             {
 
 
-                reiniciar();
+                if (flag == true)
+                {
+
+                    reiniciar();
+                }
+                else
+                {
+
+
+                    reiniciar2();
+
+                }
             }
         }
 
@@ -90,78 +129,94 @@ namespace AlmacenDisecForms
         private void BtnSave_Click(object sender, EventArgs e)
         {
 
-            {
-                if (String.IsNullOrEmpty(txtName.Text) || String.IsNullOrEmpty(txtRuc.Text) || String.IsNullOrEmpty(txtAddress.Text) || 
-                    String.IsNullOrEmpty(txtEmail.Text) || String.IsNullOrEmpty(txtPhone.Text) ||cboCountry.SelectedIndex ==-1|| cboCity.SelectedIndex == -1)
+            
+
+                if (flag == true)
                 {
-                    frmMessageBoxFillNull frm = new frmMessageBoxFillNull();
-                    frm.ShowDialog();
+
+                    if (String.IsNullOrEmpty(txtName.Text) || String.IsNullOrEmpty(txtRuc.Text) || String.IsNullOrEmpty(txtAddress.Text) ||
+                    String.IsNullOrEmpty(txtEmail.Text) || String.IsNullOrEmpty(txtPhone.Text) || cboCountry.SelectedIndex == -1 || cboCity.SelectedIndex == -1)
+                    {
+                        frmMessageBoxFillNull frm = new frmMessageBoxFillNull();
+                        frm.ShowDialog();
+
+                    }
+
+                    else
+                    {
+                        frmMessageBoxSave frm = new frmMessageBoxSave();
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
+
+                            AlmacenDisecWS.supplier s = new AlmacenDisecWS.supplier();
+                            AlmacenDisecWS.city ci = new AlmacenDisecWS.city();
+                            AlmacenDisecWS.country co = new AlmacenDisecWS.country();
+                            s.email = txtEmail.Text;
+                            s.ruc = txtRuc.Text;
+                            s.adress = txtAddress.Text;
+                            s.phone_number = Int32.Parse(txtPhone.Text);
+                            s.supplier_name = txtName.Text;
+                            s.city = (AlmacenDisecWS.city)cboCity.SelectedItem;
+                            s.city.country = (AlmacenDisecWS.country)cboCountry.SelectedItem;
+                            int result = serviceDA.insertSupplier(s);
+
+
+                            reiniciar();
+                        frmSearchSupplier fm = Owner as frmSearchSupplier;
+                        fm.dgvSearch.AutoGenerateColumns = false;
+                        fm.dgvSearch.DataSource = "";
+
+                        this.Close();
+                    }
+                    }
 
                 }
+
+
                 else
                 {
-
-
-                    if (flag == true)
+                    if (String.IsNullOrEmpty(txtCode.Text) || String.IsNullOrEmpty(txtName.Text) || String.IsNullOrEmpty(txtRuc.Text) || String.IsNullOrEmpty(txtAddress.Text) ||
+                        String.IsNullOrEmpty(txtEmail.Text) || String.IsNullOrEmpty(txtPhone.Text))
                     {
-                        if (String.IsNullOrEmpty(txtCode.Text))
-                        {
 
-                           
-                                frmMessageBoxSave frm = new frmMessageBoxSave();
-                                if (frm.ShowDialog() == DialogResult.OK)
-                                {
-
-                                    String name = txtName.Text;
-                                    //Category cat = new category(name,1);
-                                    //Se llama al insert
-                                    reiniciar();
-                                }
-                            
-
-                        }
-                        else
-                        {
-
-                            frmMessageBoxDataGeneral frm2 = new frmMessageBoxDataGeneral();
-                            frm2.ShowDialog();
-
-                        }
+                        frmMessageBoxFillNull frm2 = new frmMessageBoxFillNull();
+                        frm2.ShowDialog();
 
                     }
                     else
                     {
-                        if (String.IsNullOrEmpty(txtCode.Text))
-                        {
 
-                            frmMessageBoxFillNull frm2 = new frmMessageBoxFillNull();
-                            frm2.ShowDialog();
+                        frmMessageBoxSave frm = new frmMessageBoxSave();
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        AlmacenDisecWS.supplier s = new AlmacenDisecWS.supplier();
+                            //falta que le quiten el pais al actualizar
+                        s.id_supplier = Int32.Parse(txtCode.Text);
+                           s.email = txtEmail.Text;
+                            s.ruc = txtRuc.Text;
+                            s.adress = txtAddress.Text;
+                            s.phone_number = Int32.Parse(txtPhone.Text);
+                            s.supplier_name = txtName.Text;
+         
+                            int result = serviceDA.updateSupplier(s);
 
-                        }
-                        else
-                        {
+                            reiniciar();
+                        frmSearchSupplier fm = Owner as frmSearchSupplier;
+                        fm.dgvSearch.AutoGenerateColumns = false;
+                        fm.dgvSearch.DataSource = "";
 
-                            frmMessageBoxSave frm = new frmMessageBoxSave();
-                            if (frm.ShowDialog() == DialogResult.OK)
-                            {
-
-                              //  int id = Int32.Parse(txtId.Text);
-                                String name = txtName.Text;
-                                //  Category cat = (Category)cboCategory.SelectedIndex;
-                                //Category cat = new category(name,0);
-                                //Se llama al update
-                                reiniciar();
-                            }
-                        }
-
+                        this.Close();
                     }
+                    }
+
                 }
 
-
-
-
             }
-        }
+
+
+
+            
+        
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
@@ -176,20 +231,77 @@ namespace AlmacenDisecForms
                 frmMessageBoxDelete frm = new frmMessageBoxDelete();
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                 //   int id = Int32.Parse(txtId.Text);
-                    String name = txtName.Text;
-                    ////Category cat = new category(name,0);
-                    //Se llama al delete 
+                    int id  = Int32.Parse(txtCode.Text);
+
+                    //        s.city = (AlmacenDisecWS.city)cboCity.SelectedItem;
+                    //        s.city.country = (AlmacenDisecWS.country)cboCountry.SelectedItem;
+                    int result = serviceDA.deleteSupplier(id);
                     reiniciar();
+                    frmSearchSupplier fm = Owner as frmSearchSupplier;
+                    fm.dgvSearch.AutoGenerateColumns = false;
+                    fm.dgvSearch.DataSource = "";
+
+                    this.Close();
                 }
 
 
             }
         }
 
-        private void CboCountry_SelectedIndexChanged(object sender, EventArgs e)
+
+
+    
+
+            private void BtnBack_Click(object sender, EventArgs e)
         {
-            //Llenamos ciudades
+            frmMessageBoxBack frm = new frmMessageBoxBack();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+
+                frmSearchSupplier fm = Owner as frmSearchSupplier;
+                fm.dgvSearch.AutoGenerateColumns = false;
+                fm.dgvSearch.DataSource ="";
+               
+
+                this.Close();
+            }
+        }
+
+        private void TxtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                frmMessageBoxNumber frm = new frmMessageBoxNumber();
+                frm.ShowDialog();
+                e.Handled = true;
+                //  return;
+            }
+        }
+
+  
+
+        private void CboCountry_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            AlmacenDisecWS.country c = new AlmacenDisecWS.country();
+            c = (AlmacenDisecWS.country)cboCountry.SelectedItem;
+            int a = c.id_country;
+            cboCity.DataSource = serviceDA.queryAllCitybyId(c.id_country);
+
+            //El nombre del  atributo a mostrar
+            cboCity.DisplayMember = "name_city";
+            cboCity.ValueMember = "id_city";
+        }
+
+        private void TxtRuc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+                {
+                    frmMessageBoxNumber frm = new frmMessageBoxNumber();
+                    frm.ShowDialog();
+                    e.Handled = true;
+                    //  return;
+                }
+            
         }
     }
 }

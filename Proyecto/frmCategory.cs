@@ -27,7 +27,8 @@ namespace AlmacenDisecForms
             txtId.Enabled = false;
             btnDelete.Enabled = false;
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
-
+            txtName.CharacterCasing = CharacterCasing.Upper;
+            txtSearch.CharacterCasing = CharacterCasing.Upper;
             txtName.Enabled = false;
 
         }
@@ -47,6 +48,7 @@ namespace AlmacenDisecForms
             flag = true;
             txtId.Clear();
             btnNew.Enabled = false;
+            txtName.Enabled = true;
             //  txtName.Clear();
 
         }
