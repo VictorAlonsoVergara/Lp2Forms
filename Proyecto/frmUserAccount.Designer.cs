@@ -63,7 +63,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.545455F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.29527F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblSubtitulo, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 4);
@@ -128,17 +128,17 @@
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(47, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(637, 490);
+            this.panel1.Size = new System.Drawing.Size(636, 490);
             this.panel1.TabIndex = 12;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnCancel);
             this.panel3.Controls.Add(this.btnSave);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 409);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(635, 79);
+            this.panel3.Size = new System.Drawing.Size(634, 79);
             this.panel3.TabIndex = 32;
             // 
             // btnCancel
@@ -153,7 +153,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(411, 16);
+            this.btnCancel.Location = new System.Drawing.Point(410, 16);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(159, 38);
             this.btnCancel.TabIndex = 19;
@@ -201,9 +201,9 @@
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label43);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(29, 103);
+            this.groupBox1.Location = new System.Drawing.Point(30, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(577, 319);
+            this.groupBox1.Size = new System.Drawing.Size(576, 319);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             // 
@@ -216,7 +216,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(161, 236);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(387, 21);
+            this.txtPassword.Size = new System.Drawing.Size(386, 21);
             this.txtPassword.TabIndex = 105;
             // 
             // txtCode
@@ -228,7 +228,7 @@
             this.txtCode.ForeColor = System.Drawing.Color.White;
             this.txtCode.Location = new System.Drawing.Point(160, -68);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(294, 21);
+            this.txtCode.Size = new System.Drawing.Size(293, 21);
             this.txtCode.TabIndex = 104;
             // 
             // label6
@@ -252,7 +252,7 @@
             this.txtLastName2.ForeColor = System.Drawing.Color.White;
             this.txtLastName2.Location = new System.Drawing.Point(158, 136);
             this.txtLastName2.Name = "txtLastName2";
-            this.txtLastName2.Size = new System.Drawing.Size(340, 21);
+            this.txtLastName2.Size = new System.Drawing.Size(339, 21);
             this.txtLastName2.TabIndex = 101;
             // 
             // label4
@@ -276,7 +276,7 @@
             this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(161, 185);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(386, 21);
+            this.txtEmail.Size = new System.Drawing.Size(385, 21);
             this.txtEmail.TabIndex = 99;
             // 
             // label3
@@ -312,7 +312,7 @@
             this.txtLastName1.ForeColor = System.Drawing.Color.White;
             this.txtLastName1.Location = new System.Drawing.Point(159, 87);
             this.txtLastName1.Name = "txtLastName1";
-            this.txtLastName1.Size = new System.Drawing.Size(340, 21);
+            this.txtLastName1.Size = new System.Drawing.Size(339, 21);
             this.txtLastName1.TabIndex = 93;
             // 
             // label12
@@ -336,7 +336,7 @@
             this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(159, 40);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(387, 21);
+            this.txtName.Size = new System.Drawing.Size(386, 21);
             this.txtName.TabIndex = 90;
             // 
             // label43
