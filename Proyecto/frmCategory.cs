@@ -191,13 +191,11 @@ namespace AlmacenDisecForms
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
-        {
-           
+        {           
                 if ( String.IsNullOrEmpty(txtId.Text))
                 {
                     frmMessageBoxFillNull frm = new frmMessageBoxFillNull();
                     frm.ShowDialog();
-
                 }
                 else
                 {
@@ -205,9 +203,9 @@ namespace AlmacenDisecForms
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         int id = Int32.Parse(txtId.Text);
-                   int result = serviceDA.deleteCategory(id);
+                    int result = serviceDA.deleteCategory(id);
                     dgvSearch.AutoGenerateColumns = false;
-                  dgvSearch.DataSource = serviceDA.queryAllCategory();
+                    dgvSearch.DataSource = serviceDA.queryAllCategory();
                     reiniciar();
                     }
 

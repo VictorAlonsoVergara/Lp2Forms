@@ -38,6 +38,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,8 +64,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,7 +87,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.545455F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.29527F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.tableLayoutPanel1.Controls.Add(this.lblSubtitulo, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
@@ -131,7 +131,7 @@
             this.panel2.ForeColor = System.Drawing.Color.Transparent;
             this.panel2.Location = new System.Drawing.Point(46, 97);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(625, 490);
+            this.panel2.Size = new System.Drawing.Size(622, 490);
             this.panel2.TabIndex = 12;
             // 
             // panel3
@@ -142,12 +142,12 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 512);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(606, 62);
+            this.panel3.Size = new System.Drawing.Size(603, 62);
             this.panel3.TabIndex = 35;
             // 
             // btnDelete
             // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
             this.btnDelete.FlatAppearance.BorderSize = 0;
@@ -157,7 +157,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(218, 12);
+            this.btnDelete.Location = new System.Drawing.Point(217, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(159, 38);
             this.btnDelete.TabIndex = 22;
@@ -178,7 +178,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(425, 12);
+            this.btnCancel.Location = new System.Drawing.Point(422, 12);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(159, 38);
             this.btnCancel.TabIndex = 21;
@@ -199,7 +199,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(17, 12);
+            this.btnSave.Location = new System.Drawing.Point(33, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(159, 36);
             this.btnSave.TabIndex = 20;
@@ -238,9 +238,32 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(31, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(553, 501);
+            this.groupBox1.Size = new System.Drawing.Size(550, 501);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
+            // 
+            // txtCode
+            // 
+            this.txtCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
+            this.txtCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCode.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
+            this.txtCode.Location = new System.Drawing.Point(190, 32);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(119, 23);
+            this.txtCode.TabIndex = 132;
+            this.txtCode.UseWaitCursor = true;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(243, 32);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(24, 19);
+            this.lblId.TabIndex = 131;
+            this.lblId.Text = "ID";
+            this.lblId.UseWaitCursor = true;
             // 
             // txtSalary
             // 
@@ -251,8 +274,9 @@
             this.txtSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtSalary.Location = new System.Drawing.Point(192, 415);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(121, 23);
+            this.txtSalary.Size = new System.Drawing.Size(118, 23);
             this.txtSalary.TabIndex = 129;
+            this.txtSalary.UseWaitCursor = true;
             // 
             // label8
             // 
@@ -265,6 +289,7 @@
             this.label8.Size = new System.Drawing.Size(66, 19);
             this.label8.TabIndex = 128;
             this.label8.Text = "Salario:";
+            this.label8.UseWaitCursor = true;
             // 
             // label7
             // 
@@ -277,6 +302,7 @@
             this.label7.Size = new System.Drawing.Size(83, 19);
             this.label7.TabIndex = 127;
             this.label7.Text = "Privilegio:";
+            this.label7.UseWaitCursor = true;
             // 
             // txtPassword
             // 
@@ -287,20 +313,22 @@
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtPassword.Location = new System.Drawing.Point(191, 366);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(205, 23);
+            this.txtPassword.Size = new System.Drawing.Size(202, 23);
             this.txtPassword.TabIndex = 126;
+            this.txtPassword.UseWaitCursor = true;
             // 
             // rbMan
             // 
             this.rbMan.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rbMan.AutoSize = true;
-            this.rbMan.Location = new System.Drawing.Point(330, 321);
+            this.rbMan.Location = new System.Drawing.Point(327, 321);
             this.rbMan.Name = "rbMan";
             this.rbMan.Size = new System.Drawing.Size(106, 23);
             this.rbMan.TabIndex = 124;
             this.rbMan.TabStop = true;
             this.rbMan.Text = "Masculino";
             this.rbMan.UseVisualStyleBackColor = true;
+            this.rbMan.UseWaitCursor = true;
             // 
             // rbWoman
             // 
@@ -313,6 +341,7 @@
             this.rbWoman.TabStop = true;
             this.rbWoman.Text = "Femenino";
             this.rbWoman.UseVisualStyleBackColor = true;
+            this.rbWoman.UseWaitCursor = true;
             // 
             // label6
             // 
@@ -325,6 +354,7 @@
             this.label6.Size = new System.Drawing.Size(110, 19);
             this.label6.TabIndex = 121;
             this.label6.Text = "Ap. materno:";
+            this.label6.UseWaitCursor = true;
             // 
             // txtLastName2
             // 
@@ -335,8 +365,9 @@
             this.txtLastName2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtLastName2.Location = new System.Drawing.Point(190, 171);
             this.txtLastName2.Name = "txtLastName2";
-            this.txtLastName2.Size = new System.Drawing.Size(206, 23);
+            this.txtLastName2.Size = new System.Drawing.Size(203, 23);
             this.txtLastName2.TabIndex = 122;
+            this.txtLastName2.UseWaitCursor = true;
             // 
             // label4
             // 
@@ -349,6 +380,7 @@
             this.label4.Size = new System.Drawing.Size(56, 19);
             this.label4.TabIndex = 117;
             this.label4.Text = "Email:";
+            this.label4.UseWaitCursor = true;
             // 
             // txtEmail
             // 
@@ -359,8 +391,9 @@
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtEmail.Location = new System.Drawing.Point(190, 267);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(206, 23);
+            this.txtEmail.Size = new System.Drawing.Size(203, 23);
             this.txtEmail.TabIndex = 120;
+            this.txtEmail.UseWaitCursor = true;
             // 
             // label5
             // 
@@ -373,6 +406,7 @@
             this.label5.Size = new System.Drawing.Size(40, 19);
             this.label5.TabIndex = 118;
             this.label5.Text = "DNI:";
+            this.label5.UseWaitCursor = true;
             // 
             // txtDNI
             // 
@@ -383,8 +417,9 @@
             this.txtDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtDNI.Location = new System.Drawing.Point(190, 220);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(206, 23);
+            this.txtDNI.Size = new System.Drawing.Size(203, 23);
             this.txtDNI.TabIndex = 119;
+            this.txtDNI.UseWaitCursor = true;
             // 
             // cboPrivilege
             // 
@@ -396,8 +431,9 @@
             this.cboPrivilege.FormattingEnabled = true;
             this.cboPrivilege.Location = new System.Drawing.Point(191, 461);
             this.cboPrivilege.Name = "cboPrivilege";
-            this.cboPrivilege.Size = new System.Drawing.Size(159, 24);
+            this.cboPrivilege.Size = new System.Drawing.Size(156, 24);
             this.cboPrivilege.TabIndex = 116;
+            this.cboPrivilege.UseWaitCursor = true;
             // 
             // label3
             // 
@@ -410,6 +446,7 @@
             this.label3.Size = new System.Drawing.Size(102, 19);
             this.label3.TabIndex = 115;
             this.label3.Text = "Contraseña:";
+            this.label3.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -422,6 +459,7 @@
             this.label2.Size = new System.Drawing.Size(105, 19);
             this.label2.TabIndex = 113;
             this.label2.Text = "Ap. paterno:";
+            this.label2.UseWaitCursor = true;
             // 
             // txtLastName1
             // 
@@ -432,8 +470,9 @@
             this.txtLastName1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtLastName1.Location = new System.Drawing.Point(191, 122);
             this.txtLastName1.Name = "txtLastName1";
-            this.txtLastName1.Size = new System.Drawing.Size(205, 23);
+            this.txtLastName1.Size = new System.Drawing.Size(202, 23);
             this.txtLastName1.TabIndex = 114;
+            this.txtLastName1.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -446,6 +485,7 @@
             this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 112;
             this.label1.Text = "Género:";
+            this.label1.UseWaitCursor = true;
             // 
             // label12
             // 
@@ -458,6 +498,7 @@
             this.label12.Size = new System.Drawing.Size(77, 19);
             this.label12.TabIndex = 109;
             this.label12.Text = "Nombre:";
+            this.label12.UseWaitCursor = true;
             // 
             // txtName
             // 
@@ -468,8 +509,9 @@
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtName.Location = new System.Drawing.Point(191, 75);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(205, 23);
+            this.txtName.Size = new System.Drawing.Size(202, 23);
             this.txtName.TabIndex = 111;
+            this.txtName.UseWaitCursor = true;
             // 
             // label43
             // 
@@ -482,6 +524,7 @@
             this.label43.Size = new System.Drawing.Size(67, 19);
             this.label43.TabIndex = 110;
             this.label43.Text = "Código";
+            this.label43.UseWaitCursor = true;
             // 
             // label14
             // 
@@ -489,7 +532,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(35, 7536);
+            this.label14.Location = new System.Drawing.Point(35, 7665);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 19);
             this.label14.TabIndex = 30;
@@ -502,7 +545,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(46, 21);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(625, 34);
+            this.panel4.Size = new System.Drawing.Size(622, 34);
             this.panel4.TabIndex = 19;
             // 
             // lblTitulo
@@ -529,7 +572,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(495, 0);
+            this.btnBack.Location = new System.Drawing.Point(492, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(130, 36);
             this.btnBack.TabIndex = 22;
@@ -537,27 +580,6 @@
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(243, 32);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(24, 19);
-            this.lblId.TabIndex = 131;
-            this.lblId.Text = "ID";
-            // 
-            // txtCode
-            // 
-            this.txtCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
-            this.txtCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCode.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.txtCode.Location = new System.Drawing.Point(190, 32);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(122, 23);
-            this.txtCode.TabIndex = 132;
             // 
             // frmUser
             // 

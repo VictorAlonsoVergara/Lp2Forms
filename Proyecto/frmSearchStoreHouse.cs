@@ -13,12 +13,13 @@ namespace AlmacenDisecForms
 {
     public partial class frmSearchStoreHouse : Form
     {
-      
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
         public frmSearchStoreHouse()
         {
             InitializeComponent();
-            dgvSearch.Rows.Insert(0, "Cod1", "Brasil", "Av.  Brasil", "Lima",  "4532345");
-          
+            //dgvSearch.Rows.Insert(0, "Cod1", "Brasil", "Av.  Brasil", "Lima",  "4532345");
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+            btnModify.Enabled = false;
         }
 
         private void OpenFormPanel(object formHijo)
@@ -34,60 +35,69 @@ namespace AlmacenDisecForms
             fh.Show();
         }
 
-
-
-
-       
-
-        private void BtnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnModify_Click(object sender, EventArgs e)
         {
 
             frmStoreHouse frm = new frmStoreHouse();
-                if (dgvSearch.SelectedRows.Count > 0)
-                {
-                    if (dgvSearch.CurrentRow.Cells[0].Value == null)
-                    {
+            frm.flag = false;
+            AddOwnedForm(frm);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.Controls.Add(frm);
+            this.Tag = frm;
+            frm.cboCity.Enabled = true;
 
-                        frmMessageBoxInvalidData frm3 = new frmMessageBoxInvalidData();
-                        frm3.ShowDialog();
-                    }
-                    else
-                    {
-                        frm.flag = false;
-              
-                        frm.btnDelete.Enabled = true;
-                        frm.txtId.Text = dgvSearch.CurrentRow.Cells[0].Value.ToString();
-                        frm.txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
-                        
-                        frm.txtAddress.Text = dgvSearch.CurrentRow.Cells[2].Value.ToString();
-                    //Los combo box se rellenan diferente asi no         
-                    //frm.cboCity.SelectedValue = dgvSearch.CurrentRow.Cells[3].Value.ToString();
+            String name = dgvSearch.CurrentRow.Cells[1].Value.ToString();
+            AlmacenDisecWS.storehouse store = new AlmacenDisecWS.storehouse();
+            store = serviceDA.queryStorehouseByName(name);
 
-                    frm.txtPhone.Text = dgvSearch.CurrentRow.Cells[4].Value.ToString();
-    
-                        
-                        OpenFormPanel(frm);
-                    }
-
-                }
-                else
-                {
-                    frmMessageBoxSelectRow frm2 = new frmMessageBoxSelectRow();
-                    frm2.ShowDialog();
-                }
-            
+            frm.txtId.Text = store.id_storehouse.ToString();
+            frm.txtNameStorehouse.Text = store.storehouse_name;
+            frm.txtAddressStorehouse.Text = store.address;
+            frm.txtPhone.Text = store.phone_number.ToString();
+            frm.txtId.Enabled = false;
+            frm.cboCity.Text = dgvSearch.CurrentRow.Cells[3].Value.ToString();
+            frm.btnDelete.Enabled = true;
+            btnModify.Enabled = true;
+            frm.BringToFront();
+            frm.Show();
         }
 
         private void BtnNew_Click(object sender, EventArgs e)
         {
             frmStoreHouse frm = new frmStoreHouse();
             frm.flag = true;
-            OpenFormPanel(frm);
+            //OpenFormPanel(frm);
+            AddOwnedForm(frm);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.Controls.Add(frm);
+            this.Tag = frm;
+            frm.BringToFront();
+            frm.Show();
+
+        }
+
+        private void BtnSearch_Click_1(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtSearch.Text))
+            {
+
+                dgvSearch.AutoGenerateColumns = false;
+                dgvSearch.DataSource = serviceDA.queryAllStorehouse();
+
+
+            }
+            else
+            {
+                String name = txtSearch.Text;
+
+                //Insertar el codigo de busqueda por nombre
+
+            }
+            btnModify.Enabled = true;
         }
     }
 }

@@ -40,6 +40,8 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.IdC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblB = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,8 +54,6 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.IdC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
@@ -164,7 +164,7 @@
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(190)))));
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.White;
@@ -222,6 +222,22 @@
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSearch.Size = new System.Drawing.Size(234, 291);
             this.dgvSearch.TabIndex = 5;
+            // 
+            // IdC
+            // 
+            this.IdC.DataPropertyName = "Category_id";
+            this.IdC.HeaderText = "Id";
+            this.IdC.Name = "IdC";
+            this.IdC.ReadOnly = true;
+            this.IdC.Width = 52;
+            // 
+            // NombreC
+            // 
+            this.NombreC.DataPropertyName = "Category_name";
+            this.NombreC.HeaderText = "Categoría";
+            this.NombreC.Name = "NombreC";
+            this.NombreC.ReadOnly = true;
+            this.NombreC.Width = 128;
             // 
             // lblB
             // 
@@ -350,7 +366,7 @@
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(190)))));
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.White;
@@ -383,7 +399,7 @@
             // 
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(190)))));
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.White;
@@ -399,22 +415,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(19, 467);
             this.panel4.TabIndex = 12;
-            // 
-            // IdC
-            // 
-            this.IdC.DataPropertyName = "Category_id";
-            this.IdC.HeaderText = "Id";
-            this.IdC.Name = "IdC";
-            this.IdC.ReadOnly = true;
-            this.IdC.Width = 52;
-            // 
-            // NombreC
-            // 
-            this.NombreC.DataPropertyName = "Category_name";
-            this.NombreC.HeaderText = "Categoría";
-            this.NombreC.Name = "NombreC";
-            this.NombreC.ReadOnly = true;
-            this.NombreC.Width = 128;
             // 
             // frmCategory
             // 

@@ -12,7 +12,6 @@ namespace AlmacenDisecForms
 {
     public partial class frmUser : Form
     {
-        public AlmacenDisecWS.employee worker = null;
         public bool flag = false;
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
         private List<AlmacenDisecWS.privilege> userTypes = Enum.GetValues(typeof(AlmacenDisecWS.privilege)).Cast<AlmacenDisecWS.privilege>().ToList();
@@ -56,28 +55,20 @@ namespace AlmacenDisecForms
 
             flag = false;
             btnDelete.Enabled = true;
-   
+
             txtName.Clear();
             txtLastName1.Clear();
             txtLastName2.Clear();
             txtEmail.Clear();
             txtDNI.Clear();
             txtSalary.Clear();
-            
+
             rbMan.Checked = false;
             rbWoman.Checked = false;
 
             txtPassword.Enabled = false;
             cboPrivilege.Enabled = false;
-
-
         }
-
-
-
-
-
-
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -277,8 +268,8 @@ namespace AlmacenDisecForms
             {
 
                 frmSearchUser fm = Owner as frmSearchUser;
-                fm.dgvSearch.AutoGenerateColumns = false;
-                fm.dgvSearch.DataSource = serviceDA.queryAllEmployee();
+                //fm.dgvSearch.AutoGenerateColumns = false;
+                //fm.dgvSearch.DataSource = serviceDA.queryAllEmployee();
               
 
                 this.Close();

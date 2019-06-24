@@ -13,25 +13,25 @@ namespace AlmacenDisecForms
     public partial class frmStoreHouse : Form
     {
         public bool flag = false;
-
-        private List<String> listas = new List<String>();
-        private List<String> listas2 = new List<String>();
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
         public frmStoreHouse()
         {
             InitializeComponent();
-            //txtCode.Enabled = false;
-            // Bitmap img = new Bitmap(Application.StartupPath+@"\img\fondo.jpg");
-            // this.BackgroundImage = img;
-            // this.BackgroundImageLayout = ImageLayout.Stretch;
             txtId.Enabled = false;
+            txtNameStorehouse.Enabled = true;
+            txtAddressStorehouse.Enabled = true;
+            txtPhone.Enabled = true;
             btnDelete.Enabled = false;
-        
-            listas.Add("Perú");
-            listas.Add("Ecuador");
-            listas2.Add("Lima");
-            listas2.Add("Quitor");
-            cboCity.DataSource = listas;
-          
+            cboCity.Enabled = true;
+
+            btnBack.Enabled = true;
+            btnSave.Enabled = true;
+            btnDelete.Enabled = false;
+            btnCancel.Enabled = true;
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+            cboCity.DataSource = serviceDA.queryAllCitybyId(1);
+            cboCity.DisplayMember = "name_city";
+            cboCity.ValueMember = "id_city";
             cboCity.SelectedIndex = -1;
 
         }
@@ -39,17 +39,25 @@ namespace AlmacenDisecForms
 
         private void reiniciar() {
 
-            flag = false;
+            flag = true;
             btnDelete.Enabled = false;
-            txtAddress.Clear();
-        
-            txtName.Clear();
+            txtAddressStorehouse.Clear();
+            txtNameStorehouse.Clear();
             txtId.Clear();
             txtPhone.Clear();
-      
             cboCity.SelectedIndex = -1;
-           
-            
+        }
+
+        private void reiniciar2()
+        {
+            flag = false;
+            btnDelete.Enabled = false;
+            txtAddressStorehouse.Clear();
+            txtNameStorehouse.Clear();
+            txtId.Clear();
+            txtPhone.Clear();
+            cboCity.Enabled = true;
+            cboCity.SelectedIndex = -1;
         }
 
         private void LblSalir_Click(object sender, EventArgs e)
@@ -62,9 +70,18 @@ namespace AlmacenDisecForms
             frmMessageBoxCancel frm = new frmMessageBoxCancel();
             if (frm.ShowDialog() == DialogResult.OK)
             {
+                if (flag == true)
+                {
+
+                    reiniciar();
+                }
+                else
+                {
 
 
-                reiniciar();
+                    reiniciar2();
+
+                }
             }
         }
 
@@ -75,8 +92,9 @@ namespace AlmacenDisecForms
         {
 
             {
-                if (String.IsNullOrEmpty(txtName.Text) || String.IsNullOrEmpty(txtAddress.Text) || 
-                    String.IsNullOrEmpty(txtPhone.Text) ||cboCity.SelectedIndex ==-1)
+                if (String.IsNullOrEmpty(txtNameStorehouse.Text) || 
+                    String.IsNullOrEmpty(txtPhone.Text) ||cboCity.SelectedIndex ==-1
+                    || String.IsNullOrEmpty(txtAddressStorehouse.Text))
                 {
                     frmMessageBoxFillNull frm = new frmMessageBoxFillNull();
                     frm.ShowDialog();
@@ -90,23 +108,37 @@ namespace AlmacenDisecForms
                     {
                         if (String.IsNullOrEmpty(txtId.Text))
                         {
+                            AlmacenDisecWS.storehouse store = new AlmacenDisecWS.storehouse();
 
-                           
-                                frmMessageBoxSave frm = new frmMessageBoxSave();
-                                if (frm.ShowDialog() == DialogResult.OK)
-                                {
+                            frmMessageBoxSave frm = new frmMessageBoxSave();
+                            if (frm.ShowDialog() == DialogResult.OK)
+                            {
 
-                                    String name = txtName.Text;
-                                    //Category cat = new category(name,1);
-                                    //Se llama al insert
-                                    reiniciar();
-                                }
-                            
+                                string name = txtNameStorehouse.Text;
+                                int phoneNumber = int.Parse(txtPhone.Text);
+                                string address = txtAddressStorehouse.Text;
+                                store.address = address;
+                                store.phone_number = phoneNumber;
+                                store.storehouse_name = name;
+                                //string nameCity = cboCity.Text;
+                                //AlmacenDisecWS.city city = new AlmacenDisecWS.city();
+                                //int id = serviceDA.CityByName(nameCity);
+                                //city.id_city = id;
+                                AlmacenDisecWS.city city = new AlmacenDisecWS.city();
+                                city = (AlmacenDisecWS.city)cboCity.SelectedItem;
+                                store.city = city;
+                                int result = serviceDA.insertStorehouse(store);
+                            }
+                            frmSearchStoreHouse fm = Owner as frmSearchStoreHouse;
+                            fm.dgvSearch.AutoGenerateColumns = false;
+                            fm.dgvSearch.DataSource = serviceDA.queryAllStorehouse();
+
+                            this.Close();
+
 
                         }
                         else
                         {
-
                             frmMessageBoxDataGeneral frm2 = new frmMessageBoxDataGeneral();
                             frm2.ShowDialog();
 
@@ -115,30 +147,45 @@ namespace AlmacenDisecForms
                     }
                     else
                     {
-                        if (String.IsNullOrEmpty(txtId.Text))
+                        if (String.IsNullOrEmpty(txtNameStorehouse.Text) ||
+                            String.IsNullOrEmpty(txtPhone.Text) || cboCity.SelectedIndex == -1
+                            || String.IsNullOrEmpty(txtAddressStorehouse.Text))
                         {
-
                             frmMessageBoxFillNull frm2 = new frmMessageBoxFillNull();
                             frm2.ShowDialog();
-
                         }
                         else
                         {
 
+                            AlmacenDisecWS.storehouse store = new AlmacenDisecWS.storehouse();
+
                             frmMessageBoxSave frm = new frmMessageBoxSave();
                             if (frm.ShowDialog() == DialogResult.OK)
                             {
+                                int id = int.Parse(txtId.Text);
+                                string name = txtNameStorehouse.Text;
+                                int phoneNumber = int.Parse(txtPhone.Text);
+                                string address = txtAddressStorehouse.Text;
+                                store.id_storehouse = id;
+                                store.address = address;
+                                store.phone_number = phoneNumber;
+                                store.storehouse_name = name;
+                                AlmacenDisecWS.city city = new AlmacenDisecWS.city();
+                                city = (AlmacenDisecWS.city)cboCity.SelectedItem;
+                                store.city = city;
+                                int result = serviceDA.updateStorehouse(store);
 
-                              //  int id = Int32.Parse(txtId.Text);
-                                String name = txtName.Text;
-                                //  Category cat = (Category)cboCategory.SelectedIndex;
-                                //Category cat = new category(name,0);
-                                //Se llama al update
-                                reiniciar();
                             }
+                            
+
                         }
+                        frmSearchStoreHouse fm = Owner as frmSearchStoreHouse;
+                        fm.dgvSearch.AutoGenerateColumns = false;
+                        fm.dgvSearch.DataSource = serviceDA.queryAllStorehouse();
+                        this.Close();
 
                     }
+
                 }
 
 
@@ -160,17 +207,29 @@ namespace AlmacenDisecForms
                 frmMessageBoxDelete frm = new frmMessageBoxDelete();
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                 //   int id = Int32.Parse(txtId.Text);
-                    String name = txtName.Text;
-                    ////Category cat = new category(name,0);
-                    //Se llama al delete 
-                    reiniciar();
+                    int id = int.Parse(txtId.Text);
+                    serviceDA.deleteStorehouse(id);
+                    frmSearchStoreHouse fm = Owner as frmSearchStoreHouse;
+                    fm.dgvSearch.AutoGenerateColumns = false;
+                    fm.dgvSearch.DataSource = serviceDA.queryAllStorehouse();
+                    this.Close();
+
                 }
 
 
             }
         }
 
-       
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            frmMessageBoxBack frm = new frmMessageBoxBack();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+
+                frmSearchStoreHouse fm = Owner as frmSearchStoreHouse;
+                this.Close();
+            }
+        }
+
     }
 }

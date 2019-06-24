@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchTool));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchTool));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMaterial = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnNew = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.PictureBox();
+            this.btnAddMaterial = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.CodC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +48,6 @@
             this.SerieC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrandC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnAddMaterial = new System.Windows.Forms.Button();
-            this.btnModify = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -127,6 +127,26 @@
             this.panel2.Size = new System.Drawing.Size(678, 457);
             this.panel2.TabIndex = 14;
             // 
+            // btnNew
+            // 
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(63, 390);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(159, 38);
+            this.btnNew.TabIndex = 21;
+            this.btnNew.Text = " Nuevo";
+            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
+            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -139,11 +159,53 @@
             this.btnSearch.TabIndex = 17;
             this.btnSearch.TabStop = false;
             // 
+            // btnAddMaterial
+            // 
+            this.btnAddMaterial.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
+            this.btnAddMaterial.FlatAppearance.BorderSize = 0;
+            this.btnAddMaterial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
+            this.btnAddMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMaterial.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMaterial.ForeColor = System.Drawing.Color.White;
+            this.btnAddMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMaterial.Image")));
+            this.btnAddMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMaterial.Location = new System.Drawing.Point(237, 385);
+            this.btnAddMaterial.Name = "btnAddMaterial";
+            this.btnAddMaterial.Size = new System.Drawing.Size(162, 51);
+            this.btnAddMaterial.TabIndex = 20;
+            this.btnAddMaterial.Text = "  Agregar\n     material ";
+            this.btnAddMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddMaterial.UseVisualStyleBackColor = true;
+            this.btnAddMaterial.Click += new System.EventHandler(this.BtnAddMaterial_Click);
+            // 
+            // btnModify
+            // 
+            this.btnModify.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnModify.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModify.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
+            this.btnModify.FlatAppearance.BorderSize = 0;
+            this.btnModify.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
+            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModify.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModify.ForeColor = System.Drawing.Color.White;
+            this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
+            this.btnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModify.Location = new System.Drawing.Point(437, 390);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(159, 38);
+            this.btnModify.TabIndex = 19;
+            this.btnModify.Text = " Modificar";
+            this.btnModify.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.BtnModify_Click);
+            // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(190)))));
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.White;
@@ -239,68 +301,6 @@
             this.StatusC.Name = "StatusC";
             this.StatusC.ReadOnly = true;
             this.StatusC.Width = 96;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
-            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(63, 390);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(159, 38);
-            this.btnNew.TabIndex = 21;
-            this.btnNew.Text = " Nuevo";
-            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
-            // 
-            // btnAddMaterial
-            // 
-            this.btnAddMaterial.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnAddMaterial.FlatAppearance.BorderSize = 0;
-            this.btnAddMaterial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnAddMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddMaterial.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnAddMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMaterial.Image")));
-            this.btnAddMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddMaterial.Location = new System.Drawing.Point(237, 385);
-            this.btnAddMaterial.Name = "btnAddMaterial";
-            this.btnAddMaterial.Size = new System.Drawing.Size(162, 51);
-            this.btnAddMaterial.TabIndex = 20;
-            this.btnAddMaterial.Text = "  Agregar\n     material ";
-            this.btnAddMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddMaterial.UseVisualStyleBackColor = true;
-            this.btnAddMaterial.Click += new System.EventHandler(this.BtnAddMaterial_Click);
-            // 
-            // btnModify
-            // 
-            this.btnModify.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnModify.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModify.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnModify.FlatAppearance.BorderSize = 0;
-            this.btnModify.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModify.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModify.ForeColor = System.Drawing.Color.White;
-            this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
-            this.btnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModify.Location = new System.Drawing.Point(437, 390);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(159, 38);
-            this.btnModify.TabIndex = 19;
-            this.btnModify.Text = " Modificar";
-            this.btnModify.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModify.UseVisualStyleBackColor = true;
-            this.btnModify.Click += new System.EventHandler(this.BtnModify_Click);
             // 
             // frmSearchTool
             // 

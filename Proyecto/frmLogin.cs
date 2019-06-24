@@ -100,7 +100,7 @@ namespace AlmacenDisecForms
             int result = serviceDA.ConfirmUsuario(user, pass);
             if (cont < 4)
             {
-                if (result == 1)
+                if (result != 0)
                 {
                     AlmacenDisecWS.employee emp = serviceDA.EmployeeByCode(user);
                     // mainWindow.Closed += (s, args) => this.Close();
@@ -109,6 +109,26 @@ namespace AlmacenDisecForms
                     mainWindow.lblCargo.Text = emp.privilege.ToString();
                     mainWindow.lblNombre.Text = emp.employee_name;
                     mainWindow.lblApellidos.Text = emp.last_name + " " + emp.second_last_name;
+                    if (emp.privilege.ToString() == "STOREKEEPER")
+                    {
+                        mainWindow.btnReport.Enabled = false;
+                        mainWindow.btnGUser.Enabled = false;
+                    }
+                    else if (emp.privilege.ToString() == "TECHNICIAN")
+                    {
+                        mainWindow.btnReport.Enabled = false;
+                        mainWindow.btnGUser.Enabled = false;
+                        mainWindow.btnSupplier.Enabled = false;
+                        mainWindow.btnStore.Enabled=false;
+                        mainWindow.btnCategory.Enabled = false;
+                        mainWindow.btnFamiliy.Enabled = false;
+                        mainWindow.btnBrand.Enabled = false;
+                        mainWindow.btnMaterial .Enabled = false;
+                        mainWindow.btnTool.Enabled = false;
+
+
+                    }
+
 
                     mainWindow.Show();
 

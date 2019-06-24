@@ -157,6 +157,7 @@
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSearch.TabIndex = 16;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click_1);
             // 
             // btnModify
             // 
@@ -183,7 +184,7 @@
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(190)))));
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.White;
@@ -247,6 +248,7 @@
             // 
             // CodC
             // 
+            this.CodC.DataPropertyName = "id_storehouse";
             this.CodC.HeaderText = "Id";
             this.CodC.Name = "CodC";
             this.CodC.ReadOnly = true;
@@ -254,6 +256,7 @@
             // 
             // NombreC
             // 
+            this.NombreC.DataPropertyName = "storehouse_name";
             this.NombreC.HeaderText = "Almacen";
             this.NombreC.Name = "NombreC";
             this.NombreC.ReadOnly = true;
@@ -261,6 +264,7 @@
             // 
             // BrandC
             // 
+            this.BrandC.DataPropertyName = "address";
             this.BrandC.HeaderText = "Dirección";
             this.BrandC.Name = "BrandC";
             this.BrandC.ReadOnly = true;
@@ -268,6 +272,7 @@
             // 
             // QuantityC
             // 
+            this.QuantityC.DataPropertyName = "cityName";
             this.QuantityC.HeaderText = "Ciudad";
             this.QuantityC.Name = "QuantityC";
             this.QuantityC.ReadOnly = true;
@@ -275,6 +280,7 @@
             // 
             // StatusC
             // 
+            this.StatusC.DataPropertyName = "phone_number";
             this.StatusC.HeaderText = "Teléfono";
             this.StatusC.Name = "StatusC";
             this.StatusC.ReadOnly = true;
@@ -310,13 +316,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DataGridView dgvSearch;
+        private System.Windows.Forms.PictureBox btnSearch;
+        public System.Windows.Forms.Button btnNew;
+        public System.Windows.Forms.DataGridView dgvSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodC;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrandC;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuantityC;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusC;
-        private System.Windows.Forms.PictureBox btnSearch;
-        public System.Windows.Forms.Button btnNew;
     }
 }
