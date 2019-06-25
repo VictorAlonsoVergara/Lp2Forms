@@ -22,7 +22,7 @@ namespace AlmacenDisecForms
             InitializeComponent();
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
             txtSearch.Enabled = true;
-            
+            btnAddTool.Enabled = false;
         }
 
         private void OpenFormPanel(object formHijo)
@@ -150,9 +150,19 @@ namespace AlmacenDisecForms
             frm.txtCode.Enabled = false;
             frm.txtSerie.Enabled = false;
             frm.txtId.Enabled = false;
+            frm.btnDataG.Enabled = true;
+            frm.btnSave.Enabled = false;
+            btnAddTool.Enabled = true;
 
             frm.flag = 1;
-            OpenFormPanel(frm);
+            AddOwnedForm(frm);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.Controls.Add(frm);
+            this.Tag = frm;
+            frm.BringToFront();
+            frm.Show();
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -178,6 +188,9 @@ namespace AlmacenDisecForms
 
                 dgvSearch.AutoGenerateColumns = false;
                 dgvSearch.DataSource = list;
+                btnNew.Enabled = true;
+                btnAddTool.Enabled = true;
+
                 /*
                 if (s.tool_details != null)
                 {

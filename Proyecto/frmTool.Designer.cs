@@ -94,7 +94,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.545455F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.29527F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
@@ -150,7 +150,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(46, 21);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(628, 34);
+            this.panel3.Size = new System.Drawing.Size(627, 34);
             this.panel3.TabIndex = 19;
             // 
             // btnBack
@@ -165,13 +165,14 @@
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(498, -2);
+            this.btnBack.Location = new System.Drawing.Point(497, -2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(130, 36);
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "Regresar";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panel1
             // 
@@ -190,7 +191,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(46, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(628, 490);
+            this.panel1.Size = new System.Drawing.Size(627, 490);
             this.panel1.TabIndex = 12;
             // 
             // panel2
@@ -202,7 +203,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 622);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(609, 62);
+            this.panel2.Size = new System.Drawing.Size(608, 62);
             this.panel2.TabIndex = 33;
             // 
             // btnDataG
@@ -237,7 +238,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(320, 11);
+            this.btnDelete.Location = new System.Drawing.Point(319, 11);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(128, 38);
             this.btnDelete.TabIndex = 24;
@@ -258,7 +259,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(454, 12);
+            this.btnCancel.Location = new System.Drawing.Point(453, 12);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(146, 38);
             this.btnCancel.TabIndex = 23;
@@ -299,7 +300,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(18, 478);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(579, 144);
+            this.groupBox2.Size = new System.Drawing.Size(578, 144);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos específicos";
@@ -313,7 +314,7 @@
             this.txtSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtSerie.Location = new System.Drawing.Point(225, 91);
             this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(205, 21);
+            this.txtSerie.Size = new System.Drawing.Size(204, 21);
             this.txtSerie.TabIndex = 64;
             // 
             // label2
@@ -349,7 +350,7 @@
             this.txtCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtCode.Location = new System.Drawing.Point(225, 48);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(137, 21);
+            this.txtCode.Size = new System.Drawing.Size(136, 21);
             this.txtCode.TabIndex = 61;
             // 
             // groupBox1
@@ -380,7 +381,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(18, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(579, 463);
+            this.groupBox1.Size = new System.Drawing.Size(578, 463);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
@@ -406,7 +407,7 @@
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtId.Location = new System.Drawing.Point(225, 43);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(137, 21);
+            this.txtId.Size = new System.Drawing.Size(136, 21);
             this.txtId.TabIndex = 79;
             // 
             // label5
@@ -431,7 +432,7 @@
             this.cboWayofPay.FormattingEnabled = true;
             this.cboWayofPay.Location = new System.Drawing.Point(225, 371);
             this.cboWayofPay.Name = "cboWayofPay";
-            this.cboWayofPay.Size = new System.Drawing.Size(205, 23);
+            this.cboWayofPay.Size = new System.Drawing.Size(204, 23);
             this.cboWayofPay.TabIndex = 76;
             // 
             // label4
@@ -456,7 +457,7 @@
             this.cboStorehouse.FormattingEnabled = true;
             this.cboStorehouse.Location = new System.Drawing.Point(225, 416);
             this.cboStorehouse.Name = "cboStorehouse";
-            this.cboStorehouse.Size = new System.Drawing.Size(277, 23);
+            this.cboStorehouse.Size = new System.Drawing.Size(276, 23);
             this.cboStorehouse.TabIndex = 74;
             // 
             // label3
@@ -481,7 +482,7 @@
             this.cboMoney.FormattingEnabled = true;
             this.cboMoney.Location = new System.Drawing.Point(225, 327);
             this.cboMoney.Name = "cboMoney";
-            this.cboMoney.Size = new System.Drawing.Size(205, 23);
+            this.cboMoney.Size = new System.Drawing.Size(204, 23);
             this.cboMoney.TabIndex = 72;
             // 
             // label13
@@ -505,8 +506,9 @@
             this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtPrice.Location = new System.Drawing.Point(225, 287);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(137, 21);
+            this.txtPrice.Size = new System.Drawing.Size(136, 21);
             this.txtPrice.TabIndex = 69;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // cboCategory
             // 
@@ -518,7 +520,7 @@
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.Location = new System.Drawing.Point(226, 85);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(276, 23);
+            this.cboCategory.Size = new System.Drawing.Size(275, 23);
             this.cboCategory.TabIndex = 68;
             this.cboCategory.SelectionChangeCommitted += new System.EventHandler(this.cboCategory_SelectionChangeCommitted);
             // 
@@ -544,7 +546,7 @@
             this.cboSupplier.FormattingEnabled = true;
             this.cboSupplier.Location = new System.Drawing.Point(226, 207);
             this.cboSupplier.Name = "cboSupplier";
-            this.cboSupplier.Size = new System.Drawing.Size(276, 23);
+            this.cboSupplier.Size = new System.Drawing.Size(275, 23);
             this.cboSupplier.TabIndex = 70;
             // 
             // cboBrand
@@ -557,7 +559,7 @@
             this.cboBrand.FormattingEnabled = true;
             this.cboBrand.Location = new System.Drawing.Point(226, 166);
             this.cboBrand.Name = "cboBrand";
-            this.cboBrand.Size = new System.Drawing.Size(276, 23);
+            this.cboBrand.Size = new System.Drawing.Size(275, 23);
             this.cboBrand.TabIndex = 65;
             // 
             // txtName
@@ -569,7 +571,7 @@
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtName.Location = new System.Drawing.Point(225, 248);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(277, 21);
+            this.txtName.Size = new System.Drawing.Size(276, 21);
             this.txtName.TabIndex = 64;
             // 
             // cboFamily
@@ -582,7 +584,7 @@
             this.cboFamily.FormattingEnabled = true;
             this.cboFamily.Location = new System.Drawing.Point(226, 125);
             this.cboFamily.Name = "cboFamily";
-            this.cboFamily.Size = new System.Drawing.Size(276, 23);
+            this.cboFamily.Size = new System.Drawing.Size(275, 23);
             this.cboFamily.TabIndex = 62;
             // 
             // label10
@@ -639,7 +641,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(35, 2300);
+            this.label14.Location = new System.Drawing.Point(35, 2398);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 19);
             this.label14.TabIndex = 30;
@@ -698,10 +700,8 @@
         public System.Windows.Forms.TextBox txtSerie;
         public System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnDataG;
         public System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label4;
@@ -710,5 +710,7 @@
         public System.Windows.Forms.ComboBox cboWayofPay;
         private System.Windows.Forms.Label lblId;
         public System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.Button btnDataG;
+        public System.Windows.Forms.Button btnSave;
     }
 }

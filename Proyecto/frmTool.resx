@@ -131,6 +131,19 @@
         9gUvtWz4z9uk5gAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAZhJREFUSEvtlT9LQlEYxoWgaAmHPkBQUYOoaWZWVOjSHkaauNTQYjmFLYWbDRF9
+        AofGhhoaHCqDaGkRP0F7i5A0ROjbc26ePEeP16t5bxA+8EPQ1+f3Hrh/bCyVTOTl6TBKW/EYDa3FJQZD
+        mzQw7uyEMa20XSgTsQPiPKaiFBMW6EK8WqvWT6OYwxewXMy53Q9TzOlVCVrRGzEdhYkCAXrw+Y0u0Fsx
+        hy0wMulSCTnmiBnB6RmVkNMXq4Py/yXG3DJo/RRDuVniUm0+qYkag3JdcTV3QZ8720pxwuGlc9esRNHn
+        v8LMmTgPCkA+Pcp1xZXyG5VzN2LJj1j8ziD106PcSjHj+a/EBavF7+AU2A2Jq3eX9JE6kEq4OI2XxrVn
+        TuLVP5/HDLvAxP8UwaIm5EG5rvgXtxObrYL6KcWg3CxxELg1iSooN0XcNijvi2X64l6JWSDYA3lJqCPe
+        dXiyEBw3MeFO4LP5nm0XOokMQ5YE9SUUYmD8VJ2GMtHvJdIb95aKxdB6aBSyJC0E2HO4RCtLU7WfuozN
+        9gUvtWz4z9uk5gAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnDataG.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -212,17 +225,4 @@
   <metadata name="txtId.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAZhJREFUSEvtlT9LQlEYxoWgaAmHPkBQUYOoaWZWVOjSHkaauNTQYjmFLYWbDRF9
-        AofGhhoaHCqDaGkRP0F7i5A0ROjbc26ePEeP16t5bxA+8EPQ1+f3Hrh/bCyVTOTl6TBKW/EYDa3FJQZD
-        mzQw7uyEMa20XSgTsQPiPKaiFBMW6EK8WqvWT6OYwxewXMy53Q9TzOlVCVrRGzEdhYkCAXrw+Y0u0Fsx
-        hy0wMulSCTnmiBnB6RmVkNMXq4Py/yXG3DJo/RRDuVniUm0+qYkag3JdcTV3QZ8720pxwuGlc9esRNHn
-        v8LMmTgPCkA+Pcp1xZXyG5VzN2LJj1j8ziD106PcSjHj+a/EBavF7+AU2A2Jq3eX9JE6kEq4OI2XxrVn
-        TuLVP5/HDLvAxP8UwaIm5EG5rvgXtxObrYL6KcWg3CxxELg1iSooN0XcNijvi2X64l6JWSDYA3lJqCPe
-        dXiyEBw3MeFO4LP5nm0XOokMQ5YE9SUUYmD8VJ2GMtHvJdIb95aKxdB6aBSyJC0E2HO4RCtLU7WfuozN
-        9gUvtWz4z9uk5gAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>
