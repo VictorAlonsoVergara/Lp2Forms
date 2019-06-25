@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BotonRedondeado.cs" />
+    <Compile Include="Brand.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Connected Services\AlmacenDisecWS\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -314,6 +315,7 @@
     <Compile Include="Sede.cs" />
     <Compile Include="Storehouse.cs" />
     <Compile Include="Supplier.cs" />
+    <Compile Include="Tool.cs" />
     <EmbeddedResource Include="frmBrand.resx">
       <DependentUpon>frmBrand.cs</DependentUpon>
     </EmbeddedResource>
@@ -502,6 +504,9 @@
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.deleteToolResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.dispatchWork_orderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.employee.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -509,6 +514,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.family.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.FinishWork_orderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.FinishWork_order_lineResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.helloResponse.datasource">
@@ -601,6 +612,9 @@
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryBrandByNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryFamilyByCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryFamilyByNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -608,6 +622,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryMeasurementByDescriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryStockMaterialByStorehouseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryStockToolByStorehouseResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenDisecWS\AlmacenDisecForms.AlmacenDisecWS.queryStorehouseByNameResponse.datasource">

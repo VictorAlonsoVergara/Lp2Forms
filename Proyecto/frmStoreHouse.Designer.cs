@@ -81,7 +81,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.545455F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.29527F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblSubtitulo, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 4);
@@ -149,7 +149,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(46, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(635, 490);
+            this.panel1.Size = new System.Drawing.Size(634, 490);
             this.panel1.TabIndex = 12;
             // 
             // panel2
@@ -159,7 +159,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(633, 487);
+            this.panel2.Size = new System.Drawing.Size(632, 487);
             this.panel2.TabIndex = 13;
             // 
             // groupBox1
@@ -182,7 +182,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(31, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(547, 443);
+            this.groupBox1.Size = new System.Drawing.Size(546, 443);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -195,7 +195,7 @@
             this.txtAddressStorehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtAddressStorehouse.Location = new System.Drawing.Point(162, 296);
             this.txtAddressStorehouse.Name = "txtAddressStorehouse";
-            this.txtAddressStorehouse.Size = new System.Drawing.Size(361, 23);
+            this.txtAddressStorehouse.Size = new System.Drawing.Size(360, 23);
             this.txtAddressStorehouse.TabIndex = 88;
             // 
             // lblPhoneNumber
@@ -219,7 +219,7 @@
             this.txtNameStorehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtNameStorehouse.Location = new System.Drawing.Point(162, 105);
             this.txtNameStorehouse.Name = "txtNameStorehouse";
-            this.txtNameStorehouse.Size = new System.Drawing.Size(251, 23);
+            this.txtNameStorehouse.Size = new System.Drawing.Size(250, 23);
             this.txtNameStorehouse.TabIndex = 86;
             // 
             // lblName
@@ -246,7 +246,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(361, 362);
+            this.btnCancel.Location = new System.Drawing.Point(360, 362);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(159, 38);
             this.btnCancel.TabIndex = 19;
@@ -318,7 +318,7 @@
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtId.Location = new System.Drawing.Point(163, 45);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(251, 23);
+            this.txtId.Size = new System.Drawing.Size(250, 23);
             this.txtId.TabIndex = 77;
             // 
             // cboCity
@@ -333,7 +333,7 @@
             "cityName"});
             this.cboCity.Location = new System.Drawing.Point(162, 231);
             this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(360, 23);
+            this.cboCity.Size = new System.Drawing.Size(359, 23);
             this.cboCity.TabIndex = 84;
             // 
             // lblAddress
@@ -357,7 +357,7 @@
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtPhone.Location = new System.Drawing.Point(163, 165);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(360, 23);
+            this.txtPhone.Size = new System.Drawing.Size(359, 23);
             this.txtPhone.TabIndex = 82;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
@@ -395,7 +395,7 @@
             this.txtAddress.Location = new System.Drawing.Point(189, 207);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(360, 39);
+            this.txtAddress.Size = new System.Drawing.Size(359, 39);
             this.txtAddress.TabIndex = 80;
             // 
             // lblCatName
@@ -419,7 +419,7 @@
             this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(189, 165);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(360, 23);
+            this.txtName.Size = new System.Drawing.Size(359, 23);
             this.txtName.TabIndex = 78;
             // 
             // label14
@@ -441,7 +441,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(46, 21);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(635, 34);
+            this.panel3.Size = new System.Drawing.Size(634, 34);
             this.panel3.TabIndex = 19;
             // 
             // btnBack
@@ -456,7 +456,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(505, -2);
+            this.btnBack.Location = new System.Drawing.Point(504, -2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(130, 36);
             this.btnBack.TabIndex = 22;
@@ -474,7 +474,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStoreHouse";
-            this.Text = "frmMaterial";
+            this.Text = "6";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);

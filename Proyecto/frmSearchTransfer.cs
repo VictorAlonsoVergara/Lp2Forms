@@ -13,11 +13,12 @@ namespace AlmacenDisecForms
 {
     public partial class frmSearchTransfer : Form
     {
-      
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
+
         public frmSearchTransfer()
         {
             InitializeComponent();
-            dgvSearch.Rows.Insert(0, "Cod1", "Brasil", "Av.  Brasil", "Lima",  "4532345");
+            //dgvSearch.Rows.Insert(0, "Cod1", "Brasil", "Av.  Brasil", "Lima",  "4532345");
           
         }
 

@@ -37,17 +37,16 @@
             this.lblMaterial = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.PictureBox();
-            this.btnAddMaterial = new System.Windows.Forms.Button();
+            this.btnAddTool = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
-            this.CodC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SerieC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BrandC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,16 +115,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(86)))), ((int)(((byte)(161)))));
+            this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.btnNew);
             this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Controls.Add(this.btnAddMaterial);
+            this.panel2.Controls.Add(this.btnAddTool);
             this.panel2.Controls.Add(this.btnModify);
-            this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.dgvSearch);
             this.panel2.Location = new System.Drawing.Point(33, 121);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(678, 457);
             this.panel2.TabIndex = 14;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
+            this.txtSearch.Location = new System.Drawing.Point(126, 21);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(366, 23);
+            this.txtSearch.TabIndex = 78;
             // 
             // btnNew
             // 
@@ -158,27 +169,28 @@
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSearch.TabIndex = 17;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
-            // btnAddMaterial
+            // btnAddTool
             // 
-            this.btnAddMaterial.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
-            this.btnAddMaterial.FlatAppearance.BorderSize = 0;
-            this.btnAddMaterial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
-            this.btnAddMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddMaterial.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnAddMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMaterial.Image")));
-            this.btnAddMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddMaterial.Location = new System.Drawing.Point(237, 385);
-            this.btnAddMaterial.Name = "btnAddMaterial";
-            this.btnAddMaterial.Size = new System.Drawing.Size(162, 51);
-            this.btnAddMaterial.TabIndex = 20;
-            this.btnAddMaterial.Text = "  Agregar\n     material ";
-            this.btnAddMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddMaterial.UseVisualStyleBackColor = true;
-            this.btnAddMaterial.Click += new System.EventHandler(this.BtnAddMaterial_Click);
+            this.btnAddTool.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddTool.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddTool.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
+            this.btnAddTool.FlatAppearance.BorderSize = 0;
+            this.btnAddTool.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(50)))), ((int)(((byte)(161)))));
+            this.btnAddTool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTool.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTool.ForeColor = System.Drawing.Color.White;
+            this.btnAddTool.Image = ((System.Drawing.Image)(resources.GetObject("btnAddTool.Image")));
+            this.btnAddTool.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddTool.Location = new System.Drawing.Point(237, 376);
+            this.btnAddTool.Name = "btnAddTool";
+            this.btnAddTool.Size = new System.Drawing.Size(162, 69);
+            this.btnAddTool.TabIndex = 20;
+            this.btnAddTool.Text = "  Agregar\n    herramienta ";
+            this.btnAddTool.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddTool.UseVisualStyleBackColor = true;
+            this.btnAddTool.Click += new System.EventHandler(this.BtnAddTool_Click);
             // 
             // btnModify
             // 
@@ -200,19 +212,6 @@
             this.btnModify.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModify.UseVisualStyleBackColor = true;
             this.btnModify.Click += new System.EventHandler(this.BtnModify_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(146, 23);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(347, 22);
-            this.txtSearch.TabIndex = 7;
             // 
             // dgvSearch
             // 
@@ -237,11 +236,10 @@
             this.dgvSearch.ColumnHeadersHeight = 30;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodC,
-            this.NombreC,
-            this.SerieC,
-            this.BrandC,
-            this.StatusC});
+            this.IdT,
+            this.nameI,
+            this.price,
+            this.brand});
             this.dgvSearch.EnableHeadersVisualStyles = false;
             this.dgvSearch.GridColor = System.Drawing.SystemColors.Window;
             this.dgvSearch.Location = new System.Drawing.Point(26, 66);
@@ -267,40 +265,37 @@
             this.dgvSearch.Size = new System.Drawing.Size(624, 295);
             this.dgvSearch.TabIndex = 6;
             // 
-            // CodC
+            // IdT
             // 
-            this.CodC.HeaderText = "Código";
-            this.CodC.Name = "CodC";
-            this.CodC.ReadOnly = true;
-            this.CodC.Width = 102;
+            this.IdT.DataPropertyName = "id_item";
+            this.IdT.HeaderText = "Id";
+            this.IdT.Name = "IdT";
+            this.IdT.ReadOnly = true;
+            this.IdT.Width = 52;
             // 
-            // NombreC
+            // nameI
             // 
-            this.NombreC.HeaderText = "Herramienta";
-            this.NombreC.Name = "NombreC";
-            this.NombreC.ReadOnly = true;
-            this.NombreC.Width = 148;
+            this.nameI.DataPropertyName = "name_item";
+            this.nameI.HeaderText = "Herramienta";
+            this.nameI.Name = "nameI";
+            this.nameI.ReadOnly = true;
+            this.nameI.Width = 148;
             // 
-            // SerieC
+            // price
             // 
-            this.SerieC.HeaderText = "Serie";
-            this.SerieC.Name = "SerieC";
-            this.SerieC.ReadOnly = true;
-            this.SerieC.Width = 76;
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "Precio";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Width = 90;
             // 
-            // BrandC
+            // brand
             // 
-            this.BrandC.HeaderText = "Marca";
-            this.BrandC.Name = "BrandC";
-            this.BrandC.ReadOnly = true;
-            this.BrandC.Width = 95;
-            // 
-            // StatusC
-            // 
-            this.StatusC.HeaderText = "Estado";
-            this.StatusC.Name = "StatusC";
-            this.StatusC.ReadOnly = true;
-            this.StatusC.Width = 96;
+            this.brand.DataPropertyName = "brand_name";
+            this.brand.HeaderText = "Marca";
+            this.brand.Name = "brand";
+            this.brand.ReadOnly = true;
+            this.brand.Width = 95;
             // 
             // frmSearchTool
             // 
@@ -331,15 +326,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dgvSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SerieC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BrandC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusC;
         public System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnAddMaterial;
+        private System.Windows.Forms.Button btnAddTool;
         private System.Windows.Forms.Button btnModify;
+        public System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brand;
     }
 }

@@ -9,7 +9,7 @@ namespace AlmacenDisecForms
    class City : AlmacenDisecWS.city
 
     {
-    public     City()
+    public City()
         {
           
         }

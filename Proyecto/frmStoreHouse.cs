@@ -236,7 +236,8 @@ namespace AlmacenDisecForms
                 frmMessageBoxNumber frm = new frmMessageBoxNumber();
                 frm.ShowDialog();
                 e.Handled = true;
-                //  return;
+
+                return;
             }
         }
     }
