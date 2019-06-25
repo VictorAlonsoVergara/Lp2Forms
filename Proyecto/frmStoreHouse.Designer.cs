@@ -81,7 +81,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.545455F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.29527F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblSubtitulo, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 4);
@@ -111,7 +111,7 @@
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(16, 3);
+            this.btnRegresar.Location = new System.Drawing.Point(15, 3);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(25, 12);
             this.btnRegresar.TabIndex = 18;
@@ -124,7 +124,7 @@
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.lblSubtitulo.Location = new System.Drawing.Point(47, 72);
+            this.lblSubtitulo.Location = new System.Drawing.Point(46, 72);
             this.lblSubtitulo.Name = "lblSubtitulo";
             this.lblSubtitulo.Size = new System.Drawing.Size(219, 22);
             this.lblSubtitulo.TabIndex = 11;
@@ -147,9 +147,9 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(47, 97);
+            this.panel1.Location = new System.Drawing.Point(46, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(636, 490);
+            this.panel1.Size = new System.Drawing.Size(635, 490);
             this.panel1.TabIndex = 12;
             // 
             // panel2
@@ -159,7 +159,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(634, 487);
+            this.panel2.Size = new System.Drawing.Size(633, 487);
             this.panel2.TabIndex = 13;
             // 
             // groupBox1
@@ -182,7 +182,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(31, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(548, 443);
+            this.groupBox1.Size = new System.Drawing.Size(547, 443);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -192,10 +192,10 @@
             this.txtAddressStorehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtAddressStorehouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddressStorehouse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressStorehouse.ForeColor = System.Drawing.Color.White;
+            this.txtAddressStorehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtAddressStorehouse.Location = new System.Drawing.Point(162, 296);
             this.txtAddressStorehouse.Name = "txtAddressStorehouse";
-            this.txtAddressStorehouse.Size = new System.Drawing.Size(362, 23);
+            this.txtAddressStorehouse.Size = new System.Drawing.Size(361, 23);
             this.txtAddressStorehouse.TabIndex = 88;
             // 
             // lblPhoneNumber
@@ -216,10 +216,10 @@
             this.txtNameStorehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtNameStorehouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNameStorehouse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameStorehouse.ForeColor = System.Drawing.Color.White;
+            this.txtNameStorehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtNameStorehouse.Location = new System.Drawing.Point(162, 105);
             this.txtNameStorehouse.Name = "txtNameStorehouse";
-            this.txtNameStorehouse.Size = new System.Drawing.Size(252, 23);
+            this.txtNameStorehouse.Size = new System.Drawing.Size(251, 23);
             this.txtNameStorehouse.TabIndex = 86;
             // 
             // lblName
@@ -246,7 +246,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(362, 362);
+            this.btnCancel.Location = new System.Drawing.Point(361, 362);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(159, 38);
             this.btnCancel.TabIndex = 19;
@@ -267,7 +267,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(194, 362);
+            this.btnDelete.Location = new System.Drawing.Point(193, 362);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(159, 38);
             this.btnDelete.TabIndex = 20;
@@ -315,10 +315,10 @@
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtId.Location = new System.Drawing.Point(163, 45);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(252, 23);
+            this.txtId.Size = new System.Drawing.Size(251, 23);
             this.txtId.TabIndex = 77;
             // 
             // cboCity
@@ -327,13 +327,13 @@
             this.cboCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.cboCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCity.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCity.ForeColor = System.Drawing.Color.White;
+            this.cboCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.cboCity.FormattingEnabled = true;
             this.cboCity.Items.AddRange(new object[] {
             "cityName"});
             this.cboCity.Location = new System.Drawing.Point(162, 231);
             this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(361, 23);
+            this.cboCity.Size = new System.Drawing.Size(360, 23);
             this.cboCity.TabIndex = 84;
             // 
             // lblAddress
@@ -354,11 +354,12 @@
             this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.ForeColor = System.Drawing.Color.White;
+            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.txtPhone.Location = new System.Drawing.Point(163, 165);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(361, 23);
+            this.txtPhone.Size = new System.Drawing.Size(360, 23);
             this.txtPhone.TabIndex = 82;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // lblCity
             // 
@@ -394,7 +395,7 @@
             this.txtAddress.Location = new System.Drawing.Point(189, 207);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(361, 39);
+            this.txtAddress.Size = new System.Drawing.Size(360, 39);
             this.txtAddress.TabIndex = 80;
             // 
             // lblCatName
@@ -418,7 +419,7 @@
             this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(189, 165);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(361, 23);
+            this.txtName.Size = new System.Drawing.Size(360, 23);
             this.txtName.TabIndex = 78;
             // 
             // label14
@@ -438,9 +439,9 @@
             this.panel3.Controls.Add(this.btnBack);
             this.panel3.Controls.Add(this.lblTitulo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(47, 21);
+            this.panel3.Location = new System.Drawing.Point(46, 21);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(636, 34);
+            this.panel3.Size = new System.Drawing.Size(635, 34);
             this.panel3.TabIndex = 19;
             // 
             // btnBack
@@ -455,7 +456,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(506, -2);
+            this.btnBack.Location = new System.Drawing.Point(505, -2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(130, 36);
             this.btnBack.TabIndex = 22;

@@ -38,8 +38,6 @@ namespace AlmacenDisecForms
             txtId.Enabled = false;
             txtName.Enabled = false;
             txtName.CharacterCasing = CharacterCasing.Upper;
-
-            //cboCategory.SelectedIndex = -1;
         }
 
         private void reiniciar() {
@@ -113,6 +111,8 @@ namespace AlmacenDisecForms
                                 reiniciar();
                                 btnModify.Enabled = true;
                                 operation = true;
+                                dgvSearch.AutoGenerateColumns = false;
+                                dgvSearch.DataSource = serviceDA.queryAllFamily(c.category_id);
                             }
                         }
 
@@ -134,18 +134,19 @@ namespace AlmacenDisecForms
                         frmMessageBoxSave frm = new frmMessageBoxSave();
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
-
                             int id = Int32.Parse(txtId.Text);
                             String name = txtName.Text;
                             AlmacenDisecWS.category c = (AlmacenDisecWS.category)cboCategory.SelectedItem;
                             AlmacenDisecWS.family f = new AlmacenDisecWS.family();
                             f.id_family = id;
                             f.name_family = name;
+                            f.category = c;
                             int result = serviceDA.updateFamily(f);
                             dgvSearch.AutoGenerateColumns = false;
                             dgvSearch.DataSource = serviceDA.queryAllFamily(c.category_id);
                             reiniciar();
                             operation = true;
+                            btnModify.Enabled = true;
                         }
                     }
 
@@ -193,11 +194,11 @@ namespace AlmacenDisecForms
                         txtId.Text = dgvSearch.CurrentRow.Cells[0].Value.ToString();
                         txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
                         nombreTextoAnterior = dgvSearch.CurrentRow.Cells[1].Value.ToString();
-                        //AlmacenDisecWS.category c = serviceDA.queryAllCategoryByName(dgvSearch.CurrentRow.Cells[1].Value.ToString());
                         cboCategory.Text = cmbSearch.Text;
                         cboCategory.Enabled = true;
                         txtName.Enabled = true;
                         operation = true;
+                        btnSave.Enabled = true;
                     }
 
                 }

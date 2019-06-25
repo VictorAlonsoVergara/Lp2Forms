@@ -15,18 +15,37 @@ namespace AlmacenDisecForms
         bool flag = false;
         private String nombreTextoAnterior = null;
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
+        bool operation = false;
         public frmMeasurementUnit()
         {
             InitializeComponent();
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
-            btnSave.Enabled = false;
-            btnDelete.Enabled = false;
+            txtA.Enabled = false;
             txtId.Enabled = false;
             txtName.Enabled = false;
-            txtA.Enabled = false;
+            btnModify.Enabled = false;
+            btnSave.Enabled = false;
+            btnDelete.Enabled = false;
+            txtName.CharacterCasing = CharacterCasing.Upper;
+            txtA.CharacterCasing = CharacterCasing.Lower;
+            txtSearch.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void reiniciar() {
+            flag = true;
+            txtId.Clear();
+            txtName.Clear();
+            txtA.Clear();
+            txtId.Enabled = false;
+            txtName.Enabled = false;
+            txtA.Enabled = false;
+            btnDelete.Enabled = false;
+            btnNew.Enabled = true;
+            btnSave.Enabled = false;
+        }
+
+        private void reiniciar2()
+        {
             flag = false;
             txtId.Clear();
             txtName.Clear();
@@ -43,11 +62,11 @@ namespace AlmacenDisecForms
         {
             flag = true;
             txtId.Clear();
-            btnNew.Enabled = false;
-            btnDelete.Enabled = false;
             txtName.Enabled = true;
             txtA.Enabled = true;
+            btnNew.Enabled = false;
             btnSave.Enabled = true;
+            btnModify.Enabled = false;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -74,6 +93,8 @@ namespace AlmacenDisecForms
                         dgvSearch.AutoGenerateColumns = false;
                         dgvSearch.DataSource = serviceDA.queryAllMeasurement_Unit();
                         reiniciar();
+                        btnModify.Enabled = true;
+                        operation = true;
                     }
                 }
                 else
@@ -100,6 +121,8 @@ namespace AlmacenDisecForms
                             dgvSearch.AutoGenerateColumns = false;
                             dgvSearch.DataSource = serviceDA.queryAllMeasurement_Unit();
                             reiniciar();
+                            operation = true;
+                            btnModify.Enabled = true;
                         }
                     }
                 }
@@ -111,7 +134,16 @@ namespace AlmacenDisecForms
             frmMessageBoxCancel frm = new frmMessageBoxCancel();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                reiniciar();
+                if (flag == true)
+                {
+                    reiniciar();
+                    if (operation == true)
+                        btnModify.Enabled = true;
+                }
+                else
+                {
+                    reiniciar2();
+                }
             }
         }
 
@@ -145,6 +177,8 @@ namespace AlmacenDisecForms
                     txtA.Text = dgvSearch.CurrentRow.Cells[2].Value.ToString();
                     txtName.Enabled = true;
                     txtA.Enabled = true;
+                    operation = true;
+                    btnSave.Enabled = true;
                 }
 
             }
@@ -174,6 +208,7 @@ namespace AlmacenDisecForms
                     dgvSearch.AutoGenerateColumns = false;
                     dgvSearch.DataSource = serviceDA.queryAllMeasurement_Unit();
                     reiniciar();
+                    btnModify.Enabled = true;
                 }
             }
 
@@ -187,6 +222,8 @@ namespace AlmacenDisecForms
             {
                 dgvSearch.AutoGenerateColumns = false;
                 dgvSearch.DataSource = serviceDA.queryAllMeasurement_Unit();
+                btnModify.Enabled = true;
+                operation = true;
             }
             else
             {

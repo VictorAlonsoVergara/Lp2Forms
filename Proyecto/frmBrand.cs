@@ -23,8 +23,8 @@ namespace AlmacenDisecForms
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
             txtId.Enabled = false;
             txtName.Enabled = false;
-            txtName.CharacterCasing = CharacterCasing.Upper;
             txtSearch.CharacterCasing = CharacterCasing.Upper;
+            txtName.CharacterCasing = CharacterCasing.Upper;
             btnModify.Enabled = false;
             btnSave.Enabled = false;
             btnDelete.Enabled = false;
@@ -57,9 +57,9 @@ namespace AlmacenDisecForms
         private void BtnNew_Click(object sender, EventArgs e)
         {
             flag = true;
-            txtId.Clear();
-            btnNew.Enabled = false;
+            txtId.Clear();           
             txtName.Enabled = true;
+            btnNew.Enabled = false;
             btnSave.Enabled = true;
             btnModify.Enabled = false;
         }
@@ -116,6 +116,7 @@ namespace AlmacenDisecForms
                             dgvSearch.DataSource = serviceDA.queryAllBrand();
                             reiniciar();
                             operation = true;
+                            btnModify.Enabled = true;
                         }
                     }
 
@@ -183,6 +184,7 @@ namespace AlmacenDisecForms
                     nombreTextoAnterior = dgvSearch.CurrentRow.Cells[1].Value.ToString();
                     txtName.Enabled = true;
                     operation = true;
+                    btnSave.Enabled = true;
                 }
 
             }

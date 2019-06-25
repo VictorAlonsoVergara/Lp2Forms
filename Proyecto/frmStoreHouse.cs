@@ -34,6 +34,8 @@ namespace AlmacenDisecForms
             cboCity.ValueMember = "id_city";
             cboCity.SelectedIndex = -1;
 
+            txtNameStorehouse.CharacterCasing = CharacterCasing.Upper;
+            txtAddressStorehouse.CharacterCasing = CharacterCasing.Upper;
         }
 
 
@@ -54,7 +56,6 @@ namespace AlmacenDisecForms
             btnDelete.Enabled = false;
             txtAddressStorehouse.Clear();
             txtNameStorehouse.Clear();
-            txtId.Clear();
             txtPhone.Clear();
             cboCity.Enabled = true;
             cboCity.SelectedIndex = -1;
@@ -120,10 +121,6 @@ namespace AlmacenDisecForms
                                 store.address = address;
                                 store.phone_number = phoneNumber;
                                 store.storehouse_name = name;
-                                //string nameCity = cboCity.Text;
-                                //AlmacenDisecWS.city city = new AlmacenDisecWS.city();
-                                //int id = serviceDA.CityByName(nameCity);
-                                //city.id_city = id;
                                 AlmacenDisecWS.city city = new AlmacenDisecWS.city();
                                 city = (AlmacenDisecWS.city)cboCity.SelectedItem;
                                 store.city = city;
@@ -131,7 +128,7 @@ namespace AlmacenDisecForms
                             }
                             frmSearchStoreHouse fm = Owner as frmSearchStoreHouse;
                             fm.dgvSearch.AutoGenerateColumns = false;
-                            fm.dgvSearch.DataSource = serviceDA.queryAllStorehouse();
+                            fm.dgvSearch.DataSource = "";
 
                             this.Close();
 
@@ -181,7 +178,8 @@ namespace AlmacenDisecForms
                         }
                         frmSearchStoreHouse fm = Owner as frmSearchStoreHouse;
                         fm.dgvSearch.AutoGenerateColumns = false;
-                        fm.dgvSearch.DataSource = serviceDA.queryAllStorehouse();
+                        fm.dgvSearch.DataSource = "";
+
                         this.Close();
 
                     }
@@ -211,7 +209,7 @@ namespace AlmacenDisecForms
                     serviceDA.deleteStorehouse(id);
                     frmSearchStoreHouse fm = Owner as frmSearchStoreHouse;
                     fm.dgvSearch.AutoGenerateColumns = false;
-                    fm.dgvSearch.DataSource = serviceDA.queryAllStorehouse();
+                    fm.dgvSearch.DataSource = "";
                     this.Close();
 
                 }
@@ -231,5 +229,15 @@ namespace AlmacenDisecForms
             }
         }
 
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                frmMessageBoxNumber frm = new frmMessageBoxNumber();
+                frm.ShowDialog();
+                e.Handled = true;
+                //  return;
+            }
+        }
     }
 }
