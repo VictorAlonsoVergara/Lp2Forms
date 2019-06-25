@@ -15,6 +15,8 @@ namespace AlmacenDisecForms
         private String nombreTextoAnterior = null;
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
         bool flag = false;
+        private List<String> listas = new List<String>();
+
         bool operation = false;
         public frmFamily()
         {
@@ -38,6 +40,15 @@ namespace AlmacenDisecForms
             txtId.Enabled = false;
             txtName.Enabled = false;
             txtName.CharacterCasing = CharacterCasing.Upper;
+
+            listas.Add("MATERIAL");
+            listas.Add("HERRAMIENTA");
+
+            cboType.DataSource = listas;
+            cboType.Enabled = false;
+            cboCategory.SelectedIndex = -1;
+            cboType.SelectedIndex = -1;
+            cmbSearch.SelectedIndex = -1;
         }
 
         private void reiniciar() {
@@ -45,12 +56,14 @@ namespace AlmacenDisecForms
             txtId.Clear();
             txtName.Clear();
             cboCategory.SelectedIndex = -1;
+            cboType.SelectedIndex = -1;
             cboCategory.Enabled = false;            
             txtId.Enabled = false;
             txtName.Enabled = false;
             btnDelete.Enabled = false;
             btnNew.Enabled = true;
             btnSave.Enabled = false;
+            cboType.Enabled = false;
         }
         private void reiniciar2()
         {
@@ -58,12 +71,14 @@ namespace AlmacenDisecForms
             txtId.Clear();
             txtName.Clear();
             cboCategory.SelectedIndex = -1;
+            cboType.SelectedIndex = -1;
             cboCategory.Enabled = false;
             txtId.Enabled = false;
             txtName.Enabled = false;
             btnDelete.Enabled = false;
             btnNew.Enabled = true;
             btnModify.Enabled = true;
+            cboType.Enabled = false;
         }
 
         private void BtnNew_Click(object sender, EventArgs e)
@@ -76,6 +91,7 @@ namespace AlmacenDisecForms
             btnNew.Enabled = false;
             btnSave.Enabled = true;
             btnModify.Enabled = false;
+            cboType.Enabled = true;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -93,7 +109,7 @@ namespace AlmacenDisecForms
                 if (flag == true)
                 {
                    
-                        if (cboCategory.SelectedIndex == -1) {
+                        if ((cboCategory.SelectedIndex == -1)|| (cboType.SelectedIndex == -1)) {
                             frmMessageBoxCategory frm = new frmMessageBoxCategory();
                             frm.ShowDialog();
                         }
@@ -107,13 +123,31 @@ namespace AlmacenDisecForms
                                 AlmacenDisecWS.family f = new AlmacenDisecWS.family();
                                 f.name_family = name;
                                 f.category = c;
-                                int result = serviceDA.insertFamily(f);                                
-                                reiniciar();
+                                                            
+                          
                                 btnModify.Enabled = true;
                                 operation = true;
                                 dgvSearch.AutoGenerateColumns = false;
-                                dgvSearch.DataSource = serviceDA.queryAllFamily(c.category_id);
+                            int a = 0;
+                            string a1 = cboType.SelectedItem.ToString();
+                            if (cboType.SelectedItem.ToString() == "MATERIAL")
+                            {
+                                a = 1;
+
                             }
+                            else if (cboType.SelectedItem.ToString() == "HERRAMIENTA")
+                            {
+                                a = 2;
+                            }
+
+
+                            int result = serviceDA.insertFamily(f,a);
+                            dgvSearch.DataSource = serviceDA.queryAllFamily(c.category_id);
+                            cmbSearch.Text = cboCategory.Text;
+                            reiniciar();
+                          
+
+                        }
                         }
 
                    
@@ -144,6 +178,7 @@ namespace AlmacenDisecForms
                             int result = serviceDA.updateFamily(f);
                             dgvSearch.AutoGenerateColumns = false;
                             dgvSearch.DataSource = serviceDA.queryAllFamily(c.category_id);
+                            cmbSearch.Text = cboCategory.Text;
                             reiniciar();
                             operation = true;
                             btnModify.Enabled = true;
@@ -196,6 +231,7 @@ namespace AlmacenDisecForms
                         nombreTextoAnterior = dgvSearch.CurrentRow.Cells[1].Value.ToString();
                         cboCategory.Text = cmbSearch.Text;
                         cboCategory.Enabled = true;
+                    cboType.Enabled = false;
                         txtName.Enabled = true;
                         operation = true;
                         btnSave.Enabled = true;
