@@ -21,6 +21,7 @@ namespace AlmacenDisecForms
             //dgvSearch.Rows.Insert(0, "Cod1", "Brasil", "Av.  Brasil", "Lima",  "4532345");
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
             btnModify.Enabled = false;
+            txtSearch.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void OpenFormPanel(object formHijo)

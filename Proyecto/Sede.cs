@@ -80,6 +80,7 @@ namespace AlmacenDisecForms
         public List<Items> Item { get => item; set => item = value; }
     }
     //Brand
+    /*
     public class Brand
     {
         private string nombreBrand;
@@ -99,7 +100,7 @@ namespace AlmacenDisecForms
         public int IdBrand { get => idBrand; set => idBrand = value; }
         public int Status { get => status; set => status = value; }
         public string CodBrand { get => codBrand; set => codBrand = value; }
-    }
+    }*/
 
     //Categoria
     public class Category
@@ -123,8 +124,8 @@ namespace AlmacenDisecForms
         public string CodCategory { get => codCategory; set => codCategory = value; }
     }
 
-
-    //Material
+    
+    //Material 
     public class Items
     {
 
@@ -135,7 +136,6 @@ namespace AlmacenDisecForms
         private int cantMinima;
         private string unidad;
         private double precio;
-        private Brand brandItem;
         private string serie;
         private int status;
         private Category categoryItem;
@@ -147,8 +147,8 @@ namespace AlmacenDisecForms
             this.Cant = cant;
             this.Unidad = unidad;
         }
-
-        public Items(int id, string codItem, string nombre, int cant, int cantMinima, string unidad, double precio, Brand brandItem, string serie, int status, Category categoryItem)
+        
+        public Items(int id, string codItem, string nombre, int cant, int cantMinima, string unidad, double precio,string serie, int status, Category categoryItem)
         {
             this.Id = id;
             this.CodItem = codItem;
@@ -157,7 +157,6 @@ namespace AlmacenDisecForms
             this.CantMinima = cantMinima;
             this.Unidad = unidad;
             this.Precio = precio;
-            this.BrandItem = brandItem;
             this.Serie = serie;
             this.Status = status;
             this.CategoryItem = categoryItem;
@@ -170,15 +169,13 @@ namespace AlmacenDisecForms
         public int CantMinima { get => cantMinima; set => cantMinima = value; }
         public string Unidad { get => unidad; set => unidad = value; }
         public double Precio { get => precio; set => precio = value; }
-        public Brand BrandItem { get => brandItem; set => brandItem = value; }
         public string Serie { get => serie; set => serie = value; }
         public int Status { get => status; set => status = value; }
         public Category CategoryItem { get => categoryItem; set => categoryItem = value; }
         
-        public string getNameBrandItem { get => brandItem.NombreBrand; }
         public string getNameCategory { get => CategoryItem.NombreCategory; }
     }
-
+    
     //Herramientas
     public class Herramienta
     {
@@ -188,12 +185,11 @@ namespace AlmacenDisecForms
         private int cant;
         private string unidad;
         private double precio;
-        private Brand brandHerramienta;
         private string serie;
         private int status;
         private Category categoryHerramienta;
 
-        public Herramienta(int id, string codHerramienta, string nombre, int cant, string unidad, double precio, Brand brandHerramienta, string serie, int status, Category categoryHerramienta)
+        public Herramienta(int id, string codHerramienta, string nombre, int cant, string unidad, double precio, string serie, int status, Category categoryHerramienta)
         {
             this.Id = id;
             this.CodHerramienta = codHerramienta;
@@ -201,7 +197,6 @@ namespace AlmacenDisecForms
             this.Cant = cant;
             this.Unidad = unidad;
             this.Precio = precio;
-            this.BrandHerramienta = brandHerramienta;
             this.Serie = serie;
             this.Status = status;
             this.CategoryHerramienta = categoryHerramienta;
@@ -213,7 +208,6 @@ namespace AlmacenDisecForms
         public int Cant { get => cant; set => cant = value; }
         public string Unidad { get => unidad; set => unidad = value; }
         public double Precio { get => precio; set => precio = value; }
-        public Brand BrandHerramienta { get => brandHerramienta; set => brandHerramienta = value; }
         public string Serie { get => serie; set => serie = value; }
         public int Status { get => status; set => status = value; }
         public Category CategoryHerramienta { get => categoryHerramienta; set => categoryHerramienta = value; }

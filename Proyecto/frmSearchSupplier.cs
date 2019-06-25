@@ -16,14 +16,10 @@ namespace AlmacenDisecForms
     {
         private String nombreTextoAnterior = null;
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
-        private ArrayList array = new ArrayList();
         private BindingList<Supplier> list = new BindingList<Supplier>();
-     
     
         public frmSearchSupplier()
         {
-          
-           
             InitializeComponent();
            
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();

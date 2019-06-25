@@ -119,6 +119,7 @@ namespace AlmacenDisecForms
                             dgvSearch.DataSource = serviceDA.queryAllCategory();
                             reiniciar();
                             operation = true;
+                            btnModify.Enabled = true;
                         }
                     }
 
@@ -185,6 +186,7 @@ namespace AlmacenDisecForms
                         txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
                         txtName.Enabled = true;
                         operation = true;
+                        btnSave.Enabled = true;
                 }
 
                 }
