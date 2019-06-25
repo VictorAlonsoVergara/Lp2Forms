@@ -30,8 +30,8 @@ namespace AlmacenDisecForms
 
             txtSearch.CharacterCasing = CharacterCasing.Upper;
 
-
-
+            btnModify.Enabled = false;
+ 
 
         }
 
@@ -70,7 +70,7 @@ namespace AlmacenDisecForms
                     this.Controls.Add(frm);
                     this.Tag = frm;
                     frm.BringToFront();
-                    frm.Show();
+               
                     frm.flag = false;
                    
                         frm.btnDelete.Enabled = true;
@@ -86,10 +86,10 @@ namespace AlmacenDisecForms
               
                     frm.cboCountry.Enabled = false;
                     frm.cboCity.Enabled = false;
-                
-                        
-                        OpenFormPanel(frm);
-                    }
+
+                    frm.Show();
+
+                }
 
                 }
                 else
@@ -162,6 +162,7 @@ namespace AlmacenDisecForms
                   list.Add(s2);
                   list.Add(s3);*/
 
+                btnModify.Enabled = true;
                 dgvSearch.AutoGenerateColumns = false;
                 dgvSearch.DataSource = list;
 
@@ -196,6 +197,7 @@ namespace AlmacenDisecForms
                     dgvSearch.AutoGenerateColumns = false;
                     list2.Add(s2);
                     dgvSearch.DataSource = list2;
+                    btnModify.Enabled = true;
                 }
 
                 //Insertar el codigo de busqueda por nombre

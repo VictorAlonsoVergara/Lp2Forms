@@ -15,6 +15,8 @@ namespace AlmacenDisecForms
         public int flag = 0;
         private List<String> listas = new List<String>();
         private List<String> listas2 = new List<String>();
+       // private List<AlmacenDisecWS.currency> userTypes = Enum.GetValues(typeof(AlmacenDisecWS.currency)).Cast<AlmacenDisecWS.currency>().ToList();
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
         public frmMaterial()
         {
             InitializeComponent();
@@ -22,18 +24,34 @@ namespace AlmacenDisecForms
             // Bitmap img = new Bitmap(Application.StartupPath+@"\img\fondo.jpg");
             // this.BackgroundImage = img;
             // this.BackgroundImageLayout = ImageLayout.Stretch;
-            listas.Add("Perú");
-            listas.Add("Ecuador");
-            listas2.Add("Bolivia");
-            listas2.Add("Colombia");
-            cboBrand.DataSource = listas;
-            cboCategory.DataSource = listas2;
-            cboFamily.DataSource = listas;
-            cboUnit.DataSource = listas;
-            cboStatus.DataSource = listas;
-            cboSupplier.DataSource = listas;
+            serviceDA = new AlmacenDisecWS.DBControllerWSClient();
+            listas.Add("SOLES");
+            listas.Add("DOLARES");
+
+            cboBrand.DataSource = serviceDA.queryAllBrand();
+            cboBrand.DisplayMember = "brand_name";
+            cboBrand.ValueMember = "brand_id";
+
+
+
+            cboUnit.DataSource = serviceDA.queryAllMeasurement_Unit();
+            cboUnit.DisplayMember = "abbrevation_measure_unit";
+            cboUnit.ValueMember = "id_measure_unit";
+ 
+
             cboMoney.DataSource = listas;
 
+            cboCategory.DataSource = serviceDA.queryAllCategory();
+            cboCategory.DisplayMember = "category_name";
+            cboCategory.ValueMember = "category_id";
+
+            cboSupplier.DataSource = serviceDA.queryAllSupplier();
+            cboSupplier.DisplayMember = "supplier_name";
+            cboSupplier.ValueMember = "id_supplier";
+
+            cboBrand.DataSource = serviceDA.queryAllBrand();
+            cboBrand.DisplayMember = "brand_name";
+            cboBrand.ValueMember = "brand_id";
 
             cboBrand.SelectedIndex = -1;
             cboCategory.SelectedIndex = -1;
@@ -44,7 +62,8 @@ namespace AlmacenDisecForms
             cboMoney.SelectedIndex = -1;
              txtCode.Enabled = false;
             btnDelete.Enabled = false;
-            btnDataG.Enabled = false;
+            txtName.CharacterCasing = CharacterCasing.Upper;
+           
         }
 
 
@@ -79,7 +98,7 @@ namespace AlmacenDisecForms
             txtName.Enabled = true;
             txtPrice.Enabled = true;
             txtMinQuantity.Enabled = true;
-
+            btnDataG.Enabled = true;
 
         }
 
@@ -126,7 +145,41 @@ namespace AlmacenDisecForms
                             //Se llama al insert
 
                             frmMessageBoxAdd frm2 = new frmMessageBoxAdd();
-                            if (frm2.ShowDialog() == DialogResult.OK) {
+                                if (frm2.ShowDialog() == DialogResult.OK)
+                                {
+                                    int id_c = 0;
+                                    AlmacenDisecWS.materialDetail detail = new AlmacenDisecWS.materialDetail();
+                                    AlmacenDisecWS.material m = new AlmacenDisecWS.material();
+                                    AlmacenDisecWS.category c = new AlmacenDisecWS.category();
+                                    detail.measure = (AlmacenDisecWS.measureUnit)cboUnit.SelectedItem;
+                                    detail.serie_material = txtSerie.Text;
+                                    m.min_quantity = Int32.Parse(txtMinQuantity.Text);
+                                    m.brand = (AlmacenDisecWS.brand)cboUnit.SelectedItem;
+                                    m.family = (AlmacenDisecWS.family)cboFamily.SelectedItem;
+                                    c = (AlmacenDisecWS.category)cboCategory.SelectedItem;
+                                    /// m.supplier = (AlmacenDisecWS.supplier)cbosupplier.SelectedItem
+                                    m.price = Double.Parse(txtPrice.Text);
+                                    m.name_item = txtName.Text;
+                               //     m.material_details.  = detail;
+                                
+                                    if (cboMoney.SelectedItem.ToString() == "SOLES")
+                                    {
+
+                                        id_c = 1;
+
+                                    }
+                                    else
+                                    {
+                                        if (cboMoney.SelectedItem.ToString() == "DOLARES")
+                                        {
+                                            id_c = 2;
+                                        }
+                                    }
+
+                                        m.family.category.category_id = c.category_id;
+                                    m.family.category.category_name = c.category_name;
+
+                                  //  int result = serviceDA.insertMaterial(m,id_c) ;
                                 txtCode.Clear();
                                 txtSerie.Clear();
                                 cboStatus.SelectedIndex = -1;
@@ -222,6 +275,7 @@ namespace AlmacenDisecForms
 
         private void BtnDataG_Click(object sender, EventArgs e)
         {
+            btnDataG.Enabled = false;
             if (String.IsNullOrEmpty(txtName.Text) || String.IsNullOrEmpty(txtMinQuantity.Text) || String.IsNullOrEmpty(txtPrice.Text)
                  || cboBrand.SelectedIndex == -1 || cboCategory.SelectedIndex == -1 || cboFamily.SelectedIndex == -1
                  || cboUnit.SelectedIndex == -1 || cboSupplier.SelectedIndex == -1 || cboMoney.SelectedIndex == -1)
@@ -247,6 +301,19 @@ namespace AlmacenDisecForms
                     cboUnit.Enabled = false;
                     cboSupplier.Enabled = false;
                     cboMoney.Enabled = false;
+
+
+
+
+
+
+
+
+
+
+
+
+
                     //Si quieren guardar los datos generales antes aqui va el codigo
 
                 }
@@ -262,12 +329,48 @@ namespace AlmacenDisecForms
 
 
 
-        private void CboCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
 
-                //Llenamos el cboFamily
-            
+
+        private void TxtMinQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                frmMessageBoxNumber frm = new frmMessageBoxNumber();
+                frm.ShowDialog();
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 46))
+            {
+                frmMessageBoxNumber frm = new frmMessageBoxNumber();
+                frm.ShowDialog();
+                e.Handled = true;
+                return;
+            }
+
+            // checks to make sure only 1 decimal is allowed
+            if (e.KeyChar == 46)
+            {
+                if ((sender as TextBox).Text.IndexOf(e.KeyChar) != -1)
+                {
+                    frmMessageBoxPoint frm = new frmMessageBoxPoint();
+                    frm.ShowDialog();
+
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void CboCategory_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            AlmacenDisecWS.category c = (AlmacenDisecWS.category)cboCategory.SelectedItem;
+            cboFamily.DataSource = serviceDA.queryAllFamily(c.category_id);
+            cboFamily.DisplayMember = "name_family";
+            cboFamily.ValueMember = "id_family";
         }
     }
 }

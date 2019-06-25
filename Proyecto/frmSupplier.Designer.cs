@@ -39,7 +39,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.cboCity = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRuc = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.cboCountry = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
+            this.cboCity = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -83,7 +83,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.545455F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.29527F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblSubtitulo, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 4);
@@ -148,7 +148,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(47, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(636, 490);
+            this.panel1.Size = new System.Drawing.Size(635, 490);
             this.panel1.TabIndex = 12;
             // 
             // groupBox1
@@ -223,19 +223,6 @@
             this.txtPhone.Size = new System.Drawing.Size(157, 23);
             this.txtPhone.TabIndex = 93;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPhone_KeyPress);
-            // 
-            // cboCity
-            // 
-            this.cboCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(190)))));
-            this.cboCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.cboCity.FormattingEnabled = true;
-            this.cboCity.Location = new System.Drawing.Point(223, 383);
-            this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(157, 24);
-            this.cboCity.TabIndex = 90;
             // 
             // label3
             // 
@@ -338,7 +325,7 @@
             // cboCountry
             // 
             this.cboCountry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(190)))));
+            this.cboCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
             this.cboCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCountry.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
@@ -373,6 +360,19 @@
             this.label43.TabIndex = 81;
             this.label43.Text = "País:";
             // 
+            // cboCity
+            // 
+            this.cboCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(201)))), ((int)(((byte)(234)))));
+            this.cboCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
+            this.cboCity.FormattingEnabled = true;
+            this.cboCity.Location = new System.Drawing.Point(225, 383);
+            this.cboCity.Name = "cboCity";
+            this.cboCity.Size = new System.Drawing.Size(157, 24);
+            this.cboCity.TabIndex = 90;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(86)))), ((int)(((byte)(161)))));
@@ -382,7 +382,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 433);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(634, 55);
+            this.panel2.Size = new System.Drawing.Size(633, 55);
             this.panel2.TabIndex = 13;
             // 
             // btnDelete
@@ -418,7 +418,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(439, 14);
+            this.btnCancel.Location = new System.Drawing.Point(438, 14);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(159, 38);
             this.btnCancel.TabIndex = 19;
@@ -467,7 +467,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(47, 21);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(636, 34);
+            this.panel3.Size = new System.Drawing.Size(635, 34);
             this.panel3.TabIndex = 19;
             // 
             // btnBack
@@ -482,7 +482,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(506, -2);
+            this.btnBack.Location = new System.Drawing.Point(505, -2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(130, 36);
             this.btnBack.TabIndex = 22;

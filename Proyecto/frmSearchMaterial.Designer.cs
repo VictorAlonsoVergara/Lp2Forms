@@ -70,7 +70,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.05954F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.96658F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.Controls.Add(this.lblMaterial, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 4);
@@ -124,11 +124,12 @@
             this.panel2.Controls.Add(this.dgvSearch);
             this.panel2.Location = new System.Drawing.Point(43, 121);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(668, 457);
+            this.panel2.Size = new System.Drawing.Size(666, 457);
             this.panel2.TabIndex = 14;
             // 
             // btnNew
             // 
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(52)))));
             this.btnNew.FlatAppearance.BorderSize = 0;
@@ -152,12 +153,13 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(541, 30);
+            this.btnSearch.Location = new System.Drawing.Point(539, 30);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(40, 41);
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSearch.TabIndex = 17;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // btnAddMaterial
             // 
@@ -171,7 +173,7 @@
             this.btnAddMaterial.ForeColor = System.Drawing.Color.White;
             this.btnAddMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMaterial.Image")));
             this.btnAddMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddMaterial.Location = new System.Drawing.Point(259, 398);
+            this.btnAddMaterial.Location = new System.Drawing.Point(258, 398);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(137, 53);
             this.btnAddMaterial.TabIndex = 16;
@@ -192,7 +194,7 @@
             this.btnModify.ForeColor = System.Drawing.Color.White;
             this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
             this.btnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModify.Location = new System.Drawing.Point(453, 404);
+            this.btnModify.Location = new System.Drawing.Point(452, 404);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(159, 38);
             this.btnModify.TabIndex = 15;
@@ -211,7 +213,7 @@
             this.txtSearch.ForeColor = System.Drawing.Color.White;
             this.txtSearch.Location = new System.Drawing.Point(150, 39);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(374, 22);
+            this.txtSearch.Size = new System.Drawing.Size(372, 22);
             this.txtSearch.TabIndex = 7;
             // 
             // dgvSearch
@@ -264,7 +266,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvSearch.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(610, 306);
+            this.dgvSearch.Size = new System.Drawing.Size(608, 306);
             this.dgvSearch.TabIndex = 6;
             // 
             // CodC

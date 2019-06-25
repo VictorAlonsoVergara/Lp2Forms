@@ -34,7 +34,7 @@ namespace AlmacenDisecForms
             listas2.Add("Quitor");
            
             cboCountry.DataSource = serviceDA.queryAllCountry();
-           cboCountry.DisplayMember = "name_country";
+            cboCountry.DisplayMember = "name_country";
             cboCountry.ValueMember = "id_country";
             cboCity.SelectedIndex = -1;
             cboCountry.SelectedIndex = -1;
@@ -202,6 +202,7 @@ namespace AlmacenDisecForms
 
                             reiniciar();
                         frmSearchSupplier fm = Owner as frmSearchSupplier;
+                        fm.txtSearch.Clear();
                         fm.dgvSearch.AutoGenerateColumns = false;
                         fm.dgvSearch.DataSource = "";
 
@@ -240,7 +241,7 @@ namespace AlmacenDisecForms
                     frmSearchSupplier fm = Owner as frmSearchSupplier;
                     fm.dgvSearch.AutoGenerateColumns = false;
                     fm.dgvSearch.DataSource = "";
-
+    
                     this.Close();
                 }
 
@@ -259,8 +260,7 @@ namespace AlmacenDisecForms
             {
 
                 frmSearchSupplier fm = Owner as frmSearchSupplier;
-                fm.dgvSearch.AutoGenerateColumns = false;
-                fm.dgvSearch.DataSource ="";
+          
                
 
                 this.Close();

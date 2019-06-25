@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,33 +29,33 @@ namespace AlmacenDisecForms
             txtLastName2.CharacterCasing = CharacterCasing.Upper;
             txtEmail.CharacterCasing = CharacterCasing.Upper;
 
-          
+
 
         }
 
 
-  
-            private void reiniciar()
-            {
 
-                flag = true;
-                btnDelete.Enabled = false;
-                txtCode.Clear();
-                txtName.Clear();
-                txtLastName1.Clear();
-                txtLastName2.Clear();
-                txtEmail.Clear();
-                txtDNI.Clear();
-                txtSalary.Clear();
-                txtPassword.Clear();
-                rbMan.Checked = false;
-                rbWoman.Checked = false;
-                cboPrivilege.SelectedIndex = -1;
-                txtPassword.Enabled = true;
-                cboPrivilege.Enabled = true;
+        private void reiniciar()
+        {
+
+            flag = true;
+            btnDelete.Enabled = false;
+            txtCode.Clear();
+            txtName.Clear();
+            txtLastName1.Clear();
+            txtLastName2.Clear();
+            txtEmail.Clear();
+            txtDNI.Clear();
+            txtSalary.Clear();
+            txtPassword.Clear();
+            rbMan.Checked = false;
+            rbWoman.Checked = false;
+            cboPrivilege.SelectedIndex = -1;
+            txtPassword.Enabled = true;
+            cboPrivilege.Enabled = true;
 
 
-            }
+        }
 
         private void reiniciar2()
         {
@@ -165,7 +166,7 @@ namespace AlmacenDisecForms
                     frmSearchUser fm = Owner as frmSearchUser;
                     fm.dgvSearch.AutoGenerateColumns = false;
                     fm.dgvSearch.DataSource = serviceDA.queryAllEmployee();
-         
+
                     this.Close();
 
 
@@ -188,7 +189,7 @@ namespace AlmacenDisecForms
                 }
                 else
                 {
-                    
+
                     AlmacenDisecWS.employee emp = new AlmacenDisecWS.employee();
 
                     frmMessageBoxSave frm = new frmMessageBoxSave();
@@ -208,7 +209,7 @@ namespace AlmacenDisecForms
                         emp.second_last_name = apM;
                         emp.dni = DNI;
                         emp.salary = sueldo;
-                        emp.email_employee = email;                  
+                        emp.email_employee = email;
                         if (rbMan.Checked == true)
                         {
                             emp.gender = "M";
@@ -219,7 +220,7 @@ namespace AlmacenDisecForms
 
                         }
                         int result = serviceDA.updateEmployee(emp);
-                        
+
 
                     }
 
@@ -258,7 +259,7 @@ namespace AlmacenDisecForms
                     frmSearchUser fm = Owner as frmSearchUser;
                     fm.dgvSearch.AutoGenerateColumns = false;
                     fm.dgvSearch.DataSource = serviceDA.queryAllEmployee();
-        
+
                     this.Close();
 
                 }
@@ -276,7 +277,7 @@ namespace AlmacenDisecForms
                 frmSearchUser fm = Owner as frmSearchUser;
                 //fm.dgvSearch.AutoGenerateColumns = false;
                 //fm.dgvSearch.DataSource = serviceDA.queryAllEmployee();
-              
+
 
                 this.Close();
             }
@@ -284,14 +285,30 @@ namespace AlmacenDisecForms
 
         private void TxtSalary_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 46))
             {
                 frmMessageBoxNumber frm = new frmMessageBoxNumber();
                 frm.ShowDialog();
                 e.Handled = true;
-              //  return;
+                return;
             }
+
+            // checks to make sure only 1 decimal is allowed
+            if (e.KeyChar == 46)
+            {
+                if ((sender as TextBox).Text.IndexOf(e.KeyChar) != -1)
+                {
+                    frmMessageBoxPoint frm = new frmMessageBoxPoint();
+                    frm.ShowDialog();
+
+                    e.Handled = true;
+                }
+            }
+
+
         }
+
 
         private void TxtDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -300,7 +317,7 @@ namespace AlmacenDisecForms
                 frmMessageBoxNumber frm = new frmMessageBoxNumber();
                 frm.ShowDialog();
                 e.Handled = true;
-               // return;
+                return;
             }
         }
     }

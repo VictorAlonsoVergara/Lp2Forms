@@ -70,6 +70,12 @@
     <Compile Include="frmMessageBoxBlockSystem.Designer.cs">
       <DependentUpon>frmMessageBoxBlockSystem.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMessageBoxPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxPoint.Designer.cs">
+      <DependentUpon>frmMessageBoxPoint.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMessageBoxSearchNull.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxBlockSystem.resx">
       <DependentUpon>frmMessageBoxBlockSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxPoint.resx">
+      <DependentUpon>frmMessageBoxPoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxSearchNull.resx">
       <DependentUpon>frmMessageBoxSearchNull.cs</DependentUpon>

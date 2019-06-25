@@ -13,13 +13,15 @@ namespace AlmacenDisecForms
 {
     public partial class frmSearchMaterial : Form
     {
-        private List<Items> listas = new List<Items>();
-        private Items items;
+
+        private AlmacenDisecWS.DBControllerWSClient serviceDA;
         public frmSearchMaterial()
         {
             InitializeComponent();
 
-        }
+
+             serviceDA= new AlmacenDisecWS.DBControllerWSClient();
+    }
 
         private void OpenFormPanel(object formHijo)
         {
@@ -120,6 +122,11 @@ namespace AlmacenDisecForms
             frmMaterial frm = new frmMaterial();
             frm.flag = 1;
             OpenFormPanel(frm);
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            dgvSearch.DataSource =  serviceDA.queryAllMaterial();
         }
     }
     }

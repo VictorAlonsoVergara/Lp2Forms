@@ -335,7 +335,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnModify;
-        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox btnSearch;
         public System.Windows.Forms.Button btnNew;
         public System.Windows.Forms.DataGridView dgvSearch;
@@ -346,5 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column111;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusC;
         private System.Windows.Forms.DataGridViewTextBoxColumn Columnac;
+        public System.Windows.Forms.TextBox txtSearch;
     }
 }
