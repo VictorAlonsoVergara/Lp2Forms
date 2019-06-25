@@ -272,7 +272,7 @@
             // 
             // QuantityC
             // 
-            this.QuantityC.DataPropertyName = "cityName";
+            this.QuantityC.DataPropertyName = "city";
             this.QuantityC.HeaderText = "Ciudad";
             this.QuantityC.Name = "QuantityC";
             this.QuantityC.ReadOnly = true;

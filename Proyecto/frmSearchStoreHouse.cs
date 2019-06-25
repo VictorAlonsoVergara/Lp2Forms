@@ -14,6 +14,7 @@ namespace AlmacenDisecForms
     public partial class frmSearchStoreHouse : Form
     {
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
+        private BindingList<Storehouse> list = new BindingList<Storehouse>();
         public frmSearchStoreHouse()
         {
             InitializeComponent();
@@ -84,10 +85,32 @@ namespace AlmacenDisecForms
         {
             if (String.IsNullOrEmpty(txtSearch.Text))
             {
-
+                /*
                 dgvSearch.AutoGenerateColumns = false;
                 dgvSearch.DataSource = serviceDA.queryAllStorehouse();
+                */
 
+                list.Clear();
+                int cont = 0;
+                AlmacenDisecWS.storehouse[] a = new AlmacenDisecWS.storehouse[100];
+
+                a = serviceDA.queryAllStorehouse();
+                cont = a.Count();
+                for (int i = 0; i < cont; i++)
+                {
+                    Storehouse s = new Storehouse();
+                    s.id_storehouse = a[i].id_storehouse;
+                    s.phone_number = a[i].phone_number;
+                    s.storehouse_name = a[i].storehouse_name;
+                    s.city.id_city = a[i].city.id_city;
+                    s.city.name_city = a[i].city.name_city;
+                    s.address = a[i].address;
+                    s.storehouse_status = a[i].storehouse_status;
+                    list.Add(s);
+                }
+
+                dgvSearch.AutoGenerateColumns = false;
+                dgvSearch.DataSource = list;
 
             }
             else

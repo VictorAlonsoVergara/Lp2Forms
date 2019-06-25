@@ -249,35 +249,21 @@
             this.txtCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCode.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-<<<<<<< HEAD
-            this.txtCode.Location = new System.Drawing.Point(190, 32);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(119, 23);
-            this.txtCode.TabIndex = 132;
-            this.txtCode.UseWaitCursor = true;
-=======
+
             this.txtCode.Location = new System.Drawing.Point(235, 32);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(119, 23);
             this.txtCode.TabIndex = 132;
->>>>>>> 143900f33751d64efe5c2e267d97b34c5ad16314
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-<<<<<<< HEAD
-            this.lblId.Location = new System.Drawing.Point(243, 32);
-=======
             this.lblId.Location = new System.Drawing.Point(288, 32);
->>>>>>> 143900f33751d64efe5c2e267d97b34c5ad16314
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(24, 19);
             this.lblId.TabIndex = 131;
             this.lblId.Text = "ID";
-<<<<<<< HEAD
             this.lblId.UseWaitCursor = true;
-=======
->>>>>>> 143900f33751d64efe5c2e267d97b34c5ad16314
             // 
             // txtSalary
             // 
@@ -290,11 +276,8 @@
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(118, 23);
             this.txtSalary.TabIndex = 129;
-<<<<<<< HEAD
             this.txtSalary.UseWaitCursor = true;
-=======
             this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSalary_KeyPress);
->>>>>>> 143900f33751d64efe5c2e267d97b34c5ad16314
             // 
             // label8
             // 
@@ -339,11 +322,7 @@
             // 
             this.rbMan.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rbMan.AutoSize = true;
-<<<<<<< HEAD
-            this.rbMan.Location = new System.Drawing.Point(327, 321);
-=======
             this.rbMan.Location = new System.Drawing.Point(372, 321);
->>>>>>> 143900f33751d64efe5c2e267d97b34c5ad16314
             this.rbMan.Name = "rbMan";
             this.rbMan.Size = new System.Drawing.Size(106, 23);
             this.rbMan.TabIndex = 124;
@@ -441,11 +420,8 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(203, 23);
             this.txtDNI.TabIndex = 119;
-<<<<<<< HEAD
             this.txtDNI.UseWaitCursor = true;
-=======
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDNI_KeyPress);
->>>>>>> 143900f33751d64efe5c2e267d97b34c5ad16314
             // 
             // cboPrivilege
             // 

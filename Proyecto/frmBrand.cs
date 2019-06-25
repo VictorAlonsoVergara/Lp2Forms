@@ -16,18 +16,33 @@ namespace AlmacenDisecForms
         private AlmacenDisecWS.DBControllerWSClient serviceDA;
 
         bool flag = false;
+        bool operation = false;
         public frmBrand()
         {
             InitializeComponent();
             serviceDA = new AlmacenDisecWS.DBControllerWSClient();
             txtId.Enabled = false;
-            btnDelete.Enabled = false;
             txtName.Enabled = false;
             txtName.CharacterCasing = CharacterCasing.Upper;
             txtSearch.CharacterCasing = CharacterCasing.Upper;
+            btnModify.Enabled = false;
+            btnSave.Enabled = false;
+            btnDelete.Enabled = false;
+            
         }
 
         private void reiniciar()
+        {
+            flag = true;
+            txtId.Clear();
+            txtName.Clear();
+            txtName.Enabled = false;
+            btnDelete.Enabled = false;
+            btnNew.Enabled = true;
+            btnSave.Enabled = false;
+        }
+
+        private void reiniciar2()
         {
             flag = false;
             txtId.Clear();
@@ -36,6 +51,7 @@ namespace AlmacenDisecForms
             btnNew.Enabled = true;
             btnModify.Enabled = true;
             txtName.Enabled = false;
+            
         }
 
         private void BtnNew_Click(object sender, EventArgs e)
@@ -44,8 +60,8 @@ namespace AlmacenDisecForms
             txtId.Clear();
             btnNew.Enabled = false;
             txtName.Enabled = true;
-            // txtName.Clear();
-
+            btnSave.Enabled = true;
+            btnModify.Enabled = false;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -68,11 +84,11 @@ namespace AlmacenDisecForms
                         AlmacenDisecWS.brand b = new AlmacenDisecWS.brand();
                         b.brand_name = name;
                         int result = serviceDA.insertBrand(b);
-
-
                         dgvSearch.AutoGenerateColumns = false;
-                        dgvSearch.DataSource = serviceDA.queryAllBrand();
+                        dgvSearch.DataSource = serviceDA.queryAllBrand();                        
                         reiniciar();
+                        btnModify.Enabled = true;
+                        operation = true;
                     }
                 }
                 else
@@ -99,6 +115,7 @@ namespace AlmacenDisecForms
                             dgvSearch.AutoGenerateColumns = false;
                             dgvSearch.DataSource = serviceDA.queryAllBrand();
                             reiniciar();
+                            operation = true;
                         }
                     }
 
@@ -111,24 +128,29 @@ namespace AlmacenDisecForms
             frmMessageBoxCancel frm = new frmMessageBoxCancel();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-
-
-                reiniciar();
+                if(flag == true)
+                {
+                    reiniciar();
+                    if(operation == true)
+                        btnModify.Enabled = true;
+                }
+                else
+                {
+                    reiniciar2();
+                }
             }
         }
-
-
-
-
 
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
 
             if (String.IsNullOrEmpty(txtSearch.Text))
-            {
+            { 
                 dgvSearch.AutoGenerateColumns = false;
                 dgvSearch.DataSource = serviceDA.queryAllBrand();
+                btnModify.Enabled = true;
+                operation = true;
             }
             else
             {
@@ -160,6 +182,7 @@ namespace AlmacenDisecForms
                     txtName.Text = dgvSearch.CurrentRow.Cells[1].Value.ToString();
                     nombreTextoAnterior = dgvSearch.CurrentRow.Cells[1].Value.ToString();
                     txtName.Enabled = true;
+                    operation = true;
                 }
 
             }
@@ -192,9 +215,7 @@ namespace AlmacenDisecForms
                     dgvSearch.AutoGenerateColumns = false;
                     dgvSearch.DataSource = serviceDA.queryAllBrand();
                     reiniciar();
-
-                    reiniciar();
-
+                    btnModify.Enabled = true;
                 }
 
 
